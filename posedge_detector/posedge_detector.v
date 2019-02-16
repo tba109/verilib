@@ -10,7 +10,7 @@ module posedge_detector
    output y
    );
 
-   reg 	  ff;
+   reg 	  ff = 1'b0;
    
    always @(posedge clk or negedge rst_n)
      begin
