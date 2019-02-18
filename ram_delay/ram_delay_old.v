@@ -16,11 +16,10 @@ module ram_delay
     parameter P_NBITS_DATA=14
     ) (
        input 			 clk,
-       input [P_NBITS_ADDR-1:0]  n, // Number of delay elements, minimum valid = 2 
+       input [P_NBITS_ADDR-1:0]  delay_len, // Number of delay elements, minimum valid = 2 
        input 			 wr, // 
        input [P_NBITS_DATA-1:0]  d, // Input data
-       output [P_NBITS_DATA-1:0] qo, // 
-       output [P_NBITS_DATA-1:0] qn, // 
+       output [P_NBITS_DATA-1:0] q, // Delayed data
        output 			 valid // Indicates that the output reflects a delayed d
        );
       
@@ -43,7 +42,7 @@ module ram_delay
 	
    // RAM
    reg [P_NBITS_ADDR-1:0] 	 i_addr_in=0;
-   reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_out=3;
    true_dual_port_ram_dual_clock
      #(
        .DATA_WIDTH(P_NBITS_DATA),
@@ -52,7 +51,7 @@ module ram_delay
    TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0
      (
       .q_a				(),
-      .q_b				(qn),
+      .q_b				(q),
       .data_a				(i_d_2),
       .data_b				({P_NBITS_DATA{1'b0}}),
       .addr_a				(i_addr_in),
@@ -73,12 +72,12 @@ module ram_delay
 	    if(wr)
 	      begin
 		 valid_cnt <= valid_cnt + 1;
-		 if(valid_cnt == n-1)
+		 if(valid_cnt == delay_len-1)
 		   state <= 1;
 	      end
 	 end	 
        1: 
-	 if(n != valid_cnt)
+	 if(delay_len != valid_cnt)
 	   begin 
 	      state <= 0;
 	      valid_cnt <= 0;
@@ -92,12 +91,12 @@ module ram_delay
        begin
 	  i_addr_in <= i_addr_in + 1;
 	  i_addr_out <= i_addr_out + 1;
-	  if(i_addr_in == n-1)
+	  if(i_addr_in == delay_len-1)
 	    begin
 	       i_addr_in <= 0;
-	       i_addr_out <= 2;
+	       i_addr_out <= 3;
 	    end
-	  if(i_addr_out == n-1)
+	  if(i_addr_out == delay_len-1)
 	    i_addr_out <= 0;
        end // if (wr)
      // else if(i_wr_0 && !wr)
@@ -106,16 +105,15 @@ module ram_delay
      // 	  i_addr_out <= i_addr_out - 1;
      // 	  if(i_addr_in == 0)
      // 	    begin
-     // 	       i_addr_in <= n-1;
+     // 	       i_addr_in <= delay_len-1;
      // 	       i_addr_out <= 0;
      // 	    end
-     // 	  if(i_addr_out == 0)
-     // 	    i_addr_out <= n-1;
+     // 	  if(i_addr_out == delay_len-1)
+     // 	    i_addr_out <= 0;
      // end
-   
+   ///////////////////////////////////////////////////////////////////////////////////////////////
    // Output assignments
-   assign qo = i_d_1; 
-   assign valid = i_wr_1; 
+   
 endmodule
 
 // For emacs verilog-mode

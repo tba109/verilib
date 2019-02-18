@@ -8,7 +8,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 //////////////////////////////////////////////////////////////////////////////////////////////////
-`define TEST_CASE_DELAY_LEN_4
+`define TEST_CASE_N_4
 
 module tb;
    
@@ -24,13 +24,14 @@ module tb;
    // Connections
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire [P_NBITS_DATA-1:0] q;			// From RAM_DELAY_0 of ram_delay.v
+   wire [P_NBITS_DATA-1:0] qo;			// From RAM_DELAY_0 of ram_delay.v
+   wire [P_NBITS_DATA-1:0] qn;			// From RAM_DELAY_0 of ram_delay.v
    wire			valid;			// From RAM_DELAY_0 of ram_delay.v
    // End of automatics
    /*AUTOREGINPUT*/
    // Beginning of automatic reg inputs (for undeclared instantiated-module inputs)
    reg [P_NBITS_DATA-1:0] d;			// To RAM_DELAY_0 of ram_delay.v
-   reg [P_NBITS_ADDR-1:0] delay_len;		// To RAM_DELAY_0 of ram_delay.v
+   reg [P_NBITS_ADDR-1:0] n;		// To RAM_DELAY_0 of ram_delay.v
    reg 			  wr;			// To RAM_DELAY_0 of ram_delay.v
    // End of automatics
    
@@ -50,11 +51,12 @@ module tb;
    ram_delay #(.P_NBITS_ADDR(P_NBITS_ADDR),.P_NBITS_DATA(P_NBITS_DATA)) RAM_DELAY_0
      (
       // Outputs
-      .q			(q[P_NBITS_DATA-1:0]),
+      .qn			(qn[P_NBITS_DATA-1:0]),
+      .qo			(qo[P_NBITS_DATA-1:0]),
       .valid			(valid),
       // Inputs
       .clk			(clk),
-      .delay_len		(delay_len[P_NBITS_ADDR-1:0]),
+      .n		        (n[P_NBITS_ADDR-1:0]),
       .wr			(wr),
       .d			(d[P_NBITS_DATA-1:0])
       ); 
@@ -62,7 +64,7 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Test case
    //////////////////////////////////////////////////////////////////////   
-`ifdef TEST_CASE_DELAY_LEN_4
+`ifdef TEST_CASE_N_4
    integer 		i = 0; 
    initial
      begin
@@ -70,7 +72,7 @@ module tb;
 	rst = 1'b1; 
 	wr <= 0; 
 	d <= {P_NBITS_DATA{1'b1}};
-	delay_len <= 9'd4;
+	n <= 9'd4;
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
@@ -88,10 +90,10 @@ module tb;
 	     d<=d+1; 
 	  end
 	@(posedge clk) wr <= 0; 
-	@(posedge clk) wr <= 0; 
+	// @(posedge clk) wr <= 0; 
 	// Stimulate UUT
 	
-	for(i=0; i<delay_len; i=i+1)
+	for(i=0; i<10; i=i+1)
 	  begin
 	     @(posedge clk);
 	     wr <= 1; 
