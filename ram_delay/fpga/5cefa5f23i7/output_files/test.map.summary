@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Sat Feb 16 15:26:36 2019
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : test
+Top-level Entity Name : ram_delay
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 25
+Total pins : 40
+Total virtual pins : 0
+Total block memory bits : 3,584
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

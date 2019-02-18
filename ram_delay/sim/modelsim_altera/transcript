@@ -1,0 +1,927 @@
+# Loading project tb
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+
+
+
+
+
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:49:02 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+run
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint  \
+sim:/tb/clk
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+# ** Error: (vsim-3043) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(87): Unresolved reference to 'break'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+
+
+
+
+
+
+
+
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:49:02 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+# ** Error: (vsim-3043) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(98): Unresolved reference to 'break'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
+# Error loading design
+# End time: 14:00:59 on Feb 16,2019, Elapsed time: 1:11:57
+# Errors: 2, Warnings: 1
+# Compile of tb.v failed with 2 errors.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:22:19 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+# ** Error: (vsim-3043) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(98): Unresolved reference to 'break'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
+# Error loading design
+# End time: 14:22:19 on Feb 16,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 14:25:25 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position 3  sim:/tb/wr
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position 3  sim:/tb/wr
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.ram_dual
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of ram_dual.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 14:59:58 on Feb 16,2019, Elapsed time: 0:34:33
+# Errors: 28, Warnings: 1
+# vsim work.tb 
+# Start time: 14:59:58 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Error (suppressible): (vsim-3053) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): Illegal output or inout port connection for port 'q_a'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (42) does not match connection size (32) for port 'q_a'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(10).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (42) does not match connection size (32) for port 'data_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (1) does not match connection size (32) for port 'we_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# Error loading design
+# End time: 14:59:59 on Feb 16,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:00:40 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (42) does not match connection size (32) for port 'data_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (1) does not match connection size (32) for port 'we_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 15:22:23 on Feb 16,2019, Elapsed time: 0:21:43
+# Errors: 0, Warnings: 2
+# vsim work.tb 
+# Start time: 15:22:23 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (42) does not match connection size (32) for port 'data_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (1) does not match connection size (32) for port 'we_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 15:24:27 on Feb 16,2019, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 2
+# vsim work.tb 
+# Start time: 15:24:27 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(35): [PCDPC] - Port size (1) does not match connection size (32) for port 'we_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(9).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+# Load canceled
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 15:25:02 on Feb 16,2019, Elapsed time: 0:00:35
+# Errors: 1, Warnings: 1
+# vsim work.tb 
+# Start time: 15:25:02 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v failed with 1 errors.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v failed with 1 errors.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Error: (vsim-3389) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(51): Port 'prime' not found in the connected module (4th connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+# ** Fatal: (vsim-3365) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(51): Too many port connections. Expected 6, found 7.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+# FATAL ERROR while loading design
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:25:02 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Error: (vsim-3033) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(73): Instantiation of 'negedge_detector' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+#         Searched libraries:
+#             /home/tyler/verilog_lib_tba/ram_delay/sim/modelsim_altera/work
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:25:02 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Error: (vsim-3037) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(73): Missing instance name in instantiation of 'negedge_detector'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+# Error loading design
+# End time: 17:03:46 on Feb 16,2019, Elapsed time: 1:38:44
+# Errors: 4, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 17:04:26 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# Loading work.negedge_detector
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'rst_n'. The port definition is at: /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v(8).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/NEDGE_0 File: /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 17:04:57 on Feb 16,2019, Elapsed time: 0:00:31
+# Errors: 0, Warnings: 1
+# vsim work.tb 
+# Start time: 17:04:57 on Feb 16,2019
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# Loading work.negedge_detector
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# Loading work.negedge_detector
+# ** Warning: (vsim-3015) /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v(43): [PCDPC] - Port size (42) does not match connection size (43) for port 'data_b'. The port definition is at: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v(7).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0/TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0 File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v failed with 1 errors.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# Compile of negedge_detector.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# End time: 08:00:32 on Feb 18,2019, Elapsed time: 38:55:35
+# Errors: 0, Warnings: 1

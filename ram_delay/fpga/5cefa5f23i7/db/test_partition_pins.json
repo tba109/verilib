@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "q[0]",
+					"strict" : false
+				},
+				{
+					"name" : "q[1]",
+					"strict" : false
+				},
+				{
+					"name" : "q[2]",
+					"strict" : false
+				},
+				{
+					"name" : "q[3]",
+					"strict" : false
+				},
+				{
+					"name" : "q[4]",
+					"strict" : false
+				},
+				{
+					"name" : "q[5]",
+					"strict" : false
+				},
+				{
+					"name" : "q[6]",
+					"strict" : false
+				},
+				{
+					"name" : "q[7]",
+					"strict" : false
+				},
+				{
+					"name" : "q[8]",
+					"strict" : false
+				},
+				{
+					"name" : "q[9]",
+					"strict" : false
+				},
+				{
+					"name" : "q[10]",
+					"strict" : false
+				},
+				{
+					"name" : "q[11]",
+					"strict" : false
+				},
+				{
+					"name" : "q[12]",
+					"strict" : false
+				},
+				{
+					"name" : "q[13]",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "wr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "d[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "d[8]",
+					"strict" : false
+				},
+				{
+					"name" : "d[9]",
+					"strict" : false
+				},
+				{
+					"name" : "d[10]",
+					"strict" : false
+				},
+				{
+					"name" : "d[11]",
+					"strict" : false
+				},
+				{
+					"name" : "d[12]",
+					"strict" : false
+				},
+				{
+					"name" : "d[13]",
+					"strict" : false
+				},
+				{
+					"name" : "prime",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[0]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[1]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[7]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[5]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[6]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[4]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[2]",
+					"strict" : false
+				},
+				{
+					"name" : "delay_len[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

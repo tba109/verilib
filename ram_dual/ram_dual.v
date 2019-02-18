@@ -1,15 +1,15 @@
-module ram_dual #(parameter P_NBITS_ADR=8, parameter P_NBITS_DATA=14) 
+module ram_dual #(parameter P_NBITS_ADDR=8, parameter P_NBITS_DATA=14) 
    (
     output reg [P_NBITS_DATA-1:0] q,
     input [P_NBITS_DATA-1:0] 	  d,
-    input [P_NBITS_ADR-1:0] 	  addr_in,
-    input [P_NBITS_ADR-1:0] 	  addr_out,
+    input [P_NBITS_ADDR-1:0] 	  addr_in,
+    input [P_NBITS_ADDR-1:0] 	  addr_out,
     input 			  we, 
     input 			  clk1, 
     input 			  clk2
     );
 
-  localparam L_MEM_SIZE = {P_NBITS_ADR{1'b1}}; 
+  localparam L_MEM_SIZE = {P_NBITS_ADDR{1'b1}}; 
   reg [P_NBITS_DATA-1:0]   mem [L_MEM_SIZE:0];
    
    always @(posedge clk1) 
@@ -18,7 +18,7 @@ module ram_dual #(parameter P_NBITS_ADR=8, parameter P_NBITS_DATA=14)
 	  mem[addr_in] <= d;
      end
    
-   reg [P_NBITS_ADR-1:0] 	  addr_out_reg=0;
+   reg [P_NBITS_ADDR-1:0] 	  addr_out_reg=0;
    always @(posedge clk2) 
      begin
 	q <= mem[addr_out_reg];

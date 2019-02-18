@@ -16,34 +16,42 @@ module ram_delay
     parameter P_NBITS_DATA=14
     ) (
        input 			 clk,
-       input 			 prime,
-       input [P_NBITS_ADDR-1:0]  delay_len, 
+       input [P_NBITS_ADDR-1:0]  delay_len, // Number of delay elements, minimum valid = 2 
        input 			 wr, // 
        input [P_NBITS_DATA-1:0]  d, // Input data
        output [P_NBITS_DATA-1:0] q, // Delayed data
        output 			 valid // Indicates that the output reflects a delayed d
        );
       
+   // Register the inputs so that we can "look ahead"
+   reg 				 i_wr = 0;
+   reg [P_NBITS_DATA-1:0] 	 i_d = 0 ;
+   always @(posedge clk) 
+     begin
+	i_wr <= wr;
+	i_d <= d; 
+     end
+	
    // RAM
    reg [P_NBITS_ADDR-1:0] 	 i_addr_in=0;
    reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
-   ram_dual 
+   true_dual_port_ram_dual_clock
      #(
-       .P_NBITS_ADDR(P_NBITS_ADDR),
-       .P_NBITS_DATA(P_NBITS_DATA)
+       .DATA_WIDTH(P_NBITS_DATA),
+       .ADDR_WIDTH(P_NBITS_ADDR)
        )  
-   RAM_DUAL_0
+   TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0
      (
-      // Outputs
-      .q		(valid),
-      // Inputs
-      .d		(d),
-      .addr_in		(i_addr_in),
-      .addr_out	        (i_addr_out),
-      .we		(wr),
-      .clk1		(clk),
-      .clk2		(clk)
-      ); 
+      .q_a				(),
+      .q_b				(q),
+      .data_a				(i_d),
+      .data_b				({P_NBITS_DATA{1'b0}}),
+      .addr_a				(i_addr_in),
+      .addr_b				(i_addr_out),
+      .we_a				(i_wr),
+      .we_b				(1'b0),
+      .clk_a				(clk),
+      .clk_b				(clk)); 
       
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // Simple state machine for valid
@@ -56,12 +64,12 @@ module ram_delay
 	    if(wr)
 	      begin
 		 valid_cnt <= valid_cnt + 1;
-		 if(valid_cnt == delay_len)
+		 if(valid_cnt == delay_len-1)
 		   state <= 1;
 	      end
 	 end	 
        1: 
-	 if((delay_len != valid_cnt) || prime)
+	 if(delay_len != valid_cnt)
 	   begin 
 	      state <= 0;
 	      valid_cnt <= 0;
@@ -69,28 +77,38 @@ module ram_delay
      endcase
    
    ///////////////////////////////////////////////////////////////////////////////////////////////
-   // Address management 
+   // Address management
    always @(posedge clk)
      if(wr)
        begin
 	  i_addr_in <= i_addr_in + 1;
 	  i_addr_out <= i_addr_out + 1;
-	  if(i_addr_in == delay_len)
+	  if(i_addr_in == delay_len-1)
 	    begin
 	       i_addr_in <= 0;
 	       i_addr_out <= 2;
 	    end
-	  if(i_addr_out == delay_len)
+	  if(i_addr_out == delay_len-1)
 	    i_addr_out <= 0;
        end // if (wr)
-
+     // else if(i_wr && !wr)
+     //   begin
+     // 	  i_addr_in <= i_addr_in - 1;
+     // 	  i_addr_out <= i_addr_out - 1;
+     // 	  if(i_addr_in == 0)
+     // 	    begin
+     // 	       i_addr_in <= delay_len-1;
+     // 	       i_addr_out <= 0;
+     // 	    end
+     // 	  if(i_addr_out == delay_len-1)
+     // 	    i_addr_out <= 0;
+     //  end
    ///////////////////////////////////////////////////////////////////////////////////////////////
-   // Address management 
-   assign valid = (state == 1); 
+   // Output assignments
    
 endmodule
 
 // For emacs verilog-mode
 // Local Variables:
-// verilog-library-directories:("../ram_dual/")
+// verilog-library-directories:("../true_dual_port_ram_dual_clock/")
 // End:
