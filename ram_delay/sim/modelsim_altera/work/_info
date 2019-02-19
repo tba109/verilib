@@ -9,57 +9,57 @@ z2
 cModel Technology
 d/home/tyler
 vnegedge_detector
-Z0 !s110 1550547929
+!s110 1550547929
 !i10b 1
 !s100 TI9=1cSZf^z3AI6k<@AnF3
 IIPj4KI4Zj;F`6941dmA9f3
-Z1 VDg1SIo80bB@j0V0VzS_@n1
-Z2 d/home/tyler/verilog_lib_tba/ram_delay/sim/modelsim_altera
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 d/home/tyler/verilog_lib_tba/ram_delay/sim/modelsim_altera
 w1542147804
 8/home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v
 F/home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v
 L0 5
-Z3 OV;L;10.4d;61
+Z2 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z4 !s108 1550547929.000000
+!s108 1550547929.000000
 !s107 /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v|
 !i113 1
-Z5 o-work work
+Z3 o-work work
 vram_delay
-R0
+Z4 !s110 1550575972
 !i10b 1
-!s100 INdT;JPhaXW8X2JBJm89J0
-I=IC<01@nbz3LBGH[^3ZHP3
+!s100 O[WW2eChm_fTf_M:N08a<0
+I__a45;F8b5zjg[hnLP<_B0
+R0
 R1
-R2
-w1550547711
+w1550575107
 8/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
 F/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
-Z6 L0 13
-R3
+Z5 L0 13
+R2
 r1
 !s85 0
 31
-R4
+Z6 !s108 1550575972.000000
 !s107 /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v|
 !i113 1
-R5
+R3
 vram_dual
 !s110 1550347019
 !i10b 1
 !s100 YB[0V=YDk?lIRnfa2jGk_0
 IBAPzMWeEfAzWcmloOS4[12
+R0
 R1
-R2
 w1550334098
 8/home/tyler/verilog_lib_tba/ram_dual/ram_dual.v
 F/home/tyler/verilog_lib_tba/ram_dual/ram_dual.v
 L0 1
-R3
+R2
 r1
 !s85 0
 31
@@ -67,44 +67,44 @@ r1
 !s107 /home/tyler/verilog_lib_tba/ram_dual/ram_dual.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/ram_dual/ram_dual.v|
 !i113 1
-R5
+R3
 vtb
-R0
+R4
 !i10b 1
-!s100 _llzb7ESbK^5A6B?Oc5[L3
-IE3nDl6I=1_5WH6_U^M1H40
+!s100 g<323?[n3IdZoICUNU?`<2
+I7iLB[adHnMcTb@aJ=^ZAH3
+R0
 R1
-R2
-w1550547920
+w1550575968
 8/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
 F/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
-R6
-R3
+R5
+R2
 r1
 !s85 0
 31
-R4
+!s108 1550575971.000000
 !s107 /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v|
 !i113 1
-R5
+R3
 vtrue_dual_port_ram_dual_clock
-R0
+R4
 !i10b 1
 !s100 aS0AfUJdhDU8JgDQW6Km10
 IRnKcnj>1;^MJ6SmPlE?3B0
+R0
 R1
-R2
 w1550351854
 8/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
 F/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
 L0 4
-R3
+R2
 r1
 !s85 0
 31
-R4
+R6
 !s107 /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
 !i113 1
-R5
+R3

@@ -1,15 +1,26 @@
 # Loading project tb
 # Compile of tb.v was successful.
+# Compile of ram_delay.v failed with 1 errors.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
+# 3 compiles, 0 failed with no errors.
 vsim work.tb
 # vsim work.tb 
-# Start time: 21:10:12 on Feb 18,2019
+# Start time: 06:16:22 on Feb 19,2019
 # Loading work.tb
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3017) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(51): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+# ** Warning: (vsim-3722) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(51): [TFMPC] - Missing connection for port 'init'.
+# WARNING: No extended dataflow license exists
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
 add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
 run
 # 
@@ -18,8 +29,7 @@ run
 # Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
+# 3 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
 # Loading work.ram_delay
@@ -28,11 +38,12 @@ run
 # 
 # ------------------------------------------------------
 # Test Case: TEST_CASE_1
+# OK
+# 
 # Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
+# 3 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
 # Loading work.ram_delay
@@ -41,282 +52,11 @@ run
 # 
 # ------------------------------------------------------
 # Test Case: TEST_CASE_1
+# ERR
+# 
 # Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# WARNING: No extended dataflow license exists
-# Compile of tb.v was successful.
-# Compile of ram_delay.v failed with 2 errors.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 1 failed with 2 errors.
-# Compile of tb.v was successful.
-# Compile of ram_delay.v failed with 4 errors.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 1 failed with 4 errors.
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-restart
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-restart
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# Compile of negedge_detector.v was successful.
-# 4 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_1
-# End time: 22:46:12 on Feb 18,2019, Elapsed time: 1:36:00
-# Errors: 0, Warnings: 1
+# 3 compiles, 0 failed with no errors.
+# End time: 07:29:39 on Feb 19,2019, Elapsed time: 1:13:17
+# Errors: 0, Warnings: 3

@@ -12,11 +12,4 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	true_dual_port_ram_dual_clock
 
-} {} {}} /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v {1 {vlog -work work -stats=none /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module negedge_detector
-
-Top level modules:
-	negedge_detector
-
 } {} {}}

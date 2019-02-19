@@ -18,6 +18,7 @@ module tb;
    parameter CLK_PERIOD = 10;
    reg clk;
    reg rst;
+   reg init; 
    parameter P_NBITS_DATA = 42;
    parameter P_NBITS_ADDR = 9; 
    
@@ -44,6 +45,10 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Simulated interfaces
    //////////////////////////////////////////////////////////////////////   
+   reg 			  ok = 1; 
+   always @(posedge clk)
+     if(valid && (qn+n!=qo))
+       ok <= 0; 
       
    //////////////////////////////////////////////////////////////////////
    // UUT
@@ -56,6 +61,7 @@ module tb;
       .valid			(valid),
       // Inputs
       .clk			(clk),
+      .init                     (init), 
       .n		        (n[P_NBITS_ADDR-1:0]),
       .wr			(wr),
       .d			(d[P_NBITS_DATA-1:0])
@@ -102,6 +108,8 @@ module tb;
 	  end
 	@(posedge clk) wr <= 0; 
 
+	if(ok) $display("OK\n"); else $display("ERR\n"); 
+	
      end
    `endif
 

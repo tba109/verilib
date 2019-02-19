@@ -15,7 +15,8 @@ module ram_delay
     parameter P_NBITS_ADDR=8, 
     parameter P_NBITS_DATA=14
     ) (
-       input 			 clk,
+       input 			 clk, // system clock
+       input 			 init, // init the RAM (valid for the length of the delay loop)
        input [P_NBITS_ADDR-1:0]  n, // Number of delay elements, minimum valid = 2 
        input 			 wr, // 
        input [P_NBITS_DATA-1:0]  d, // Input data
@@ -78,24 +79,25 @@ module ram_delay
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // Simple state machine for valid
    reg [P_NBITS_ADDR-1:0] 	 valid_cnt = 0;
-   reg 				 state = 0; 
+   localparam S_INIT = 0, S_VALID = 1; 
+   reg 				 state = S_INIT; 
    reg 				 i_state = 0;
    always @(posedge clk) i_state <= state; 
    always @(posedge clk)
      case(state)
-       0:
+       S_INIT:
 	 begin
 	    if(wr)
 	      begin
 		 valid_cnt <= valid_cnt + 1;
 		 if(valid_cnt == n-1)
-		   state <= 1;
+		   state <= S_VALID;
 	      end
 	 end	 
-       1: 
-	 if(n != valid_cnt)
+       S_VALID: 
+	 if((n != valid_cnt) || init)
 	   begin 
-	      state <= 0;
+	      state <= S_INIT;
 	      valid_cnt <= 0;
 	   end
      endcase
@@ -118,7 +120,7 @@ module ram_delay
    
    // Output assignments
    assign qo = i_d_1; 
-   always @(posedge clk) valid <= wr && (i_state == 1); 
+   always @(posedge clk) valid <= wr && (i_state == S_VALID); 
 endmodule
 
 // For emacs verilog-mode
