@@ -8,7 +8,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 //////////////////////////////////////////////////////////////////////////////////////////////////
-`define TEST_CASE_N_4
+// `define TEST_CASE_N_16
+// `define TEST_CASE_N_16_ADDR_EN
+// `define TEST_CASE_FLUSH
+`define TEST_CASE_RESET
 
 module tb;
    
@@ -18,23 +21,17 @@ module tb;
    parameter CLK_PERIOD = 10;
    reg clk;
    reg rst;
-   reg init; 
    parameter P_NBITS_DATA = 42;
    parameter P_NBITS_ADDR = 9; 
-   
-   // Connections
-   /*AUTOWIRE*/
-   // Beginning of automatic wires (for undeclared instantiated-module outputs)
    wire [P_NBITS_DATA-1:0] qo;			// From RAM_DELAY_0 of ram_delay.v
    wire [P_NBITS_DATA-1:0] qn;			// From RAM_DELAY_0 of ram_delay.v
    wire			valid;			// From RAM_DELAY_0 of ram_delay.v
-   // End of automatics
-   /*AUTOREGINPUT*/
-   // Beginning of automatic reg inputs (for undeclared instantiated-module inputs)
    reg [P_NBITS_DATA-1:0] d;			// To RAM_DELAY_0 of ram_delay.v
    reg [P_NBITS_ADDR-1:0] n;		// To RAM_DELAY_0 of ram_delay.v
    reg 			  wr;			// To RAM_DELAY_0 of ram_delay.v
-   // End of automatics
+   reg 			  flush; 
+   reg 			  addr_en;
+   reg [P_NBITS_ADDR-1:0] addr; 
    
    //////////////////////////////////////////////////////////////////////
    // Clock Driver
@@ -46,8 +43,12 @@ module tb;
    // Simulated interfaces
    //////////////////////////////////////////////////////////////////////   
    reg 			  ok = 1; 
+   reg [P_NBITS_DATA-1:0] qn_prev=0;
+   always @(posedge clk) 
+     if(valid)
+       qn_prev <= qn; 
    always @(posedge clk)
-     if(valid && (qn+n!=qo))
+     if(valid && (qn+n!=qo) && (qn_prev+1!=qn))
        ok <= 0; 
       
    //////////////////////////////////////////////////////////////////////
@@ -61,7 +62,10 @@ module tb;
       .valid			(valid),
       // Inputs
       .clk			(clk),
-      .init                     (init), 
+      .rst                      (rst), 
+      .flush                     (flush), 
+      .addr_en                  (addr_en),
+      .addr                     (addr), 
       .n		        (n[P_NBITS_ADDR-1:0]),
       .wr			(wr),
       .d			(d[P_NBITS_DATA-1:0])
@@ -70,49 +74,211 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Test case
    //////////////////////////////////////////////////////////////////////   
-`ifdef TEST_CASE_N_4
+
+   `ifdef TEST_CASE_N_16
    integer 		i = 0; 
    initial
      begin
 	clk = 1'b0;
-	rst = 1'b1; 
+	rst = 1'b0; 
 	wr <= 0; 
 	d <= {P_NBITS_DATA{1'b1}};
-	n <= 9'd4;
+	n <= 9'd16;
+	flush <= 0; 
+	addr_en <= 0;
+	addr <= 0; 
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
 	#(20* CLK_PERIOD);
-
+	
 	// Logging
 	$display("");
 	$display("------------------------------------------------------");
-	$display("Test Case: TEST_CASE_1");
-
-	for(i=0; i<10; i=i+1)
-	  begin
-	     @(posedge clk);
-	     wr <= 1; 
-	     d<=d+1; 
-	  end
-	@(posedge clk) wr <= 0;
-	// @(posedge clk) wr <= 0; 
-	// @(posedge clk) wr <= 0; 
-	// Stimulate UUT
+	$display("Test Case: TEST_CASE_N_16");
 	
-	for(i=0; i<10; i=i+1)
-	  begin
-	     @(posedge clk);
-	     wr <= 1; 
-	     d<=d+1; 
-	  end
-	@(posedge clk) wr <= 0; 
+	// 
+	$display("1.) 20 writes with 1 cycle delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	@(posedge clk) wr <= 0;
 
+	
+	// 
+	$display("2.) 20 writes with 2 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+
+	// 
+	$display("3.) 20 writes with 3 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	
+	// 
+	$display("4.) 20 writes with 4 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	
+	// 
+	$display("5.) write-delay, 10 cycles\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; @(posedge clk) wr <= 0; end 	
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+
+
+	$display("6.) 20 final cycles of write\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	
+	// Check
 	if(ok) $display("OK\n"); else $display("ERR\n"); 
 	
      end
    `endif
 
+   
+   `ifdef TEST_CASE_N_16_ADDR_EN
+   always @(posedge clk)
+     if(wr)
+       begin
+	  addr <= addr + 1;
+	  if(addr==n-1)
+	    addr <= 0;
+       end
+   
+   integer 		i = 0; 
+   initial
+     begin
+	clk = 1'b0;
+	rst = 1'b0; 
+	wr <= 0; 
+	d <= {P_NBITS_DATA{1'b1}};
+	n <= 9'd16;
+	flush <= 0; 
+	addr_en <= 1;
+	addr <= 1; 
+	// Reset	
+	#(10 * CLK_PERIOD);
+	rst = 1'b0;
+	#(20* CLK_PERIOD);
+	
+	// Logging
+	$display("");
+	$display("------------------------------------------------------");
+	$display("Test Case: TEST_CASE_N_16_ADDR_EN");
+	
+	// 
+	$display("1.) 20 writes with 1 cycle delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	@(posedge clk) wr <= 0;
+
+	
+	// 
+	$display("2.) 20 writes with 2 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+
+	// 
+	$display("3.) 20 writes with 3 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	
+	// 
+	$display("4.) 20 writes with 4 cycles of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	
+	// 
+	$display("5.) Read-write....10 cycles each, then 1 cycle of delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; @(posedge clk) wr <= 0; end 
+	
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+	@(posedge clk) wr <= 0;
+		
+	$display("6.) 20 final cycles of write\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	@(posedge clk) wr <= 0;
+	
+	// Check
+	if(ok) $display("OK\n"); else $display("ERR\n"); 
+	
+     end
+   `endif
+
+   `ifdef TEST_CASE_FLUSH
+   integer 		i = 0; 
+   initial
+     begin
+	clk = 1'b0;
+	rst = 1'b1; 
+	wr = 0; 
+	d = {P_NBITS_DATA{1'b1}};
+	n = 9'd16;
+	flush = 0; 
+	addr_en = 0;
+	addr = 0; 
+	// Reset	
+	#(10 * CLK_PERIOD);
+	rst = 1'b0;
+	#(20* CLK_PERIOD);
+	
+	// Logging
+	$display("");
+	$display("------------------------------------------------------");
+	$display("Test Case: TEST_CASE_FLUSH");
+	
+	// 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=42'h3ffffffffff; end
+	@(posedge clk); wr <= 0;
+	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 1; end
+	@(posedge clk); flush <= 0; 
+     end // initial begin
+   `endif
+
+   `ifdef TEST_CASE_RESET
+   integer 		i = 0; 
+   initial
+     begin
+	clk = 1'b0;
+	rst = 1'b1; 
+	wr = 0; 
+	d = {P_NBITS_DATA{1'b1}};
+	n = 9'd16;
+	flush = 0; 
+	addr_en = 0;
+	addr = 0; 
+	// Reset	
+	#(10 * CLK_PERIOD);
+	rst = 1'b0;
+	#(20* CLK_PERIOD);
+	
+	// Logging
+	$display("");
+	$display("------------------------------------------------------");
+	$display("Test Case: TEST_CASE_FLUSH");
+	
+	// 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=42'h3ffffffffff; end
+	@(posedge clk); wr <= 0;
+	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 1; end
+	@(posedge clk); flush <= 0; 
+     end // initial begin
+   `endif
+
+   
    //////////////////////////////////////////////////////////////////////
    // Tasks (e.g., writing data, etc.)
    //////////////////////////////////////////////////////////////////////   
