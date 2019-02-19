@@ -21,7 +21,7 @@ module ram_delay
        input [P_NBITS_DATA-1:0]  d, // Input data
        output [P_NBITS_DATA-1:0] qo, // 
        output [P_NBITS_DATA-1:0] qn, // 
-       output 			 valid // Indicates that the output reflects a delayed d
+       output reg 		 valid // Indicates that the output reflects a delayed d
        );
       
    // Register the inputs so that we can "look ahead"
@@ -31,19 +31,32 @@ module ram_delay
    reg [P_NBITS_DATA-1:0] 	 i_d_1 = 0 ;
    reg 				 i_wr_2 = 0;
    reg [P_NBITS_DATA-1:0] 	 i_d_2 = 0 ;
-   always @(posedge clk) 
-     begin
-	i_wr_0 <= wr;
-	i_d_0  <= d;
-	i_wr_1 <= i_wr_0;
-	i_d_1  <= i_d_0;
-	i_wr_2 <= i_wr_1;
-	i_d_2  <= i_d_1;
-     end
-	
-   // RAM
    reg [P_NBITS_ADDR-1:0] 	 i_addr_in=0;
    reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_in_0=0;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_out_0=2;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_in_1=0;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_out_1=2;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_in_2=0;
+   reg [P_NBITS_ADDR-1:0] 	 i_addr_out_2=2;
+   always @(posedge clk) 
+     if(wr)
+       begin
+	  i_wr_0 <= wr;
+	  i_d_0  <= d;
+	  i_wr_1 <= i_wr_0;
+	  i_d_1  <= i_d_0;
+	  i_wr_2 <= i_wr_1;
+	  i_d_2  <= i_d_1;
+	  i_addr_in_0 <= i_addr_in;
+	  i_addr_out_0 <= i_addr_out;
+	  i_addr_in_1 <= i_addr_in_0;
+	  i_addr_out_1 <= i_addr_out_0;
+	  i_addr_in_2 <= i_addr_in_1;
+	  i_addr_out_2 <= i_addr_out_1;
+       end
+	
+   // RAM
    true_dual_port_ram_dual_clock
      #(
        .DATA_WIDTH(P_NBITS_DATA),
@@ -66,6 +79,8 @@ module ram_delay
    // Simple state machine for valid
    reg [P_NBITS_ADDR-1:0] 	 valid_cnt = 0;
    reg 				 state = 0; 
+   reg 				 i_state = 0;
+   always @(posedge clk) i_state <= state; 
    always @(posedge clk)
      case(state)
        0:
@@ -100,22 +115,10 @@ module ram_delay
 	  if(i_addr_out == n-1)
 	    i_addr_out <= 0;
        end // if (wr)
-     // else if(i_wr_0 && !wr)
-     //   begin
-     // 	  i_addr_in <= i_addr_in - 1;
-     // 	  i_addr_out <= i_addr_out - 1;
-     // 	  if(i_addr_in == 0)
-     // 	    begin
-     // 	       i_addr_in <= n-1;
-     // 	       i_addr_out <= 0;
-     // 	    end
-     // 	  if(i_addr_out == 0)
-     // 	    i_addr_out <= n-1;
-     // end
    
    // Output assignments
    assign qo = i_d_1; 
-   assign valid = i_wr_1; 
+   always @(posedge clk) valid <= wr && (i_state == 1); 
 endmodule
 
 // For emacs verilog-mode

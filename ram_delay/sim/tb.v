@@ -89,7 +89,8 @@ module tb;
 	     wr <= 1; 
 	     d<=d+1; 
 	  end
-	@(posedge clk) wr <= 0; 
+	@(posedge clk) wr <= 0;
+	// @(posedge clk) wr <= 0; 
 	// @(posedge clk) wr <= 0; 
 	// Stimulate UUT
 	

@@ -5,12 +5,12 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	ram_delay
 
-} {} {}} /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
+} {} {}} /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v {1 {vlog -work work -stats=none /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module tb
+-- Compiling module true_dual_port_ram_dual_clock
 
 Top level modules:
-	tb
+	true_dual_port_ram_dual_clock
 
 } {} {}} /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v {1 {vlog -work work -stats=none /home/tyler/verilog_lib_tba/negedge_detector/negedge_detector.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
@@ -18,12 +18,5 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 
 Top level modules:
 	negedge_detector
-
-} {} {}} /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v {1 {vlog -work work -stats=none /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module true_dual_port_ram_dual_clock
-
-Top level modules:
-	true_dual_port_ram_dual_clock
 
 } {} {}}
