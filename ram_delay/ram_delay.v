@@ -21,6 +21,7 @@ module ram_delay
        input [P_NBITS_ADDR-1:0]  n, // Number of delay elements, minimum valid = 2 
        input 			 wr, // 
        input [P_NBITS_DATA-1:0]  d, // Input data
+       input [P_NBITS_DATA-1:0]  d_reset, // reset value of d
        input 			 addr_en, // enable external address bus control
        input [P_NBITS_ADDR-1:0]  addr, // external address. Should count up 0 to n-1 when wr is asserted. 
        output [P_NBITS_DATA-1:0] qo, // output
@@ -28,6 +29,15 @@ module ram_delay
        output reg 		 valid // Indicates the output is valid. This is the same as eariler
        );
       
+   // Internal
+   localparam 
+     S_RESET = 0, 
+     S_VALID = 1; 
+   reg 				 state = S_RESET; 
+   reg [P_NBITS_ADDR-1:0] 	 reset_cnt = 0;
+   reg 				 i_state = 0;
+   reg 				 i_flush = 0; 
+   wire 			 wr_reset;
    reg 				 i_wr_0 = 0;
    reg [P_NBITS_DATA-1:0] 	 i_d_0 = 0 ;
    reg 				 i_wr_1 = 0;
@@ -38,10 +48,10 @@ module ram_delay
    reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
    wire [P_NBITS_ADDR-1:0] 	 i_addr_in_0; 
    always @(posedge clk) 
-     if(wr)
+     if(wr || wr_reset)
        begin
-	  i_wr_0 <= wr;
-	  i_d_0  <= d;
+	  i_wr_0 <= (state == S_RESET) ? wr_reset  : wr;
+	  i_d_0  <= (state == S_RESET) ? d_reset : d;
 	  i_wr_1 <= i_wr_0;
 	  i_d_1  <= i_d_0;
 	  i_wr_2 <= i_wr_1;
@@ -68,27 +78,22 @@ module ram_delay
       .clk_a				(clk),
       .clk_b				(clk)); 
       
-   ///////////////////////////////////////////////////////////////////////////////////////////////
    // Logic to handle reset and flush
-   reg [P_NBITS_ADDR-1:0] 	 reset_cnt = 0;
-   localparam S_RESET = 0, S_VALID = 1; 
-   reg 				 state = S_RESET; 
-   reg 				 i_state = 0;
-   reg 				 i_flush = 0; 
+   assign wr_reset = state == S_RESET; 
    always @(posedge clk) begin i_state <= state; i_flush <= flush; end 
    always @(posedge clk or posedge rst)
-     if(rst) 
-       state <= S_RESET;
+     if(rst)
+       begin 
+	  state <= S_RESET;
+	  reset_cnt <= 0;
+       end
      else
        case(state)
 	 S_RESET:
 	   begin
-	      if(wr)
-		begin
-		   reset_cnt <= reset_cnt + 1;
-		   if(reset_cnt == n-1)
-		     state <= S_VALID;
-		end
+	      reset_cnt <= reset_cnt + 1;
+	      if(reset_cnt == n-1)
+		state <= S_VALID;
 	   end	 
 	 S_VALID: 
 	   if(n != reset_cnt)
@@ -98,10 +103,9 @@ module ram_delay
 	     end
        endcase
    
-   ///////////////////////////////////////////////////////////////////////////////////////////////
    // Address management
    always @(posedge clk)
-     if(wr)
+     if(wr || wr_reset)
        begin
 	  i_addr_in <= i_addr_in + 1;
 	  i_addr_out <= i_addr_out + 1;
@@ -114,7 +118,6 @@ module ram_delay
 	    i_addr_out <= 0;
        end // if (wr)
 
-   ///////////////////////////////////////////////////////////////////////////////////////////////   
    // Output assignments
    assign qo = i_d_1; 
    always @(posedge clk) valid <= (wr && !i_flush) && (i_state == S_VALID);
