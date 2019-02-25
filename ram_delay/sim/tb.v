@@ -10,7 +10,6 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 `define TEST_CASE_N_16
 // `define TEST_CASE_N_16_ADDR_EN
-// `define TEST_CASE_FLUSH
 // `define TEST_CASE_RESET
 
 module tb;
@@ -21,7 +20,7 @@ module tb;
    parameter CLK_PERIOD = 10;
    reg clk;
    reg rst;
-   parameter P_NBITS_DATA = 42;
+   parameter P_NBITS_DATA = 14;
    parameter P_NBITS_ADDR = 9; 
    wire [P_NBITS_DATA-1:0] qo;			// From RAM_DELAY_0 of ram_delay.v
    wire [P_NBITS_DATA-1:0] qn;			// From RAM_DELAY_0 of ram_delay.v
@@ -29,7 +28,6 @@ module tb;
    reg [P_NBITS_DATA-1:0] d;			// To RAM_DELAY_0 of ram_delay.v
    reg [P_NBITS_ADDR-1:0] n;		// To RAM_DELAY_0 of ram_delay.v
    reg 			  wr;			// To RAM_DELAY_0 of ram_delay.v
-   reg 			  flush; 
    reg 			  addr_en;
    reg [P_NBITS_ADDR-1:0] addr; 
    reg [P_NBITS_DATA-1:0] d_reset; 
@@ -65,7 +63,6 @@ module tb;
       .clk			(clk),
       .rst                      (rst), 
       .d_reset                  (d_reset), 
-      .flush                    (flush), 
       .addr_en                  (addr_en),
       .addr                     (addr), 
       .n		        (n[P_NBITS_ADDR-1:0]),
@@ -86,7 +83,6 @@ module tb;
 	wr <= 0; 
 	d <= {P_NBITS_DATA{1'b1}};
 	n <= 9'd16;
-	flush <= 0; 
 	addr_en <= 0;
 	addr <= 0; 
 	d_reset <= 0;
@@ -99,16 +95,11 @@ module tb;
 	$display("");
 	$display("------------------------------------------------------");
 	$display("Test Case: TEST_CASE_N_16");
-
-	//
-	$display("0.) Clock through the 16 cycles of zeros\n");
-	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 1; end 
 	
 	// 
 	$display("1.) 20 writes with 1 cycle delay\n"); 
-	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 0; end
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
 	@(posedge clk) wr <= 0;
-
 	
 	// 
 	$display("2.) 20 writes with 2 cycles of delay\n"); 
@@ -138,10 +129,21 @@ module tb;
 	@(posedge clk) wr <= 0;
 	@(posedge clk) wr <= 0;
 
-
 	$display("6.) 20 final cycles of write\n"); 
 	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
 	@(posedge clk) wr <= 0;
+
+
+	$display("7.) Reset...\n");
+	@(posedge clk) rst <= 1;
+	@(posedge clk) rst <= 0;
+	for(i=0; i < 16; i=i+1) @(posedge clk); 
+	
+	// 
+	$display("1.) 20 writes with 1 cycle delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	@(posedge clk) wr <= 0;
+
 	
 	// Check
 	if(ok) $display("OK\n"); else $display("ERR\n"); 
@@ -167,9 +169,9 @@ module tb;
 	wr <= 0; 
 	d <= {P_NBITS_DATA{1'b1}};
 	n <= 9'd16;
-	flush <= 0; 
 	addr_en <= 1;
 	addr <= 1; 
+	d_reset <= 0; 
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
@@ -218,41 +220,21 @@ module tb;
 	$display("6.) 20 final cycles of write\n"); 
 	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
 	@(posedge clk) wr <= 0;
+
+	$display("7.) Reset...\n");
+	@(posedge clk) rst <= 1;
+	@(posedge clk) rst <= 0;
+	for(i=0; i < 16; i=i+1) @(posedge clk); 
+	
+	// 
+	$display("1.) 20 writes with 1 cycle delay\n"); 
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	@(posedge clk) wr <= 0;
 	
 	// Check
 	if(ok) $display("OK\n"); else $display("ERR\n"); 
 	
      end
-   `endif
-
-   `ifdef TEST_CASE_FLUSH
-   integer 		i = 0; 
-   initial
-     begin
-	clk = 1'b0;
-	rst = 1'b0; 
-	wr = 0; 
-	d = {P_NBITS_DATA{1'b1}};
-	n = 9'd16;
-	flush = 0; 
-	addr_en = 0;
-	addr = 0; 
-	// Reset	
-	#(10 * CLK_PERIOD);
-	rst = 1'b0;
-	#(20* CLK_PERIOD);
-	
-	// Logging
-	$display("");
-	$display("------------------------------------------------------");
-	$display("Test Case: TEST_CASE_FLUSH");
-	
-	// 
-	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=42'h3ffffffffff; end
-	@(posedge clk); wr <= 0;
-	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 1; end
-	@(posedge clk); flush <= 0; 
-     end // initial begin
    `endif
 
    `ifdef TEST_CASE_RESET
@@ -264,7 +246,6 @@ module tb;
 	wr = 0; 
 	d = {P_NBITS_DATA{1'b1}};
 	n = 9'd16;
-	flush = 0; 
 	addr_en = 0;
 	addr = 0; 
 	d_reset = 42'habcdef;

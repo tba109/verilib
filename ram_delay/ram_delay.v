@@ -17,7 +17,6 @@ module ram_delay
     ) (
        input 			 clk, // system clock
        input 			 rst, // system reset
-       input 			 flush, // flush the RAM (valid for the length of the delay loop)
        input [P_NBITS_ADDR-1:0]  n, // Number of delay elements, minimum valid = 2 
        input 			 wr, // 
        input [P_NBITS_DATA-1:0]  d, // Input data
@@ -32,11 +31,12 @@ module ram_delay
    // Internal
    localparam 
      S_RESET = 0, 
-     S_VALID = 1; 
-   reg 				 state = S_RESET; 
+     S_PRIME = 1, 
+     S_VALID = 2; 
+   reg [1:0] 			 state = S_RESET; 
+   reg [1:0] 			 i_state = 0;
    reg [P_NBITS_ADDR-1:0] 	 reset_cnt = 0;
-   reg 				 i_state = 0;
-   reg 				 i_flush = 0; 
+   reg [P_NBITS_ADDR-1:0] 	 prime_cnt = 0;   
    wire 			 wr_reset;
    reg 				 i_wr_0 = 0;
    reg [P_NBITS_DATA-1:0] 	 i_d_0 = 0 ;
@@ -78,23 +78,32 @@ module ram_delay
       .clk_a				(clk),
       .clk_b				(clk)); 
       
-   // Logic to handle reset and flush
+   // Logic to handle reset
    assign wr_reset = state == S_RESET; 
-   always @(posedge clk) begin i_state <= state; i_flush <= flush; end 
+   always @(posedge clk) i_state <= state;
    always @(posedge clk)
      case(state)
        S_RESET:
 	 begin
+	    prime_cnt <= 0; 
 	    reset_cnt <= reset_cnt + 1;
 	    if(reset_cnt == n-1)
-	      state <= S_VALID;
+	      state <= S_PRIME;
 	 end	 
+       S_PRIME:
+	 begin
+	    if(wr)
+	      prime_cnt <= prime_cnt + 1;
+	    if(prime_cnt == n-1)
+	      state <= S_VALID; 
+	 end
        S_VALID: 
 	 if(n != reset_cnt || rst)
 	   begin 
 	      state <= S_RESET;
 	      reset_cnt <= 0;
 	   end
+       default state <= S_RESET; 
      endcase
    
    // Address management
@@ -114,9 +123,9 @@ module ram_delay
 
    // Output assignments
    assign qo = i_d_1;
-   always @(posedge clk) valid <= (wr && !flush && !i_flush) && (i_state == S_VALID);
-   // always @(posedge clk) valid <= (wr && !i_flush) && (i_state == S_VALID);
-   // always @(posedge clk) valid <= (i_wr_0 && !i_flush) && (i_state == S_VALID);
+   always @(posedge clk) valid <= wr && (i_state == S_VALID);
+   // always @(posedge clk) valid <= (wr) && (i_state == S_VALID);
+   // always @(posedge clk) valid <= (i_wr_0) && (i_state == S_VALID);
     
 endmodule
 
