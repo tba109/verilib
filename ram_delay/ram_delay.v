@@ -23,10 +23,10 @@ module ram_delay
        input [P_NBITS_DATA-1:0]  d, // Input data
        input [P_NBITS_DATA-1:0]  d_reset, // reset value of d
        input 			 addr_en, // enable external address bus control
-       input [P_NBITS_ADDR-1:0]  addr, // external address. Should count up 0 to n-1 when wr is asserted. 
-       output [P_NBITS_DATA-1:0] qo, // output
-       output [P_NBITS_DATA-1:0] qn, // delayed output so that qn is qo from n samples earlier
-       output reg 		 valid // Indicates the output is valid. This is the same as eariler
+       input [P_NBITS_ADDR-1:0]  addr, // external address. Counts up 0 to n-1 when wr is asserted. 
+       output [P_NBITS_DATA-1:0] qo, // output aligned with qn
+       output [P_NBITS_DATA-1:0] qn, // qo from n samples earlier
+       output reg 		 valid=0 // Indicates qn accurately represents n cycle delay from qo
        );
       
    // Internal
@@ -48,16 +48,16 @@ module ram_delay
    reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
    wire [P_NBITS_ADDR-1:0] 	 i_addr_in_0; 
    always @(posedge clk) 
-     if(wr || wr_reset)
+     if(wr)  
        begin
-	  i_wr_0 <= (state == S_RESET) ? wr_reset  : wr;
-	  i_d_0  <= (state == S_RESET) ? d_reset : d;
+	  i_wr_0 <= wr;
 	  i_wr_1 <= i_wr_0;
-	  i_d_1  <= i_d_0;
 	  i_wr_2 <= i_wr_1;
+	  i_d_0  <= d;
+	  i_d_1  <= i_d_0;
 	  i_d_2  <= i_d_1;
        end
-   assign i_addr_in_0 = addr_en ? addr : i_addr_in; 
+   assign i_addr_in_0 = (state == S_RESET) ? reset_cnt : (addr_en ? addr : i_addr_in); 
 	
    // RAM
    true_dual_port_ram_dual_clock
@@ -69,11 +69,11 @@ module ram_delay
      (
       .q_a				(),
       .q_b				(qn),
-      .data_a				(i_d_2),
+      .data_a				((state == S_RESET) ? d_reset : i_d_2),
       .data_b				({P_NBITS_DATA{1'b0}}),
       .addr_a				(i_addr_in_0),
       .addr_b				(i_addr_out),
-      .we_a				(i_wr_2),
+      .we_a				((state == S_RESET) ? wr_reset : i_wr_2),
       .we_b				(1'b0),
       .clk_a				(clk),
       .clk_b				(clk)); 
@@ -81,31 +81,25 @@ module ram_delay
    // Logic to handle reset and flush
    assign wr_reset = state == S_RESET; 
    always @(posedge clk) begin i_state <= state; i_flush <= flush; end 
-   always @(posedge clk or posedge rst)
-     if(rst)
-       begin 
-	  state <= S_RESET;
-	  reset_cnt <= 0;
-       end
-     else
-       case(state)
-	 S_RESET:
-	   begin
-	      reset_cnt <= reset_cnt + 1;
-	      if(reset_cnt == n-1)
-		state <= S_VALID;
-	   end	 
-	 S_VALID: 
-	   if(n != reset_cnt)
-	     begin 
-		state <= S_RESET;
-		reset_cnt <= 0;
-	     end
-       endcase
+   always @(posedge clk)
+     case(state)
+       S_RESET:
+	 begin
+	    reset_cnt <= reset_cnt + 1;
+	    if(reset_cnt == n-1)
+	      state <= S_VALID;
+	 end	 
+       S_VALID: 
+	 if(n != reset_cnt || rst)
+	   begin 
+	      state <= S_RESET;
+	      reset_cnt <= 0;
+	   end
+     endcase
    
    // Address management
    always @(posedge clk)
-     if(wr || wr_reset)
+     if(wr)
        begin
 	  i_addr_in <= i_addr_in + 1;
 	  i_addr_out <= i_addr_out + 1;
@@ -119,8 +113,10 @@ module ram_delay
        end // if (wr)
 
    // Output assignments
-   assign qo = i_d_1; 
-   always @(posedge clk) valid <= (wr && !i_flush) && (i_state == S_VALID);
+   assign qo = i_d_1;
+   always @(posedge clk) valid <= (wr && !flush && !i_flush) && (i_state == S_VALID);
+   // always @(posedge clk) valid <= (wr && !i_flush) && (i_state == S_VALID);
+   // always @(posedge clk) valid <= (i_wr_0 && !i_flush) && (i_state == S_VALID);
     
 endmodule
 

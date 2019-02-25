@@ -8,10 +8,10 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 //////////////////////////////////////////////////////////////////////////////////////////////////
-// `define TEST_CASE_N_16
+`define TEST_CASE_N_16
 // `define TEST_CASE_N_16_ADDR_EN
 // `define TEST_CASE_FLUSH
-`define TEST_CASE_RESET
+// `define TEST_CASE_RESET
 
 module tb;
    
@@ -89,6 +89,7 @@ module tb;
 	flush <= 0; 
 	addr_en <= 0;
 	addr <= 0; 
+	d_reset <= 0;
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
@@ -98,16 +99,20 @@ module tb;
 	$display("");
 	$display("------------------------------------------------------");
 	$display("Test Case: TEST_CASE_N_16");
+
+	//
+	$display("0.) Clock through the 16 cycles of zeros\n");
+	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 1; end 
 	
 	// 
 	$display("1.) 20 writes with 1 cycle delay\n"); 
-	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; flush <= 0; end
 	@(posedge clk) wr <= 0;
 
 	
 	// 
 	$display("2.) 20 writes with 2 cycles of delay\n"); 
-	for(i=0; i<20; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
+	for(i=0; i<19; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end 
 	@(posedge clk) wr <= 0;
 	@(posedge clk) wr <= 0;
 
@@ -274,7 +279,11 @@ module tb;
 	$display("Test Case: TEST_CASE_RESET");
 	
 	// 
-	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=42'h3ffffffffff; end
+	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=d+1; end
+	for(i=0; i<16; i=i+1) begin @(posedge clk); wr <= 1; d<=0; end
+	@(posedge clk); wr <= 0;
+	@(posedge clk); wr <= 0;
+	@(posedge clk); wr <= 0;
 	@(posedge clk); wr <= 0;
 
 	@(posedge clk) rst <= 1;

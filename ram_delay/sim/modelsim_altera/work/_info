@@ -29,23 +29,23 @@ r1
 !i113 1
 Z3 o-work work
 vram_delay
-Z4 !s110 1550630358
+Z4 !s110 1550960368
 !i10b 1
-!s100 =jeT<8E2C@l7;AAh=OR]n3
-I<O744e;0b:;S_080D;TO81
+!s100 9mGEQL^:_ZX@g6VG`35Bb3
+IFPFQ39^mI]l4fV8kAnz>91
 R0
-R1
-w1550630288
-8/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
-F/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
+Z5 d/home/tyler/verilib/ram_delay/sim/modelsim_altera
+w1550959690
+8/home/tyler/verilib/ram_delay/ram_delay.v
+F/home/tyler/verilib/ram_delay/ram_delay.v
 L0 13
 R2
 r1
 !s85 0
 31
-Z5 !s108 1550630358.000000
-!s107 /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/ram_delay/ram_delay.v|
+Z6 !s108 1550960368.000000
+!s107 /home/tyler/verilib/ram_delay/ram_delay.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ram_delay/ram_delay.v|
 !i113 1
 R3
 vram_dual
@@ -71,40 +71,40 @@ R3
 vtb
 R4
 !i10b 1
-!s100 JaaPdme@36bjOSFiO[]`22
-I[d5>8FN]3^d=QT]]hn[0h3
+!s100 [3399JcJonBQg?_A59jC=0
+I8Em_bGgV:LBXQTMjdO=AK1
 R0
-R1
-w1550629769
-8/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
-F/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v
+R5
+w1550960364
+8/home/tyler/verilib/ram_delay/sim/tb.v
+F/home/tyler/verilib/ram_delay/sim/tb.v
 L0 16
 R2
 r1
 !s85 0
 31
-R5
-!s107 /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/ram_delay/sim/tb.v|
+R6
+!s107 /home/tyler/verilib/ram_delay/sim/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ram_delay/sim/tb.v|
 !i113 1
 R3
 vtrue_dual_port_ram_dual_clock
 R4
 !i10b 1
 !s100 aS0AfUJdhDU8JgDQW6Km10
-IRnKcnj>1;^MJ6SmPlE?3B0
+IeWd88lANmAePdJLD>Ckf[0
 R0
-R1
-w1550351854
-8/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
-F/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+R5
+w1550852215
+8/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+F/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
 L0 4
 R2
 r1
 !s85 0
 31
-R5
-!s107 /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
+R6
+!s107 /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
 !i113 1
 R3

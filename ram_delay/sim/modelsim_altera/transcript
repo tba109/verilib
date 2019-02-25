@@ -1,11 +1,7 @@
 # Loading project tb
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
 vsim work.tb
 # vsim work.tb 
-# Start time: 20:46:06 on Feb 19,2019
+# Start time: 16:57:29 on Feb 23,2019
 # Loading work.tb
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
@@ -14,172 +10,45 @@ add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_FLUSH
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-# ** Warning: (vsim-3017) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(57): [TFMPC] - Too few port connections. Expected 12, found 11.
-#    Time: 0 ns  Iteration: 0  Instance: /tb/RAM_DELAY_0 File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
-# ** Warning: (vsim-3722) /home/tyler/verilog_lib_tba/ram_delay/sim/tb.v(57): [TFMPC] - Missing connection for port 'drst'.
-run
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
 # 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-# Compile of tb.v failed with 2 errors.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of tb.v failed with 2 errors.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 1 failed with 2 errors.
-# Compile of tb.v failed with 1 errors.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 1 failed with 1 error.
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
 # 1.) 20 writes with 1 cycle delay
 # 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
+# 2.) 20 writes with 2 cycles of delay
 # 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# 3.) 20 writes with 3 cycles of delay
 # 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
+# 4.) 20 writes with 4 cycles of delay
 # 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# 5.) write-delay, 10 cycles
 # 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
+# 6.) 20 final cycles of write
 # 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
-# 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
-# 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v failed with 4 errors.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 1 failed with 4 errors.
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# ERR
 # 
 add wave -position insertpoint  \
-sim:/tb/RAM_DELAY_0/drst
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+sim:/tb/ok
 restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-# Warning in wave window restart: (vish-4014) No objects found matching '/tb/RAM_DELAY_0/drst'. 
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
 # 
-add wave -position insertpoint  \
-sim:/tb/RAM_DELAY_0/d_reset
-add wave -position insertpoint  \
-sim:/tb/RAM_DELAY_0/wr_reset
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
-run
+# 1.) 20 writes with 1 cycle delay
 # 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# 2.) 20 writes with 2 cycles of delay
+# 
+# 3.) 20 writes with 3 cycles of delay
+# 
+# 4.) 20 writes with 4 cycles of delay
+# 
+# 5.) write-delay, 10 cycles
+# 
+# 6.) 20 final cycles of write
+# 
+# ERR
 # 
 # Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
@@ -192,12 +61,99 @@ restart
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_RESET
-# 32 writes
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
+# 
+# 1.) 20 writes with 1 cycle delay
+# 
+# 2.) 20 writes with 2 cycles of delay
+# 
+# 3.) 20 writes with 3 cycles of delay
+# 
+# 4.) 20 writes with 4 cycles of delay
+# 
+# 5.) write-delay, 10 cycles
+# 
+# 6.) 20 final cycles of write
+# 
+# ERR
 # 
 # Compile of tb.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
 # 3 compiles, 0 failed with no errors.
-# End time: 21:39:21 on Feb 19,2019, Elapsed time: 0:53:15
-# Errors: 1, Warnings: 3
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
+# 
+# 1.) 20 writes with 1 cycle delay
+# 
+# 2.) 20 writes with 2 cycles of delay
+# 
+# 3.) 20 writes with 3 cycles of delay
+# 
+# 4.) 20 writes with 4 cycles of delay
+# 
+# 5.) write-delay, 10 cycles
+# 
+# 6.) 20 final cycles of write
+# 
+# OK
+# 
+# Compile of tb.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
+# 
+# 1.) 20 writes with 1 cycle delay
+# 
+# 2.) 20 writes with 2 cycles of delay
+# 
+# 3.) 20 writes with 3 cycles of delay
+# 
+# 4.) 20 writes with 4 cycles of delay
+# 
+# 5.) write-delay, 10 cycles
+# 
+# 6.) 20 final cycles of write
+# 
+# OK
+# 
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_N_16
+# 0.) Clock through the 16 cycles of zeros
+# 
+# 1.) 20 writes with 1 cycle delay
+# 
+# 2.) 20 writes with 2 cycles of delay
+# 
+# 3.) 20 writes with 3 cycles of delay
+# 
+# 4.) 20 writes with 4 cycles of delay
+# 
+# 5.) write-delay, 10 cycles
+# 
+# 6.) 20 final cycles of write
+# 
+# OK
+# 
+# End time: 07:29:11 on Feb 25,2019, Elapsed time: 38:31:42
+# Errors: 0, Warnings: 1
