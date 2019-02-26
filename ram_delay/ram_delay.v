@@ -32,8 +32,9 @@ module ram_delay
        input 			 addr_en, // enable external address bus control
        input [P_NBITS_ADDR-1:0]  addr, // external address. Must count 0 to n-1 when wr is asserted. 
        output [P_NBITS_DATA-1:0] qo, // output aligned with qn
+       output reg 		 valid_qo=0, // output qo is valid 		 
        output [P_NBITS_DATA-1:0] qn, // qo from n samples earlier
-       output reg 		 valid=0 // Indicates qn accurately represents n cycle delay from qo
+       output reg 		 valid_qn=0 // Indicates qn accurately represents n cycle delay from qo
        );
       
    // Internal
@@ -53,7 +54,16 @@ module ram_delay
    reg [P_NBITS_ADDR-1:0] 	 i_addr_out=2;
    wire [P_NBITS_ADDR-1:0] 	 i_addr_in_0; 
    always @(posedge clk) 
-     if(wr)  
+     if(rst)
+       begin
+	  i_wr_0 <= 0;
+	  i_wr_1 <= 0;
+	  i_wr_2 <= 0;
+	  i_d_0  <= 0;
+	  i_d_1  <= 0;
+	  i_d_2  <= 0;
+       end
+     else if(wr)  
        begin
 	  i_wr_0 <= wr;
 	  i_wr_1 <= i_wr_0;
@@ -122,7 +132,8 @@ module ram_delay
 
    // Output assignments
    assign qo = i_d_1;
-   always @(posedge clk) valid <= wr && (i_state == S_VALID);
+   always @(posedge clk) valid_qo <= i_wr_0 && wr;
+   always @(posedge clk) valid_qn <= wr && (i_state == S_VALID);
     
 endmodule
 

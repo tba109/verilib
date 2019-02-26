@@ -1,84 +1,65 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
-// Tyler Anderson Fri Feb  8 09:51:07 EST 2019
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Tyler Anderson Tue Feb 26 14:36:52 EST 2019
 //
-// Gated integrator with delay RAM included. 
-////////////////////////////////////////////////////////////////////////////////////////////////////
+// gated_integrator.v
+//
+// Gated integrator using ram_delay. Sum all samples in a window 
+//  
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-module gated_integrator 
+module gated_integrator
   #(
-    parameter P_NBITS_DATA_IN=16, 
-    parameter P_NBITS_DATA_OUT=24,
-    parameter P_NBITS_DELAY_A_ADDR = 9, 
-    parameter P_NBITS_DELAY_B_ADDR = 14
+    parameter P_NBITS_ADDR=6, // max number of bits for the addressing power 2 is gate width
+    parameter P_NBITS_DATA_IN=14, // input data size
+    parameter P_NBITS_DATA_OUT=20 // output data size   
     ) (
-       input 				 clk, 
-       input 				 wr, 
-       input 				 init_wr,
-       input [P_NBITS_DATA_OUT-1:0] 	 init_y, 
-       input [P_NBITS_DELAY_A_ADDR-1:0]  delay_len, 
-       input [P_NBITS_DELAY_B_ADDR-1:0]  delay_b_len,
-       input [P_NBITS_DATA_IN-1:0] 	 a,
-       output reg [P_NBITS_DATA_OUT-1:0] y=0
+       input 			     clk, // system clock
+       input 			     rst, // delay ram begins filling and is asserted after n writes
+       input [P_NBITS_ADDR-1:0]      n, // Number of delay elements, minimum valid = 2 
+       input 			     wr, // write enable for input data
+       input [P_NBITS_DATA_IN-1:0]   d, // input data
+       input 			     addr_en, // enable external address bus control
+       input [P_NBITS_ADDR-1:0]      addr, // external address. Must count 0 to n-1 when wr is asserted. 
+       output reg [P_NBITS_DATA-1:0] sum=0, // output aligned with qn
+       output reg 		     valid=0 // Indicates qn accurately represents n cycle delay from qo
        );
 
-   ////////////////////////////////////////////////////////////////////////////////
-   // FSM for initialization and address management
-   localparam
-     S_RUN = 0,
-     S_INIT = 1;
-   reg [0:0] 				 fsm = S_RUN; 
-   reg [0:0] 				 init_addr_start = 0; 
-   always @(posedge clk)
-     case(fsm)
-       S_RUN:  begin if(init_wr) fsm <= S_INIT; end
-       S_INIT: ; 
-     endcase
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////
+   // Internals
+   wire [P_NBITS_DATA-1:0] 	     i_a; // output aligned with b
+   wire 			     i_v_a; // a valid 
+   wire [P_NBITS_DATA-1:0] 	     i_b; // a from n samples earlier
+   wire 			     i_v_b; // b valid
+   ram_delay RAM_DELAY_0(/*AUTOINST*/
+			 // Outputs
+			 .qo			(i_a[P_NBITS_DATA-1:0]),
+			 .qn			(i_b[P_NBITS_DATA-1:0]),
+			 .valid			(i_v),
+			 // Inputs
+			 .clk			(clk),
+			 .rst			(rst),
+			 .n			(n[P_NBITS_ADDR-1:0]),
+			 .wr			(wr),
+			 .d			(d[P_NBITS_DATA-1:0]),
+			 .addr_en		(addr_en),
+			 .addr			(addr[P_NBITS_ADDR-1:0])); 
    
-   ////////////////////////////////////////////////////////////////////////////////
-   // Delay A Buffer
-
-   // Address management 
-   reg [P_NBITS_DELAY_A_ADDR-1:0] 	 delay_a_addr_in   = 0;
-   reg [P_NBITS_DELAY_A_ADDR-1:0] 	 delay_a_addr_out  = 2;    
-   always @(posedge clk)
+   ////////////////////////////////////////////////////////////////////////////////////////////////////////
+   // Internals
+   always @(posedge clk) 
      begin
-	if(wr)
-	  begin
-	     // Sample addressing
-	     delay_a_addr_in  <= delay_a_addr_in  + 1;
-	     delay_a_addr_out <= delay_a_addr_out + 1;
-	     if(delay_a_addr_in == delay_a_len-1)
-	       begin
-		  delay_a_addr_in  <= 0;
-		  delay_a_addr_out <= 2;
-	       end
-	     if(delay_a_addr_out == delay_a_len-1)
-	       delay_a_addr_out <= 0; 	     
-	  end 
-     end // always @ (posedge clk)
-
-   // RAM
-   wire [P_NBITS_DATA_IN-1:0] i_a_0;
-   wire [P_NBITS_DATA_OUT-1:0] i_y_0; 
-   ram_dual #(.P_NBITS_ADR(P_NBITS_DELAY_A_ADDR),.P_NBITS_DATA(P_NBITS_DATA_IN)) DELAY_A_0 
-   (
-    .clk1(clk),
-    .clk2(clk), 
-    .d(init_busy ? init_data_in : a_0),		  
-    .q(i_a_0),
-    .addr_in(delay_a_addr_in),
-    .addr_out(delay_a_addr_out),
-    .we(wr)
-    );
-
-   
-   
-   ////////////////////////////////////////////////////////////////////////////////
-   // Accumulator
-   always @(posedge clk)
-     if(init_wr)
-       y <= init_y;
-     else if(wr)
-       y <= y + a - b; 
-      
+	valid <= i_v_a; 
+	if(!i_v_a)
+	  sum <= 0;
+	else if(!i_v_b)
+	  sum <= sum + i_a;
+	else
+	  sum <= sum + i_a - i_b;
+     end
+	
 endmodule
+
+// For emacs verilog-mode
+// Local Variables:
+// verilog-library-directories:("../ram_delay/")
+// End:

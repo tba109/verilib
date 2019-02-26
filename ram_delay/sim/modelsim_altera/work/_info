@@ -29,21 +29,21 @@ r1
 !i113 1
 Z3 o-work work
 vram_delay
-Z4 !s110 1551194085
+Z4 !s110 1551213865
 !i10b 1
-!s100 e4@[M6hE4;mOZ_[FNF=?z3
-I=M0lKb_;XX;b?7GCWVoYI2
+!s100 4C9oI6OE9eB7O^T8gMKZ[2
+ILR:0]@B^<VNlggNN4Zzh[3
 R0
 Z5 d/home/tyler/verilib/ram_delay/sim/modelsim_altera
-w1551193741
+w1551213016
 8/home/tyler/verilib/ram_delay/ram_delay.v
 F/home/tyler/verilib/ram_delay/ram_delay.v
-L0 13
+L0 22
 R2
 r1
 !s85 0
 31
-Z6 !s108 1551194085.000000
+Z6 !s108 1551213865.000000
 !s107 /home/tyler/verilib/ram_delay/ram_delay.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ram_delay/ram_delay.v|
 !i113 1
@@ -71,11 +71,11 @@ R3
 vtb
 R4
 !i10b 1
-!s100 Oog8zEdF1<Qj0jAeQX]OW0
-I2BDQ[NzXA>`Hk7EPR?_T41
+!s100 =^i05n>8BJ;W]26;U?0JE0
+IIo3YQmF;N_0FEL1_oBd921
 R0
 R5
-w1551194082
+w1551211963
 8/home/tyler/verilib/ram_delay/sim/tb.v
 F/home/tyler/verilib/ram_delay/sim/tb.v
 L0 14

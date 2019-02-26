@@ -23,7 +23,8 @@ module tb;
    parameter P_NBITS_ADDR = 9; 
    wire [P_NBITS_DATA-1:0] qo;			// From RAM_DELAY_0 of ram_delay.v
    wire [P_NBITS_DATA-1:0] qn;			// From RAM_DELAY_0 of ram_delay.v
-   wire			valid;			// From RAM_DELAY_0 of ram_delay.v
+   wire			valid_qn;			// From RAM_DELAY_0 of ram_delay.v
+   wire 		valid_qo; 
    reg [P_NBITS_DATA-1:0] d;			// To RAM_DELAY_0 of ram_delay.v
    reg [P_NBITS_ADDR-1:0] n;		// To RAM_DELAY_0 of ram_delay.v
    reg 			  wr;			// To RAM_DELAY_0 of ram_delay.v
@@ -42,10 +43,10 @@ module tb;
    reg 			  ok = 1; 
    reg [P_NBITS_DATA-1:0] qn_prev=0;
    always @(posedge clk) 
-     if(valid)
+     if(valid_qn)
        qn_prev <= qn; 
    always @(posedge clk)
-     if(valid && (qn+n!=qo) && (qn_prev+1!=qn))
+     if(valid_qn && (qn+n!=qo) && (qn_prev+1!=qn))
        ok <= 0; 
       
    //////////////////////////////////////////////////////////////////////
@@ -55,8 +56,9 @@ module tb;
      (
       // Outputs
       .qn			(qn[P_NBITS_DATA-1:0]),
+      .valid_qo                 (valid_qo), 
       .qo			(qo[P_NBITS_DATA-1:0]),
-      .valid			(valid),
+      .valid_qn			(valid_qn),
       // Inputs
       .clk			(clk),
       .rst                      (rst), 
