@@ -1,9 +1,9 @@
-/home/tyler/verilib/ram_delay/ram_delay.v {1 {vlog -work work -stats=none /home/tyler/verilib/ram_delay/ram_delay.v
+/home/tyler/verilib/ram_delay/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/verilib/ram_delay/sim/tb.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module ram_delay
+-- Compiling module tb
 
 Top level modules:
-	ram_delay
+	tb
 
 } {} {}} /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v {1 {vlog -work work -stats=none /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015

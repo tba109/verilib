@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Sat Feb 16 15:26:36 2019
+Tue Feb 26 12:25:35 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -53,14 +53,14 @@ agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +---------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Feb 16 15:26:36 2019           ;
+; Analysis & Synthesis Status     ; Successful - Tue Feb 26 12:25:35 2019           ;
 ; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
 ; Revision Name                   ; test                                            ;
 ; Top-level Entity Name           ; ram_delay                                       ;
 ; Family                          ; Cyclone V                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                             ;
-; Total registers                 ; 25                                              ;
-; Total pins                      ; 40                                              ;
+; Total registers                 ; 72                                              ;
+; Total pins                      ; 63                                              ;
 ; Total virtual pins              ; 0                                               ;
 ; Total block memory bits         ; 3,584                                           ;
 ; Total DSP Blocks                ; 0                                               ;
@@ -178,25 +178,25 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                          ;
-+------------------------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                                       ; Library ;
-+------------------------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; ../../../true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v ; yes             ; User Verilog HDL File                                 ; /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v                          ;         ;
-; ../../ram_delay.v                                                      ; yes             ; User Verilog HDL File                                 ; /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v                                                                  ;         ;
-; altsyncram.tdf                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf                                             ;         ;
-; stratix_ram_block.inc                                                  ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;         ;
-; lpm_mux.inc                                                            ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/lpm_mux.inc                                                ;         ;
-; lpm_decode.inc                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/lpm_decode.inc                                             ;         ;
-; aglobal160.inc                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc                                             ;         ;
-; a_rdenreg.inc                                                          ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;         ;
-; altrom.inc                                                             ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altrom.inc                                                 ;         ;
-; altram.inc                                                             ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altram.inc                                                 ;         ;
-; altdpram.inc                                                           ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altdpram.inc                                               ;         ;
-; db/altsyncram_6rt1.tdf                                                 ; yes             ; Auto-Generated Megafunction                           ; /home/tyler/verilog_lib_tba/ram_delay/fpga/5cefa5f23i7/db/altsyncram_6rt1.tdf                                      ;         ;
-; db/test.ram0_true_dual_port_ram_dual_clock_f471eff2.hdl.mif            ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tyler/verilog_lib_tba/ram_delay/fpga/5cefa5f23i7/db/test.ram0_true_dual_port_ram_dual_clock_f471eff2.hdl.mif ;         ;
-+------------------------------------------------------------------------+-----------------+-------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                  ;
++------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                       ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                               ; Library ;
++------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
+; ../../../true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v ; yes             ; User Verilog HDL File                                 ; /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v                          ;         ;
+; ../../ram_delay.v                                                      ; yes             ; User Verilog HDL File                                 ; /home/tyler/verilib/ram_delay/ram_delay.v                                                                  ;         ;
+; altsyncram.tdf                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
+; stratix_ram_block.inc                                                  ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
+; lpm_mux.inc                                                            ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
+; lpm_decode.inc                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
+; aglobal160.inc                                                         ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc                                     ;         ;
+; a_rdenreg.inc                                                          ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
+; altrom.inc                                                             ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
+; altram.inc                                                             ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altram.inc                                         ;         ;
+; altdpram.inc                                                           ; yes             ; Megafunction                                          ; /home/tyler/altera/16.0/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
+; db/altsyncram_6rt1.tdf                                                 ; yes             ; Auto-Generated Megafunction                           ; /home/tyler/verilib/ram_delay/fpga/5cefa5f23i7/db/altsyncram_6rt1.tdf                                      ;         ;
+; db/test.ram0_true_dual_port_ram_dual_clock_f471eff2.hdl.mif            ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; /home/tyler/verilib/ram_delay/fpga/5cefa5f23i7/db/test.ram0_true_dual_port_ram_dual_clock_f471eff2.hdl.mif ;         ;
++------------------------------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -204,27 +204,27 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 46        ;
+; Estimate of Logic utilization (ALMs needed) ; 49        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 71        ;
+; Combinational ALUT usage for logic          ; 68        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 20        ;
-;     -- 5 input functions                    ; 3         ;
-;     -- 4 input functions                    ; 2         ;
-;     -- <=3 input functions                  ; 46        ;
+;     -- 6 input functions                    ; 21        ;
+;     -- 5 input functions                    ; 2         ;
+;     -- 4 input functions                    ; 1         ;
+;     -- <=3 input functions                  ; 44        ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 25        ;
+; Dedicated logic registers                   ; 72        ;
 ;                                             ;           ;
-; I/O pins                                    ; 40        ;
+; I/O pins                                    ; 63        ;
 ; Total MLAB memory bits                      ; 0         ;
 ; Total block memory bits                     ; 3584      ;
 ;                                             ;           ;
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 39        ;
-; Total fan-out                               ; 638       ;
-; Average fan-out                             ; 3.36      ;
+; Maximum fan-out                             ; 86        ;
+; Total fan-out                               ; 816       ;
+; Average fan-out                             ; 2.91      ;
 +---------------------------------------------+-----------+
 
 
@@ -233,7 +233,7 @@ agreement for further details.
 +--------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
 ; Compilation Hierarchy Node                                         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                          ; Entity Name                   ; Library Name ;
 +--------------------------------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------+-------------------------------+--------------+
-; |ram_delay                                                         ; 71 (71)           ; 25 (25)      ; 3584              ; 0          ; 40   ; 0            ; |ram_delay                                                                                                                   ; ram_delay                     ; work         ;
+; |ram_delay                                                         ; 68 (68)           ; 72 (72)      ; 3584              ; 0          ; 63   ; 0            ; |ram_delay                                                                                                                   ; ram_delay                     ; work         ;
 ;    |true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0| ; 0 (0)             ; 0 (0)        ; 3584              ; 0          ; 0    ; 0            ; |ram_delay|true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0                                                     ; true_dual_port_ram_dual_clock ; work         ;
 ;       |altsyncram:ram_rtl_0|                                       ; 0 (0)             ; 0 (0)        ; 3584              ; 0          ; 0    ; 0            ; |ram_delay|true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0|altsyncram:ram_rtl_0                                ; altsyncram                    ; work         ;
 ;          |altsyncram_6rt1:auto_generated|                          ; 0 (0)             ; 0 (0)        ; 3584              ; 0          ; 0    ; 0            ; |ram_delay|true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0|altsyncram:ram_rtl_0|altsyncram_6rt1:auto_generated ; altsyncram_6rt1               ; work         ;
@@ -255,12 +255,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 25    ;
+; Total registers                              ; 72    ;
 ; Number of registers using Synchronous Clear  ; 16    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 24    ;
+; Number of registers using Clock Enable       ; 69    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -289,8 +289,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |ram_delay|valid_cnt[6]    ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ram_delay|i_addr_out[4]   ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |ram_delay|i_addr_out[7]   ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 0 LEs                ; 24 LEs                 ; Yes        ; |ram_delay|prime_cnt[6]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -422,25 +422,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 25                          ;
-;     ENA               ; 8                           ;
+; arriav_ff             ; 72                          ;
+;     ENA               ; 53                          ;
 ;     ENA SCLR          ; 16                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 71                          ;
-;     arith             ; 41                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 39                          ;
-;     normal            ; 30                          ;
+;     plain             ; 3                           ;
+; arriav_lcell_comb     ; 68                          ;
+;     arith             ; 33                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 32                          ;
+;     normal            ; 35                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         4 data inputs ; 2                           ;
-;         5 data inputs ; 3                           ;
-;         6 data inputs ; 20                          ;
-; boundary_port         ; 40                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 8                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 21                          ;
+; boundary_port         ; 63                          ;
 ; stratixv_ram_block    ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.41                        ;
+; Max LUT depth         ; 4.20                        ;
+; Average LUT depth     ; 1.77                        ;
 +-----------------------+-----------------------------+
 
 
@@ -449,7 +450,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -459,20 +460,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Sat Feb 16 15:26:15 2019
+    Info: Processing started: Tue Feb 26 12:24:51 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
-    Info (12023): Found entity 1: true_dual_port_ram_dual_clock File: /home/tyler/verilog_lib_tba/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v
-    Info (12023): Found entity 1: ram_delay File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v Line: 13
-Warning (12019): Can't analyze file -- file ../../../tdp_ram/tdp_ram.v is missing
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+    Info (12023): Found entity 1: true_dual_port_ram_dual_clock File: /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file /home/tyler/verilib/ram_delay/ram_delay.v
+    Info (12023): Found entity 1: ram_delay File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 22
 Info (12127): Elaborating entity "ram_delay" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at ram_delay.v(58): truncated value with size 32 to match size of target (8) File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v Line: 58
-Warning (10230): Verilog HDL assignment warning at ram_delay.v(76): truncated value with size 32 to match size of target (8) File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v Line: 76
-Warning (10230): Verilog HDL assignment warning at ram_delay.v(77): truncated value with size 32 to match size of target (8) File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v Line: 77
-Info (12128): Elaborating entity "true_dual_port_ram_dual_clock" for hierarchy "true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0" File: /home/tyler/verilog_lib_tba/ram_delay/ram_delay.v Line: 46
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(43): truncated value with size 32 to match size of target (1) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 43
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(95): truncated value with size 32 to match size of target (8) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 95
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(97): truncated value with size 32 to match size of target (1) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 97
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(102): truncated value with size 32 to match size of target (1) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 102
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(105): truncated value with size 32 to match size of target (1) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 105
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(112): truncated value with size 32 to match size of target (8) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 112
+Warning (10230): Verilog HDL assignment warning at ram_delay.v(113): truncated value with size 32 to match size of target (8) File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 113
+Info (12128): Elaborating entity "true_dual_port_ram_dual_clock" for hierarchy "true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0" File: /home/tyler/verilib/ram_delay/ram_delay.v Line: 84
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276007): RAM logic "true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0|ram" is uninferred due to asynchronous read logic File: /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v Line: 14
 Info (19000): Inferred 1 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "true_dual_port_ram_dual_clock:TRUE_DUAL_PORT_RAM_DUAL_CLOCK_0|ram_rtl_0" 
         Info (286033): Parameter OPERATION_MODE set to DUAL_PORT
@@ -510,19 +516,19 @@ Info (12133): Instantiated megafunction "true_dual_port_ram_dual_clock:TRUE_DUAL
     Info (12134): Parameter "INIT_FILE" = "db/test.ram0_true_dual_port_ram_dual_clock_f471eff2.hdl.mif"
     Info (12134): Parameter "READ_DURING_WRITE_MODE_MIXED_PORTS" = "OLD_DATA"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6rt1.tdf
-    Info (12023): Found entity 1: altsyncram_6rt1 File: /home/tyler/verilog_lib_tba/ram_delay/fpga/5cefa5f23i7/db/altsyncram_6rt1.tdf Line: 28
+    Info (12023): Found entity 1: altsyncram_6rt1 File: /home/tyler/verilib/ram_delay/fpga/5cefa5f23i7/db/altsyncram_6rt1.tdf Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 125 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 71 logic cells
+Info (21057): Implemented 191 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 34 input pins
+    Info (21059): Implemented 29 output pins
+    Info (21061): Implemented 114 logic cells
     Info (21064): Implemented 14 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1383 megabytes
-    Info: Processing ended: Sat Feb 16 15:26:36 2019
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 8 warnings
+    Info: Peak virtual memory: 1389 megabytes
+    Info: Processing ended: Tue Feb 26 12:25:35 2019
+    Info: Elapsed time: 00:00:44
+    Info: Total CPU time (on all processors): 00:00:50
 
 

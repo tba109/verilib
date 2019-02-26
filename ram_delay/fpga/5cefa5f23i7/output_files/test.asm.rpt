@@ -1,5 +1,5 @@
 Assembler report for test
-Sat Feb 16 15:28:13 2019
+Tue Feb 26 12:28:20 2019
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Feb 16 15:28:13 2019 ;
+; Assembler Status      ; Successful - Tue Feb 26 12:28:20 2019 ;
 ; Revision Name         ; test                                  ;
 ; Top-level Entity Name ; ram_delay                             ;
 ; Family                ; Cyclone V                             ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting           ;
 +----------------+-------------------+
 ; Device         ; 5CEFA5F23I7       ;
-; JTAG usercode  ; 0x007EC1D1        ;
-; Checksum       ; 0x007EC1D1        ;
+; JTAG usercode  ; 0x007F69AD        ;
+; Checksum       ; 0x007F69AD        ;
 +----------------+-------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
-    Info: Processing started: Sat Feb 16 15:27:53 2019
+    Info: Processing started: Tue Feb 26 12:27:54 2019
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1222 megabytes
-    Info: Processing ended: Sat Feb 16 15:28:13 2019
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Peak virtual memory: 1223 megabytes
+    Info: Processing ended: Tue Feb 26 12:28:20 2019
+    Info: Elapsed time: 00:00:26
+    Info: Total CPU time (on all processors): 00:00:24
 
 

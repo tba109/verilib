@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sat Feb 16 15:27:50 2019
+Fitter Status : Successful - Tue Feb 26 12:27:48 2019
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
 Revision Name : test
 Top-level Entity Name : ram_delay
 Family : Cyclone V
 Device : 5CEFA5F23I7
 Timing Models : Final
-Logic utilization (in ALMs) : 43 / 29,080 ( < 1 % )
-Total registers : 25
-Total pins : 40 / 240 ( 17 % )
+Logic utilization (in ALMs) : 42 / 29,080 ( < 1 % )
+Total registers : 72
+Total pins : 63 / 240 ( 26 % )
 Total virtual pins : 0
 Total block memory bits : 3,584 / 4,567,040 ( < 1 % )
 Total RAM Blocks : 1 / 446 ( < 1 % )

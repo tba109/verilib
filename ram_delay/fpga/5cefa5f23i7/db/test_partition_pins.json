@@ -4,59 +4,115 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "q[0]",
+					"name" : "qo[0]",
 					"strict" : false
 				},
 				{
-					"name" : "q[1]",
+					"name" : "qo[1]",
 					"strict" : false
 				},
 				{
-					"name" : "q[2]",
+					"name" : "qo[2]",
 					"strict" : false
 				},
 				{
-					"name" : "q[3]",
+					"name" : "qo[3]",
 					"strict" : false
 				},
 				{
-					"name" : "q[4]",
+					"name" : "qo[4]",
 					"strict" : false
 				},
 				{
-					"name" : "q[5]",
+					"name" : "qo[5]",
 					"strict" : false
 				},
 				{
-					"name" : "q[6]",
+					"name" : "qo[6]",
 					"strict" : false
 				},
 				{
-					"name" : "q[7]",
+					"name" : "qo[7]",
 					"strict" : false
 				},
 				{
-					"name" : "q[8]",
+					"name" : "qo[8]",
 					"strict" : false
 				},
 				{
-					"name" : "q[9]",
+					"name" : "qo[9]",
 					"strict" : false
 				},
 				{
-					"name" : "q[10]",
+					"name" : "qo[10]",
 					"strict" : false
 				},
 				{
-					"name" : "q[11]",
+					"name" : "qo[11]",
 					"strict" : false
 				},
 				{
-					"name" : "q[12]",
+					"name" : "qo[12]",
 					"strict" : false
 				},
 				{
-					"name" : "q[13]",
+					"name" : "qo[13]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[7]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[8]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[9]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[10]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[11]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[12]",
+					"strict" : false
+				},
+				{
+					"name" : "qn[13]",
 					"strict" : false
 				},
 				{
@@ -64,11 +120,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
 					"name" : "wr",
 					"strict" : false
 				},
 				{
-					"name" : "clk",
+					"name" : "addr_en",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[6]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[7]",
 					"strict" : false
 				},
 				{
@@ -128,39 +220,39 @@
 					"strict" : false
 				},
 				{
-					"name" : "prime",
+					"name" : "n[6]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[0]",
+					"name" : "n[7]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[1]",
+					"name" : "n[3]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[7]",
+					"name" : "n[4]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[5]",
+					"name" : "n[5]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[6]",
+					"name" : "n[0]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[4]",
+					"name" : "n[1]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[2]",
+					"name" : "n[2]",
 					"strict" : false
 				},
 				{
-					"name" : "delay_len[3]",
+					"name" : "rst",
 					"strict" : false
 				}
 			]
