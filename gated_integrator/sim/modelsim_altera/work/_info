@@ -1,0 +1,90 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tyler/verilib/ram_delay/sim/modelsim_altera
+vgated_integrator
+Z0 !s110 1551293077
+!i10b 1
+!s100 JFjENE[?e9=6FHChL;jfo0
+I<zo@BQzNin;k=JzAXDbW>3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tyler/verilib/gated_integrator/sim/modelsim_altera
+w1551292480
+8/home/tyler/verilib/gated_integrator/gated_integrator.v
+F/home/tyler/verilib/gated_integrator/gated_integrator.v
+L0 9
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1551293077.000000
+!s107 /home/tyler/verilib/gated_integrator/gated_integrator.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/gated_integrator/gated_integrator.v|
+!i113 1
+Z5 o-work work
+vram_delay
+R0
+!i10b 1
+!s100 4C9oI6OE9eB7O^T8gMKZ[2
+ILR:0]@B^<VNlggNN4Zzh[3
+R1
+R2
+w1551231591
+8/home/tyler/verilib/ram_delay/ram_delay.v
+F/home/tyler/verilib/ram_delay/ram_delay.v
+L0 22
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/ram_delay/ram_delay.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ram_delay/ram_delay.v|
+!i113 1
+R5
+vtb
+R0
+!i10b 1
+!s100 e5HiHJRmbF]MobhOPP7Gl0
+IhL<AbLTFSVdB^ig84;gL>1
+R1
+R2
+w1551293068
+8/home/tyler/verilib/gated_integrator/sim/tb.v
+F/home/tyler/verilib/gated_integrator/sim/tb.v
+L0 15
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/gated_integrator/sim/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/gated_integrator/sim/tb.v|
+!i113 1
+R5
+vtrue_dual_port_ram_dual_clock
+!s110 1551293078
+!i10b 1
+!s100 aS0AfUJdhDU8JgDQW6Km10
+IeWd88lANmAePdJLD>Ckf[0
+R1
+R2
+w1550852215
+8/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+F/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v
+L0 4
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/true_dual_port_ram_dual_clock/true_dual_port_ram_dual_clock.v|
+!i113 1
+R5

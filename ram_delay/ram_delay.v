@@ -7,7 +7,7 @@
 // Features:
 // -- Adjustable delay in clock cycles, n
 // -- Write enable
-// -- Valid indicates that th
+// -- Valids to indicate when new samples are appearing on the original and delayed outputs
 // -- Reset causes valid to be low until the result of n writes appears on qn
 //
 // Notes:

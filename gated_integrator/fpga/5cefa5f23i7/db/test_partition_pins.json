@@ -1,0 +1,213 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "sum[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[15]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[16]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[17]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[18]",
+					"strict" : false
+				},
+				{
+					"name" : "sum[19]",
+					"strict" : false
+				},
+				{
+					"name" : "valid",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "wr",
+					"strict" : false
+				},
+				{
+					"name" : "addr_en",
+					"strict" : false
+				},
+				{
+					"name" : "addr[0]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[1]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[2]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[3]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[4]",
+					"strict" : false
+				},
+				{
+					"name" : "addr[5]",
+					"strict" : false
+				},
+				{
+					"name" : "n[5]",
+					"strict" : false
+				},
+				{
+					"name" : "n[4]",
+					"strict" : false
+				},
+				{
+					"name" : "n[3]",
+					"strict" : false
+				},
+				{
+					"name" : "n[2]",
+					"strict" : false
+				},
+				{
+					"name" : "n[0]",
+					"strict" : false
+				},
+				{
+					"name" : "n[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d[0]",
+					"strict" : false
+				},
+				{
+					"name" : "d[1]",
+					"strict" : false
+				},
+				{
+					"name" : "d[2]",
+					"strict" : false
+				},
+				{
+					"name" : "d[3]",
+					"strict" : false
+				},
+				{
+					"name" : "d[4]",
+					"strict" : false
+				},
+				{
+					"name" : "d[5]",
+					"strict" : false
+				},
+				{
+					"name" : "d[6]",
+					"strict" : false
+				},
+				{
+					"name" : "d[7]",
+					"strict" : false
+				},
+				{
+					"name" : "d[8]",
+					"strict" : false
+				},
+				{
+					"name" : "d[9]",
+					"strict" : false
+				},
+				{
+					"name" : "d[10]",
+					"strict" : false
+				},
+				{
+					"name" : "d[11]",
+					"strict" : false
+				},
+				{
+					"name" : "d[12]",
+					"strict" : false
+				},
+				{
+					"name" : "d[13]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,232 +1,720 @@
 # Loading project tb
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
 # Compile of tb.v was successful.
+# Compile of gated_integrator.v failed with 3 errors.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v failed with 1 errors.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
 vsim work.tb
 # vsim work.tb 
-# Start time: 15:13:19 on Feb 26,2019
+# Start time: 08:12:20 on Feb 27,2019
 # Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3017) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Too few port connections. Expected 9, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0 File: /home/tyler/verilib/gated_integrator/gated_integrator.v
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'rst'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'n'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'wr'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'addr_en'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'addr'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'sum'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'valid'.
+# ** Warning: (vsim-3017) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Too few port connections. Expected 11, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Error: (vsim-3063) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): Port 'valid' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qo'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qn'.
+# Error loading design
+# End time: 08:12:21 on Feb 27,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 13
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 08:19:28 on Feb 27,2019
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3017) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Too few port connections. Expected 9, found 0.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0 File: /home/tyler/verilib/gated_integrator/gated_integrator.v
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'clk'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'rst'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'n'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'wr'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'd'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'addr_en'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'addr'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'sum'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/sim/tb.v(41): [TFMPC] - Missing connection for port 'valid'.
+# ** Warning: (vsim-3017) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Too few port connections. Expected 11, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Error: (vsim-3063) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): Port 'valid' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qo'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qn'.
+# Error loading design
+# End time: 08:19:28 on Feb 27,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 13
+# Compile of tb.v failed with 3 errors.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 3 errors.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 08:37:04 on Feb 27,2019
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-3017) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Too few port connections. Expected 11, found 10.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Error: (vsim-3063) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): Port 'valid' not found in the connected module (3rd connection).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/GI_0/RAM_DELAY_0 File: /home/tyler/verilib/ram_delay/ram_delay.v
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qo'.
+# ** Warning: (vsim-3722) /home/tyler/verilib/gated_integrator/gated_integrator.v(36): [TFMPC] - Missing connection for port 'valid_qn'.
+# Error loading design
+# End time: 08:37:05 on Feb 27,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 3
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 08:38:35 on Feb 27,2019
+# Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
 # WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
+clear
+# [H[2J
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/tb/GI_0/*
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
-# Compile of tb.v was successful.
+# Test Case: TEST_CASE_1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Compile of tb.v failed with 1 errors.
+# Compile of gated_integrator.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
+# Test Case: TEST_CASE_1
 # Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
+# Test Case: TEST_CASE_1
 # Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
-add wave -position insertpoint sim:/tb/RAM_DELAY_0/*
-# Compile of tb.v was successful.
+# Test Case: TEST_CASE_1
+# Compile of tb.v failed with 5 errors.
+# Compile of gated_integrator.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 1 failed with 5 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(109): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
+# Test Case: TEST_CASE_1
 # Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
 # Compile of ram_delay.v was successful.
 # Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# 4 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/tb/GI_0/*
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
+# Loading work.gated_integrator
 # Loading work.ram_delay
 # Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(110): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
-# 
-# 2.) 20 writes with 2 cycles of delay
-# 
-# 3.) 20 writes with 3 cycles of delay
-# 
-# 4.) 20 writes with 4 cycles of delay
-# 
-# 5.) write-delay, 10 cycles
-# 
-# 6.) 20 final cycles of write
-# 
-# 7.) Reset...
-# 
-# 8.) 20 writes with 1 cycle delay
-# 
-# 9.) 20 writes with 1 cycle delay
-# 
-# OK
-# 
-# Compile of tb.v was successful.
-# Compile of ram_delay.v was successful.
-# Compile of true_dual_port_ram_dual_clock.v was successful.
-# 3 compiles, 0 failed with no errors.
+# Test Case: TEST_CASE_1
+add wave sim:/tb/*
 restart
-# Loading work.tb
-# Loading work.ram_delay
-# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(110): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_N_16_ADDR_EN
-# 1.) 20 writes with 1 cycle delay
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(110): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 2.) 20 writes with 2 cycles of delay
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(114): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/fsum'. 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(114): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 3.) 20 writes with 3 cycles of delay
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/*
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(113): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/fsum_2'. 
+run
 # 
-# 4.) 20 writes with 4 cycles of delay
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(114): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 5.) write-delay, 10 cycles
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint  \
+sim:/tb/fsum_2
+add wave -position insertpoint sim:/tb/*
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/tb/*
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(115): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 6.) 20 final cycles of write
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint  \
+sim:/tb/fsum_3
+# Compile of tb.v failed with 1 errors.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(122): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 7.) Reset...
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+# OK!
 # 
-# 8.) 20 writes with 1 cycle delay
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(125): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# 9.) 20 writes with 1 cycle delay
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# OK!
 # 
-# OK
+# Compile of tb.v failed with 1 errors.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(121): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(142): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(154): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(167): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(179): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
 # 
-# End time: 15:44:46 on Feb 26,2019, Elapsed time: 0:31:27
-# Errors: 0, Warnings: 1
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# ERR
+# 
+add wave -position insertpoint sim:/tb/GI_0/*
+restart
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(121): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(142): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(154): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(167): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(179): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# ERR
+# 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(121): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(142): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(154): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(167): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(179): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# ERR
+# 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(121): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(142): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(154): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(167): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(179): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# ERR
+# 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(121): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(142): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(154): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(167): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(179): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# ERR
+# 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(122): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(141): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(152): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(164): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(176): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# OK!
+# 
+# Compile of tb.v was successful.
+# Compile of gated_integrator.v was successful.
+# Compile of ram_delay.v was successful.
+# Compile of true_dual_port_ram_dual_clock.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.gated_integrator
+# Loading work.ram_delay
+# Loading work.true_dual_port_ram_dual_clock
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(122): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(131): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(141): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(152): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(164): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+# ** Warning: (vsim-PLI-3691) /home/tyler/verilib/gated_integrator/sim/tb.v(178): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ns  Iteration: 0  Instance: /tb File: /home/tyler/verilib/gated_integrator/sim/tb.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# 1.) read in 100 cycles, wait 1 cycle
+# 
+# 2.) read in 100 cycles, wait 2 cycles
+# 
+# 3.) read in 100 cycles, wait 3 cycles
+# 
+# 4.) read in 100 cycles, wait 4 cycles
+# 
+# 5.) read in 100 cycles of alterating read/wait, read/wait...
+# 
+# OK!
+# 
+# End time: 14:12:51 on Feb 27,2019, Elapsed time: 5:34:16
+# Errors: 2, Warnings: 54

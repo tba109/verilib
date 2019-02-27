@@ -5,4 +5,11 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	true_dual_port_ram_dual_clock
 
+} {} {}} /home/tyler/verilib/gated_integrator/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/verilib/gated_integrator/sim/tb.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
 } {} {}}
