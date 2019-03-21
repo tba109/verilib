@@ -3,187 +3,133 @@
 //
 // spi_master.v
 //
-// https://en.wikipedia.org/wiki/Serial_Peripheral_Interface
-// CPOL determines the polarity of the clock. The polarities can be converted with a simple 
-// inverter.
-// -- CPOL=0 is a clock which idles at 0, and each cycle consists of a pulse of 1. That is, the 
-//           leading edge is a rising edge, and the trailing edge is a falling edge.
-// -- CPOL=1 is a clock which idles at 1, and each cycle consists of a pulse of 0. That is, the 
-//           leading edge is a falling edge, and the trailing edge is a rising edge.
-// 
-// CPHA determines the timing of the data bits relative to the clock pulses. It is not trivial 
-// to convert between the two forms. 
-//
-// For CPHA=0, the "out" side changes the data on the trailing edge of the preceding clock cycle, 
-// while the "in" side captures the data on (or shortly after) the leading edge of the clock 
-// cycle. The out side holds the data valid until the trailing edge of the current clock cycle. 
-// For the first cycle, the first bit must be on the MOSI line before the leading clock edge. An 
-// alternative way of considering it is to say that a CPHA=0 cycle consists of a half cycle with 
-// the clock idle, followed by a half cycle with the clock asserted.
-//
-// For CPHA=1, the "out" side changes the data on the leading edge of the current clock cycle, 
-// while the "in" side captures the data on (or shortly after) the trailing edge of the clock 
-// cycle. The out side holds the data valid until the leading edge of the following clock cycle. 
-// For the last cycle, the slave holds the MISO line valid until slave select is deasserted.
-// An alternative way of considering it is to say that a CPHA=1 cycle consists of a half cycle 
-// with the clock asserted, followed by a half cycle with the clock idle.
-//
+// Generic SPI master. Signaling in/out is determined by events at number of cycles, rather
+// than CPOL CPHA. Shifts out MSB first, so need to reflect the data word if you need LSB first.
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 module spi_master
   (
+   // system inputs
    input 	     clk, // clock
    input 	     rst, // reset
-   input 	     cpol, // clock polarity
-   input 	     cpha, // clock phase
-   input [31:0]      sclk_div, // division of the clock, cycles per clock tick
+   // Total number of clock cycles required
+   input [31:0]      cnt_max,
+   // mosi
+   input [31:0]      nb_max_mosi, // number of bits to shift out
+   input 	     y0_mosi, // idle level
+   input [31:0]      n0_mosi, // delay from outputing the first bit
+   input [31:0]      n1_mosi, // first half cycle length
+   input [31:0]      n2_mosi, // second half cycle length
+   input [31:0]      n3_mosi, // delay on last bit
+   // miso
+   input [31:0]      nb_max_miso, // number of bits to shift in
+   input 	     y0_miso, // idle level
+   input [31:0]      n0_miso, // delay from first bit
+   input [31:0]      n1_miso, // first half cycle length
+   input [31:0]      n2_miso, // second half cycle length
+   input [31:0]      n3_miso, // delay on last bit before returning to idle
+   // sclk
+   input [31:0]      nb_max_sclk, // number of clock cycles
+   input 	     y0_sclk, // idle level
+   input [31:0]      n0_sclk, // delay from first bit
+   input [31:0]      n1_sclk, // first half cycle length
+   input [31:0]      n2_sclk, // second half cycle length
+   input [31:0]      n3_sclk, // delay on last bit before returning to idle   
+   // Write data
    input 	     wr_req, // write request
-   output reg 	     wr_ack=0, // write acknowledge
    input [31:0]      wr_data, // write data
    input [31:0]      wr_n, // number of bits for read/write
+   // Read data
    input 	     rd_req, // read request
-   output reg 	     rd_ack=0, // read acknowledge
    output reg [31:0] rd_data=0, // read data
-   input [31:0]      rd_n, // number of read bits
-   output 	     mosi=0, // master out, slave in
-   output 	     sclk=0, // master in, slave out
+   input [31:0]      rd_n, // number of read bits   
+   output reg 	     ack <= 0; // acknowledge 
+   // SPI outputs
+   output reg 	     mosi=0, // master out, slave in
+   output reg 	     sclk=0, // master in, slave out
    input 	     miso // master in, slave out
    );
 
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // Internals
-   reg [31:0] 		       sclk_cnt=0;
-   reg [31:0] 		       data_cnt=0; 
-   reg 			       i_sclk=0;
-   reg 			       i_mosi=0; 
-   reg [31:0] 		       i_wr_data=0;
-   reg [31:0] 		       i_rd_data=0;
+   reg [31:0] 	     cnt=0; // main counter
+   reg [31:0] 	     sr_miso=0;
+   reg [31:0] 	     sr_mosi=0; 
+   reg [31:0] 	     nb_mosi=0;
+   reg [31:0] 	     nb_miso=0;
+   reg [31:0] 	     nb_sclk=0; 
+   reg [31:0] 	     cnt_next_miso=0;
+   reg [31:0] 	     cnt_next_mosi=0;
+   reg [31:0] 	     cnt_next_clk=0; 
    
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // FSM definitions
-   reg [1:0] 		       fsm;
-   localparam
-     S_IDLE=0,
-     S_WR_SHIFT=1,
-     S_RD_SHIFT=2;
-
-`ifdef MODEL_TECH // This works well for modelsim
-   reg [127:0] state_str;
-   always @(*)
-     case(fsm)
-       S_IDLE:     state_str <= "S_IDLE";
-       S_WR_SHIFT: state_str <= "S_WR_SHIFT";
-       S_RD_SHIFT: state_str <= "S_RD_SHIFT";
-       default:    state_str <= "*** UNKNOWN ***"; 
-     endcase // case (fsm)
-`endif
-   
+   localparam 
+     S0=0,
+     S1=1,
+     S2=2, 
+     S3=3;
+   reg [1:0] 	     state_mosi=S0;
+   reg [1:0] 	     state_miso=S0;
+   reg [1:0] 	     state_sclk=S0; 
+      
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // Output assignments
-   assign sclk = cpol ? !i_sclk : i_sclk; 
-   always @(posedge clk or posedge rst)
-     if(rst)
-       begin
-	  i_sclk <= 0;
-	  i_mosi <= 0; 
-       end
-     else
-       begin
-	  if(fsm == S_WR_SHIFT || fsm == S_RD_SHIFT)
-	    begin
-	       if(sclk_cnt == sclk_div)
-		 i_sclk <= !i_sclk;
-	    end
-	  else
-	    i_sclk <= 0; 
-       end
    
-   always @(posedge clk)
-     if(cpha==0)
-       begin
-	  if(fsm == S_WR_SHIFT && sclk_cnt == 0)
-	    begin
-	       i_mosi <= ;
-	    end
-	  else
-	    i_mosi <= i_wr_data[0];
    
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // FSM Flow
-   always @(posedge clk or posedge rst)
-     if(rst)
-       begin
-	  fsm <= S_IDLE;
-	  wr_ack <= 0;
-	  rd_ack <= 0;
-	  sclk_cnt <= 0;
-	  data_cnt <= 0;
-	  i_sclk <= 0;
-	  i_mosi <= 0;
-	  i_sclk_run <= 0; 
-       end
-     else
-       begin
-	  wr_ack <= 0;
-	  rd_ack <= 0; 
-	  case(fsm)
-	    
-	    S_IDLE:
+   // Main counter
+   always @(posedge clk)
+     begin
+	ack <= 0; 
+	if(cnt == 0 && (wr_req || rd_req))
+	  begin 
+	     cnt <= cnt + 1;
+	     sr_mosi <= wr_data;
+	  end
+	else if(cnt == cnt_max)
+	  begin
+	     ack <= 1;
+	     cnt <= 0;
+	  end
+	else
+	  cnt <= cnt + 1;
+     end
+
+   always @(posedge clk)
+     case(state_mosi)
+       S0: 
+	 begin
+	    mosi <= y0_mosi;
+	    nb_mosi <= 0; 
+	    cnt_next_mosi <= 0; 
+	    if(cnt==n0_mosi-1)
 	      begin
-		 sclk_cnt <= 0;
-		 data_cnt <= 0; 
-		 if(wr_req)
-		   fsm <= S_WR_SHIFT;
-		 else if(rd_req)
-		   fsm <= S_RD_SHIFT; 
+		 state_mosi <= S1;
+		 cnt_next_mosi <= n0_mosi+n1_mosi;
 	      end
-	    
-	    S_WR_SHIFT:
+	 end
+       S1: 
+	begin 
+	    if(cnt==cnt_next_mosi-1)
 	      begin
-		 sclk_cnt <= sclk_cnt+1;
-		 if(sclk_cnt == sclk_div)
-		   begin
-		      if(data_cnt == wr_n)
-			begin
-			   sclk_cnt <= 0;
-			   data_cnt <= 0;
-			   wr_ack <= 1;
-			   if(rd_req)
-			     fsm <= S_RD_SHIFT;
-			   else
-			     fsm <= S_IDLE; 
-			end
-		      else
-			begin
-			   sclk_cnt <= 0;
-			   data_cnt <= data_cnt + 1;
-			end
-		   end
+		 state_mosi <= 
 	      end
-	    	    
-	    S_RD_SHIFT:
-	      begin
-		 sclk_cnt <= sclk_cnt+1;
-		 if(sclk_cnt == sclk_div)
-		   begin
-		      if(data_cnt == rd_n)
-			begin
-			   sclk_cnt <= 0;
-			   data_cnt <= 0;
-			   rd_ack <= 1; 
-			   fsm <= S_IDLE; 
-			end
-		      else
-			begin
-			   sclk_cnt <= 0;
-			   data_cnt <= data_cnt + 1;
-			end
-		   end
-	      end
-	    
-	    default:  fsm <= S_IDLE;
-	  endcase // case (fsm)
-       end
+	 end
+       S2: 
+	 begin 
+	    ; 
+	 end
+       S3: 
+	 begin 
+	    ; 
+	 end
+       default: 
+	 state_mosi <= S0; 
+     endcase 
+   
+       
 endmodule
 
 // For emacs verilog-mode
