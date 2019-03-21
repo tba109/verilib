@@ -1,0 +1,115 @@
+# Loading project tb
+# Compile of tb.v failed with 1 errors.
+# Compile of serial_rx.v failed with 3 errors.
+# 2 compiles, 2 failed with 4 errors.
+# Compile of tb.v was successful.
+# Compile of serial_rx.v failed with 2 errors.
+# 2 compiles, 1 failed with 2 errors.
+# Compile of tb.v was successful.
+# Compile of serial_rx.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:19:14 on Mar 21,2019
+# Loading work.tb
+# Loading work.serial_rx
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/SERIAL_RX_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_rx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_rx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_rx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_rx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_rx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_rx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.tb
+# End time: 15:36:36 on Mar 21,2019, Elapsed time: 0:17:22
+# Errors: 0, Warnings: 1
+# vsim work.tb 
+# Start time: 15:36:36 on Mar 21,2019
+# Loading work.tb
+# Loading work.serial_tx
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/SERIAL_TX_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_tx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_tx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_tx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# Compile of tb.v failed with 1 errors.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of serial_tx.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.serial_tx
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_16_2_3_4_5
+# End time: 16:08:25 on Mar 21,2019, Elapsed time: 0:31:49
+# Errors: 0, Warnings: 1
