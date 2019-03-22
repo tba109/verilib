@@ -14,12 +14,12 @@ vserial_rx
 !s100 UL0OkS1M^QOIk:6TK`ki>1
 IU^M1>e1cPJ=fiCGC6Bzce1
 Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 d/home/tyler/verilib/serial_rx/sim/modelsim_altera
+d/home/tyler/verilib/serial_rx/sim/modelsim_altera
 w1553196699
 8/home/tyler/verilib/serial_rx/serial_rx.v
 F/home/tyler/verilib/serial_rx/serial_rx.v
-Z2 L0 14
-Z3 OV;L;10.4d;61
+L0 14
+Z1 OV;L;10.4d;61
 r1
 !s85 0
 31
@@ -27,44 +27,44 @@ r1
 !s107 /home/tyler/verilib/serial_rx/serial_rx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_rx.v|
 !i113 1
-Z4 o-work work
+Z2 o-work work
 vserial_tx
-Z5 !s110 1553198625
+Z3 !s110 1553214544
 !i10b 1
-!s100 f_0[F4KhfW2hi1@mBPSdE0
-IB_WEN6HcbBl1R>n]XLSWb2
+!s100 `3og^_OI5_Bj7V71BEzn60
+I=Un:bIfoiaUlS3@hPFR551
 R0
+Z4 d/home/tyler/verilib/serial_tx/sim/modelsim_altera
+w1553213291
+8/home/tyler/verilib/serial_tx/serial_tx.v
+F/home/tyler/verilib/serial_tx/serial_tx.v
+L0 12
 R1
-w1553198622
-8/home/tyler/verilib/serial_rx/serial_tx.v
-F/home/tyler/verilib/serial_rx/serial_tx.v
+r1
+!s85 0
+31
+Z5 !s108 1553214544.000000
+!s107 /home/tyler/verilib/serial_tx/serial_tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_tx/serial_tx.v|
+!i113 1
 R2
-R3
-r1
-!s85 0
-31
-Z6 !s108 1553198625.000000
-!s107 /home/tyler/verilib/serial_rx/serial_tx.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_tx.v|
-!i113 1
-R4
 vtb
-R5
-!i10b 1
-!s100 X4ehUo>3h0^hBhH6Fliz82
-Ii8N;>W12ZRlXI6lf^K<Md0
-R0
-R1
-w1553198576
-8/home/tyler/verilib/serial_rx/sim/tb.v
-F/home/tyler/verilib/serial_rx/sim/tb.v
-L0 16
 R3
+!i10b 1
+!s100 ]f14EeP<D2dhdb<Oz61[V2
+Ik?0_6C>507f0`Yz<YNE7F3
+R0
+R4
+w1553213450
+8/home/tyler/verilib/serial_tx/sim/tb.v
+F/home/tyler/verilib/serial_tx/sim/tb.v
+L0 15
+R1
 r1
 !s85 0
 31
-R6
-!s107 /home/tyler/verilib/serial_rx/sim/tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/sim/tb.v|
+R5
+!s107 /home/tyler/verilib/serial_tx/sim/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_tx/sim/tb.v|
 !i113 1
-R4
+R2

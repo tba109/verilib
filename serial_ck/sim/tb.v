@@ -10,8 +10,8 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// `define TEST_CASE_16_2_3_4_5
-`define TEST_CASE_16_1_3_4_0
+`define TEST_CASE_16_2_3_4
+// `define TEST_CASE_16_1_3_4
 
 module tb;
    
@@ -25,18 +25,16 @@ module tb;
    // Connections
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire			ack;			// From SERIAL_TX_0 of serial_tx.v
-   wire			y;			// From SERIAL_TX_0 of serial_tx.v
+   wire			ack;			// From SERIAL_CK_0 of serial_ck.v
+   wire			y;			// From SERIAL_CK_0 of serial_ck.v
    // End of automatics
    /*AUTOREGINPUT*/
    // Beginning of automatic reg inputs (for undeclared instantiated-module inputs)
-   reg [255:0]		data;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n0;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n1;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n2;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n3;			// To SERIAL_TX_0 of serial_tx.v
-   reg [7:0]		nbits;			// To SERIAL_TX_0 of serial_tx.v
-   reg			y0;			// To SERIAL_TX_0 of serial_tx.v
+   reg [31:0] 		n0;			// To SERIAL_CK_0 of serial_ck.v
+   reg [31:0]		n1;			// To SERIAL_CK_0 of serial_ck.v
+   reg [31:0]		n2;			// To SERIAL_CK_0 of serial_ck.v
+   reg [7:0]		ncyc;			// To SERIAL_CK_0 of serial_ck.v
+   reg			y0;			// To SERIAL_CK_0 of serial_ck.v
    reg [31:0] 		cnt; 
    // End of automatics
    
@@ -53,7 +51,7 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // UUT
    //////////////////////////////////////////////////////////////////////   
-   serial_tx SERIAL_TX_0(/*AUTOINST*/
+   serial_ck SERIAL_CK_0(/*AUTOINST*/
 			 // Outputs
 			 .ack			(ack),
 			 .y			(y),
@@ -62,12 +60,10 @@ module tb;
 			 .rst			(rst),
 			 .cnt                   (cnt),
 			 .y0			(y0),
-			 .data			(data[255:0]),
-			 .nbits			(nbits[7:0]),
+			 .ncyc			(ncyc[7:0]),
 			 .n0			(n0[31:0]),
 			 .n1			(n1[31:0]),
-			 .n2			(n2[31:0]),
-			 .n3			(n3[31:0])); 
+			 .n2			(n2[31:0]));
    
    //////////////////////////////////////////////////////////////////////
    // Testbench
@@ -82,7 +78,7 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Test case
    //////////////////////////////////////////////////////////////////////   
-   `ifdef TEST_CASE_16_2_3_4_5
+   `ifdef TEST_CASE_16_2_3_4
    reg cnt_go;
    always @(posedge clk) if(cnt_go) cnt <= cnt + 1; else cnt <= 0; 
    initial
@@ -91,12 +87,10 @@ module tb;
 	rst = 1;
 	clk = 0;
 	cnt_go <= 0; 
-	nbits <= 16;
-	data <= 16'h5aaa; 
+	ncyc <= 16;
 	n0 <= 2;
 	n1 <= 3;
 	n2 <= 4;
-	n3 <= 5;
 	y0 <= 1; 
 	// Reset	
 	#(10 * CLK_PERIOD);
@@ -114,7 +108,7 @@ module tb;
      end
    `endif
 
-   `ifdef TEST_CASE_16_1_3_4_0
+   `ifdef TEST_CASE_16_1_3_4
    reg cnt_go;
    always @(posedge clk) if(cnt_go) cnt <= cnt + 1; else cnt <= 0; 
    initial
@@ -123,12 +117,10 @@ module tb;
 	rst = 1;
 	clk = 0;
 	cnt_go <= 0; 
-	nbits <= 16;
-	data <= 16'h5aaa; 
+	ncyc <= 16;
 	n0 <= 1;
 	n1 <= 3;
 	n2 <= 4;
-	n3 <= 0;
 	y0 <= 1; 
 	// Reset	
 	#(10 * CLK_PERIOD);

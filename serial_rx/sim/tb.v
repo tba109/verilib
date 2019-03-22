@@ -10,8 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// `define TEST_CASE_16_2_3_4_5
-`define TEST_CASE_16_1_3_4_0
+`define TEST_CASE_16_2_3
 
 module tb;
    
@@ -21,23 +20,20 @@ module tb;
    parameter CLK_PERIOD = 10;
    reg clk;
    reg rst;
-
+   
    // Connections
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
-   wire			ack;			// From SERIAL_TX_0 of serial_tx.v
-   wire			y;			// From SERIAL_TX_0 of serial_tx.v
+   wire [255:0]		data;			// From SERIAL_RX_0 of serial_rx.v
    // End of automatics
    /*AUTOREGINPUT*/
    // Beginning of automatic reg inputs (for undeclared instantiated-module inputs)
-   reg [255:0]		data;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n0;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n1;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n2;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n3;			// To SERIAL_TX_0 of serial_tx.v
-   reg [7:0]		nbits;			// To SERIAL_TX_0 of serial_tx.v
-   reg			y0;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0] 		cnt; 
+   reg			a;			// To SERIAL_RX_0 of serial_rx.v
+   reg [31:0]		cnt;			// To SERIAL_RX_0 of serial_rx.v
+   reg [31:0]		n0;			// To SERIAL_RX_0 of serial_rx.v
+   reg [31:0]		n1;			// To SERIAL_RX_0 of serial_rx.v
+   reg [7:0]		nbits;			// To SERIAL_RX_0 of serial_rx.v
+   reg [15:0] 		data_in; 
    // End of automatics
    
    //////////////////////////////////////////////////////////////////////
@@ -53,21 +49,17 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // UUT
    //////////////////////////////////////////////////////////////////////   
-   serial_tx SERIAL_TX_0(/*AUTOINST*/
+   serial_rx SERIAL_RX_0(/*AUTOINST*/
 			 // Outputs
-			 .ack			(ack),
-			 .y			(y),
+			 .data			(data[255:0]),
 			 // Inputs
 			 .clk			(clk),
 			 .rst			(rst),
-			 .cnt                   (cnt),
-			 .y0			(y0),
-			 .data			(data[255:0]),
+			 .a			(a),
 			 .nbits			(nbits[7:0]),
 			 .n0			(n0[31:0]),
 			 .n1			(n1[31:0]),
-			 .n2			(n2[31:0]),
-			 .n3			(n3[31:0])); 
+			 .cnt			(cnt[31:0])); 
    
    //////////////////////////////////////////////////////////////////////
    // Testbench
@@ -82,22 +74,22 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Test case
    //////////////////////////////////////////////////////////////////////   
-   `ifdef TEST_CASE_16_2_3_4_5
+`ifdef TEST_CASE_16_2_3
+   integer i; 
    reg cnt_go;
    always @(posedge clk) if(cnt_go) cnt <= cnt + 1; else cnt <= 0; 
    initial
      begin
+	i = 0; 
 	cnt = 0; 
 	rst = 1;
 	clk = 0;
 	cnt_go <= 0; 
 	nbits <= 16;
-	data <= 16'h5aaa; 
 	n0 <= 2;
 	n1 <= 3;
-	n2 <= 4;
-	n3 <= 5;
-	y0 <= 1; 
+	data_in <= 16'h5aaa; 
+	a <= 0; 
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
@@ -106,9 +98,26 @@ module tb;
 	// Logging
 	$display("");
 	$display("------------------------------------------------------");
-	$display("Test Case: TEST_CASE_16_2_3_4_5");
+	$display("Test Case: TEST_CASE_16_2_3");
 
 	cnt_go = 1; 
+
+	for(i=0; i < 4; i=i+1) @(posedge clk); a <= data_in[15];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[14];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[13];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[12];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[11];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[10];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[9];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[8];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[7];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[6];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[5];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[4];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[3];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[2];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[1];
+	for(i=0; i < n1; i=i+1) @(posedge clk); a <= data_in[0];
 	
 	// Stimulate UUT
      end

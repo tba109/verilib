@@ -8,18 +8,38 @@ z2
 !i10f 100
 cModel Technology
 d/home/tyler
+vserial_ck
+Z0 !s110 1553211314
+!i10b 1
+!s100 A>T7k4LjmNW^JaA_Y1][i2
+IShS[^<NP5>ES8]^zGB3`?0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tyler/verilib/serial_ck/sim/modelsim_altera
+w1553210487
+8/home/tyler/verilib/serial_ck/serial_ck.v
+F/home/tyler/verilib/serial_ck/serial_ck.v
+L0 11
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1553211314.000000
+!s107 /home/tyler/verilib/serial_ck/serial_ck.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_ck/serial_ck.v|
+!i113 1
+Z5 o-work work
 vserial_rx
 !s110 1553196703
 !i10b 1
 !s100 UL0OkS1M^QOIk:6TK`ki>1
 IU^M1>e1cPJ=fiCGC6Bzce1
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 d/home/tyler/verilib/serial_rx/sim/modelsim_altera
+R1
+Z6 d/home/tyler/verilib/serial_rx/sim/modelsim_altera
 w1553196699
 8/home/tyler/verilib/serial_rx/serial_rx.v
 F/home/tyler/verilib/serial_rx/serial_rx.v
-Z2 L0 14
-Z3 OV;L;10.4d;61
+Z7 L0 14
+R3
 r1
 !s85 0
 31
@@ -27,44 +47,44 @@ r1
 !s107 /home/tyler/verilib/serial_rx/serial_rx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_rx.v|
 !i113 1
-Z4 o-work work
+R5
 vserial_tx
-Z5 !s110 1553198625
+!s110 1553198625
 !i10b 1
 !s100 f_0[F4KhfW2hi1@mBPSdE0
 IB_WEN6HcbBl1R>n]XLSWb2
-R0
 R1
+R6
 w1553198622
 8/home/tyler/verilib/serial_rx/serial_tx.v
 F/home/tyler/verilib/serial_rx/serial_tx.v
-R2
+R7
 R3
 r1
 !s85 0
 31
-Z6 !s108 1553198625.000000
+!s108 1553198625.000000
 !s107 /home/tyler/verilib/serial_rx/serial_tx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_tx.v|
 !i113 1
-R4
-vtb
 R5
-!i10b 1
-!s100 X4ehUo>3h0^hBhH6Fliz82
-Ii8N;>W12ZRlXI6lf^K<Md0
+vtb
 R0
+!i10b 1
+!s100 T3KEmY=;bcI^j^H0Oe4=z3
+IRk12U6J?KT;zKJT:abIK72
 R1
-w1553198576
-8/home/tyler/verilib/serial_rx/sim/tb.v
-F/home/tyler/verilib/serial_rx/sim/tb.v
+R2
+w1553210559
+8/home/tyler/verilib/serial_ck/sim/tb.v
+F/home/tyler/verilib/serial_ck/sim/tb.v
 L0 16
 R3
 r1
 !s85 0
 31
-R6
-!s107 /home/tyler/verilib/serial_rx/sim/tb.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/sim/tb.v|
-!i113 1
 R4
+!s107 /home/tyler/verilib/serial_ck/sim/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_ck/sim/tb.v|
+!i113 1
+R5

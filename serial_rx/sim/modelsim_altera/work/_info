@@ -9,62 +9,62 @@ z2
 cModel Technology
 d/home/tyler
 vserial_rx
-!s110 1553196703
+Z0 !s110 1553217022
 !i10b 1
-!s100 UL0OkS1M^QOIk:6TK`ki>1
-IU^M1>e1cPJ=fiCGC6Bzce1
-Z0 VDg1SIo80bB@j0V0VzS_@n1
-Z1 d/home/tyler/verilib/serial_rx/sim/modelsim_altera
-w1553196699
+!s100 odlTl2BS?<Yci7O@n2C682
+I@F8b]:QLXNZhFE_jcjU=O3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tyler/verilib/serial_rx/sim/modelsim_altera
+w1553216978
 8/home/tyler/verilib/serial_rx/serial_rx.v
 F/home/tyler/verilib/serial_rx/serial_rx.v
-Z2 L0 14
-Z3 OV;L;10.4d;61
+Z3 L0 12
+Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-!s108 1553196703.000000
+Z5 !s108 1553217022.000000
 !s107 /home/tyler/verilib/serial_rx/serial_rx.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_rx.v|
 !i113 1
-Z4 o-work work
+Z6 o-work work
 vserial_tx
-Z5 !s110 1553198625
+!s110 1553214924
 !i10b 1
-!s100 f_0[F4KhfW2hi1@mBPSdE0
-IB_WEN6HcbBl1R>n]XLSWb2
-R0
+!s100 `3og^_OI5_Bj7V71BEzn60
+I=Un:bIfoiaUlS3@hPFR551
 R1
-w1553198622
-8/home/tyler/verilib/serial_rx/serial_tx.v
-F/home/tyler/verilib/serial_rx/serial_tx.v
 R2
+w1553213291
+8/home/tyler/verilib/serial_tx/serial_tx.v
+F/home/tyler/verilib/serial_tx/serial_tx.v
 R3
+R4
 r1
 !s85 0
 31
-Z6 !s108 1553198625.000000
-!s107 /home/tyler/verilib/serial_rx/serial_tx.v|
-!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/serial_tx.v|
+!s108 1553214924.000000
+!s107 /home/tyler/verilib/serial_tx/serial_tx.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_tx/serial_tx.v|
 !i113 1
-R4
+R6
 vtb
-R5
-!i10b 1
-!s100 X4ehUo>3h0^hBhH6Fliz82
-Ii8N;>W12ZRlXI6lf^K<Md0
 R0
+!i10b 1
+!s100 YeFCETnbM9D[FFP3GLS:10
+IcA71`II[ozGScKYDFHNh90
 R1
-w1553198576
+R2
+w1553216642
 8/home/tyler/verilib/serial_rx/sim/tb.v
 F/home/tyler/verilib/serial_rx/sim/tb.v
-L0 16
-R3
+L0 15
+R4
 r1
 !s85 0
 31
-R6
+R5
 !s107 /home/tyler/verilib/serial_rx/sim/tb.v|
 !s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/serial_rx/sim/tb.v|
 !i113 1
-R4
+R6

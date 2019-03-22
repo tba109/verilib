@@ -10,8 +10,7 @@
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 // Test cases
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-// `define TEST_CASE_16_2_3_4_5
-`define TEST_CASE_16_1_3_4_0
+`define TEST_CASE_16_2_3
 
 module tb;
    
@@ -33,8 +32,6 @@ module tb;
    reg [255:0]		data;			// To SERIAL_TX_0 of serial_tx.v
    reg [31:0]		n0;			// To SERIAL_TX_0 of serial_tx.v
    reg [31:0]		n1;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n2;			// To SERIAL_TX_0 of serial_tx.v
-   reg [31:0]		n3;			// To SERIAL_TX_0 of serial_tx.v
    reg [7:0]		nbits;			// To SERIAL_TX_0 of serial_tx.v
    reg			y0;			// To SERIAL_TX_0 of serial_tx.v
    reg [31:0] 		cnt; 
@@ -65,9 +62,7 @@ module tb;
 			 .data			(data[255:0]),
 			 .nbits			(nbits[7:0]),
 			 .n0			(n0[31:0]),
-			 .n1			(n1[31:0]),
-			 .n2			(n2[31:0]),
-			 .n3			(n3[31:0])); 
+			 .n1			(n1[31:0]));
    
    //////////////////////////////////////////////////////////////////////
    // Testbench
@@ -82,7 +77,7 @@ module tb;
    //////////////////////////////////////////////////////////////////////
    // Test case
    //////////////////////////////////////////////////////////////////////   
-   `ifdef TEST_CASE_16_2_3_4_5
+   `ifdef TEST_CASE_16_2_3
    reg cnt_go;
    always @(posedge clk) if(cnt_go) cnt <= cnt + 1; else cnt <= 0; 
    initial
@@ -95,8 +90,6 @@ module tb;
 	data <= 16'h5aaa; 
 	n0 <= 2;
 	n1 <= 3;
-	n2 <= 4;
-	n3 <= 5;
 	y0 <= 1; 
 	// Reset	
 	#(10 * CLK_PERIOD);
@@ -106,46 +99,13 @@ module tb;
 	// Logging
 	$display("");
 	$display("------------------------------------------------------");
-	$display("Test Case: TEST_CASE_16_2_3_4_5");
+	$display("Test Case: TEST_CASE_16_2_3");
 
 	cnt_go = 1; 
 	
 	// Stimulate UUT
      end
    `endif
-
-   `ifdef TEST_CASE_16_1_3_4_0
-   reg cnt_go;
-   always @(posedge clk) if(cnt_go) cnt <= cnt + 1; else cnt <= 0; 
-   initial
-     begin
-	cnt = 0; 
-	rst = 1;
-	clk = 0;
-	cnt_go <= 0; 
-	nbits <= 16;
-	data <= 16'h5aaa; 
-	n0 <= 1;
-	n1 <= 3;
-	n2 <= 4;
-	n3 <= 0;
-	y0 <= 1; 
-	// Reset	
-	#(10 * CLK_PERIOD);
-	rst = 1'b0;
-	#(20* CLK_PERIOD);
-
-	// Logging
-	$display("");
-	$display("------------------------------------------------------");
-	$display("Test Case: TEST_CASE_16_2_3_4_5");
-
-	cnt_go = 1; 
-	
-	// Stimulate UUT
-     end
-   `endif
-
    
    //////////////////////////////////////////////////////////////////////
    // Tasks (e.g., writing data, etc.)
