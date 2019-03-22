@@ -1,115 +1,216 @@
 # Loading project tb
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
 # Compile of tb.v failed with 1 errors.
-# Compile of serial_rx.v failed with 3 errors.
+# Compile of iter_integer_linear_calc.v failed with 3 errors.
 # 2 compiles, 2 failed with 4 errors.
-# Compile of tb.v was successful.
-# Compile of serial_rx.v failed with 2 errors.
-# 2 compiles, 1 failed with 2 errors.
-# Compile of tb.v was successful.
-# Compile of serial_rx.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.tb
-# vsim work.tb 
-# Start time: 15:19:14 on Mar 21,2019
-# Loading work.tb
-# Loading work.serial_rx
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/tb/SERIAL_RX_0/*
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_rx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_rx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_rx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_rx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_rx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_rx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
-# 2 compiles, 0 failed with no errors.
-vsim work.tb
-# End time: 15:36:36 on Mar 21,2019, Elapsed time: 0:17:22
-# Errors: 0, Warnings: 1
-# vsim work.tb 
-# Start time: 15:36:36 on Mar 21,2019
-# Loading work.tb
-# Loading work.serial_tx
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint sim:/tb/SERIAL_TX_0/*
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_tx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_tx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
-# 2 compiles, 0 failed with no errors.
-restart
-# Loading work.tb
-# Loading work.serial_tx
-run
-# 
-# ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
 # Compile of tb.v failed with 1 errors.
-# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v failed with 2 errors.
+# 2 compiles, 2 failed with 3 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of iter_integer_linear_calc.v failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of iter_integer_linear_calc.v failed with 1 errors.
+# 2 compiles, 2 failed with 2 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of iter_integer_linear_calc.v was successful.
 # 2 compiles, 1 failed with 1 error.
 # Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
 # 2 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:25:07 on Mar 22,2019
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/IILC_0/*
 # Compile of tb.v was successful.
-# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
 # 2 compiles, 0 failed with no errors.
 restart
 # Loading work.tb
-# Loading work.serial_tx
+# Loading work.iter_integer_linear_calc
 run
 # 
 # ------------------------------------------------------
-# Test Case: TEST_CASE_16_2_3_4_5
-# End time: 16:08:25 on Mar 21,2019, Elapsed time: 0:31:49
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 2 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.iter_integer_linear_calc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# End time: 15:43:30 on Mar 22,2019, Elapsed time: 3:18:23
 # Errors: 0, Warnings: 1
+# Closing project /home/tyler/verilib/iter_integer_linear_cal/sim/tb.mpf
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
+# Compile of tb.v failed with 1 errors.
+# Compile of spi_master.v failed with 1 errors.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 2 failed with 2 errors.
+# Compile of tb.v was successful.
+# Compile of spi_master.v failed with 1 errors.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of spi_master.v failed with 1 errors.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of spi_master.v failed with 1 errors.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:48:23 on Mar 22,2019
+# Loading work.tb
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(79): [PCDPC] - Port size (32) does not match connection size (8) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MOSI_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MOSI_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(89): [PCDPC] - Port size (32) does not match connection size (8) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MISO_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(89): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MISO_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(99): [PCDPC] - Port size (32) does not match connection size (1) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_SCLK_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(99): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_SCLK_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(112): [PCDPC] - Port size (8) does not match connection size (32) for port 'ncyc'. The port definition is at: /home/tyler/verilib/serial_ck/serial_ck.v(16).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_CK_0 File: /home/tyler/verilib/serial_ck/serial_ck.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(125): [PCDPC] - Port size (256) does not match connection size (32) for port 'data'. The port definition is at: /home/tyler/verilib/serial_rx/serial_rx.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_RX_0 File: /home/tyler/verilib/serial_rx/serial_rx.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(137): [PCDPC] - Port size (256) does not match connection size (32) for port 'data'. The port definition is at: /home/tyler/verilib/serial_tx/serial_tx.v(17).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_TX_0 File: /home/tyler/verilib/serial_tx/serial_tx.v
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/SPIM_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(79): [PCDPC] - Port size (32) does not match connection size (8) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MOSI_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MOSI_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(89): [PCDPC] - Port size (32) does not match connection size (8) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MISO_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(89): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_MISO_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(99): [PCDPC] - Port size (32) does not match connection size (1) for port 'x'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(22).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_SCLK_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(99): [PCDPC] - Port size (1) does not match connection size (32) for port 'valid'. The port definition is at: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v(25).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/IILC_SCLK_0 File: /home/tyler/verilib/iter_integer_linear_cal/iter_integer_linear_calc.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(112): [PCDPC] - Port size (8) does not match connection size (32) for port 'ncyc'. The port definition is at: /home/tyler/verilib/serial_ck/serial_ck.v(16).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_CK_0 File: /home/tyler/verilib/serial_ck/serial_ck.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(125): [PCDPC] - Port size (256) does not match connection size (32) for port 'data'. The port definition is at: /home/tyler/verilib/serial_rx/serial_rx.v(21).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_RX_0 File: /home/tyler/verilib/serial_rx/serial_rx.v
+# ** Warning: (vsim-3015) /home/tyler/verilib/spi_master/spi_master.v(137): [PCDPC] - Port size (256) does not match connection size (32) for port 'data'. The port definition is at: /home/tyler/verilib/serial_tx/serial_tx.v(17).
+#    Time: 0 ns  Iteration: 0  Instance: /tb/SPIM_0/SERIAL_TX_0 File: /home/tyler/verilib/serial_tx/serial_tx.v
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/SPIM_0/*
+run
+# End time: 15:51:45 on Mar 22,2019, Elapsed time: 0:03:22
+# Errors: 0, Warnings: 19

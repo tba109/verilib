@@ -1,15 +1,1 @@
-/home/tyler/verilib/serial_rx/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_rx/sim/tb.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module tb
 
-Top level modules:
-	tb
-
-} {} {}} /home/tyler/verilib/serial_rx/serial_rx.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_rx/serial_rx.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module serial_rx
-
-Top level modules:
-	serial_rx
-
-} {} {}}

@@ -5,6 +5,9 @@
 //
 // Generic SPI master. Signaling in/out is determined by events at number of cycles, rather
 // than CPOL CPHA. Shifts out MSB first, so need to reflect the data word if you need LSB first.
+//
+// The total execuation time words is calculated dynamically, and is based on the longest of the 
+// required waveforms for mosi, miso, and sclk. 
 //////////////////////////////////////////////////////////////////////////////////////////////////
 
 module spi_master
@@ -13,7 +16,7 @@ module spi_master
    input 	 clk, // clock
    input 	 rst, // reset
    // Total number of clock cycles required
-   input [31:0]  cnt_max,
+
    // mosi
    input [7:0] 	 nb_mosi, // number of bits to shift out
    input 	 y0_mosi, // idle level
@@ -24,7 +27,7 @@ module spi_master
    input [31:0]  n0_miso, // delay from first bit
    input [31:0]  n1_miso, // first half cycle length
    // sclk
-   input [31:0]  nc_sclk, // number of clock cycles
+   input [31:0]  nb_sclk, // number of clock cycles
    input 	 y0_sclk, // idle level
    input [31:0]  n0_sclk, // delay from first bit
    input [31:0]  n1_sclk, // first half cycle length
@@ -34,8 +37,8 @@ module spi_master
    input [31:0]  wr_data, // write data
    // Read data
    input 	 rd_req, // read request
-   output [31:0] rd_data=0, // read data
-   output reg 	 ack=0; // acknowledge 
+   output [31:0] rd_data, // read data
+   output reg 	 ack=0, // acknowledge 
    // SPI outputs
    output 	 mosi, // master out, slave in
    output 	 sclk, // master in, slave out
@@ -44,9 +47,70 @@ module spi_master
 
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // Internals
-   reg [31:0] 	     cnt=0; // main counter
-   reg 		     is_rd=0;
-   reg 		     is_wr=0; 
+
+   // These manage the counter
+   reg 		 is_rd=0;
+   reg 		 is_wr=0;
+  
+   // This manages determining the max count.
+   reg [31:0] 	 max_cnt;
+   wire 	 valid_max_cnt; 
+   wire [31:0] 	 max_cnt_mosi;
+   wire [31:0] 	 max_cnt_sclk;
+   wire [31:0] 	 max_cnt_miso;   
+   wire valid_max_cnt_mosi;
+   wire valid_max_cnt_sclk;
+   wire valid_max_cnt_miso;
+
+   // Counter
+   reg [31:0] 	 cnt=0; // main counter 
+
+   // This handles the max count
+   assign valid_max_cnt = valid_max_cnt_mosi && valid_max_cnt_miso && valid_max_cnt_sclk; 
+   always @(*)
+     if( (max_cnt_mosi >= max_cnt_sclk) && (max_cnt_mosi >= max_cnt_miso) )
+       max_cnt <= max_cnt_mosi;
+     else if( (max_cnt_sclk >= max_cnt_mosi) && (max_cnt_sclk >= max_cnt_miso) )
+       max_cnt <= max_cnt_sclk;
+     else if( (max_cnt_miso >= max_cnt_sclk) && (max_cnt_miso >= max_cnt_mosi) )
+       max_cnt <= max_cnt_miso;
+     else
+       max_cnt <= 32'hffffffff; 
+   
+   // these iteratively calculate max count, so as to allow arbitrary bit lengths. 
+   iter_integer_linear_calc IILC_MOSI_0
+     (
+      .clk(clk),
+      .rst(rst),
+      .m(n1_mosi),
+      .x({24'b0,nb_mosi}),
+      .b(n0_mosi),
+      .y(max_cnt_mosi),
+      .valid(valid_max_cnt_mosi)
+      );
+   iter_integer_linear_calc IILC_MISO_0
+     (
+      .clk(clk),
+      .rst(rst),
+      .m(n1_miso),
+      .x({24'b0,nb_miso}),
+      .b(n0_miso),
+      .y(max_cnt_miso),
+      .valid(valid_max_cnt_miso)
+      );
+   iter_integer_linear_calc IILC_SCLK_0
+     (
+      .clk(clk),
+      .rst(rst),
+      .m(n1_sclk + n2_sclk),
+      .x({24'b0,nb_sclk}),
+      .b(n0_sclk),
+      .y(max_cnt_sclk),
+      .valid(valid_max_cnt_sclk)
+      );
+
+   
+   // The serial PHY   
    serial_ck SERIAL_CK_0(
 			 // Outputs
 			 .y			(sclk),
@@ -54,7 +118,7 @@ module spi_master
 			 .clk			(clk),
 			 .rst			(rst),
 			 .y0			(y0_sclk),
-			 .ncyc			(nc_sclk),
+			 .ncyc			(nb_sclk),
 			 .n0			(n0_sclk),
 			 .n1			(n1_sclk),
 			 .n2			(n2_sclk),
@@ -88,23 +152,28 @@ module spi_master
    ///////////////////////////////////////////////////////////////////////////////////////////////
    // FSM Flow
    // Main counter
-   always @(posedge clk)
-     begin
-	ack <= 0; 
-	if(cnt == 0 && (wr_req || rd_req))
-	  begin 
-	     cnt <= cnt + 1;
-	  end
-	else if(cnt == cnt_max)
-	  begin
-	     ack <= 1;
-	     cnt <= 0;
-	  end
-	else
+   always @(posedge clk or posedge rst)
+     if(rst)
+       begin
+	  cnt <= 0;
+	  ack <= 0;
+       end
+     else
+       begin
+	  ack <= 0; 
+	  if(cnt == 0 && (wr_req || rd_req) && valid_max_cnt)
+	    begin 
+	       cnt <= cnt + 1;
+	    end
+	  else if(cnt == max_cnt)
+	    begin
+	       ack <= 1;
+	       cnt <= 0;
+	    end
+	  else
 	  cnt <= cnt + 1;
-     end
+       end
    
-
    always @(posedge clk or posedge rst)
      if(rst)
        begin
@@ -131,5 +200,5 @@ endmodule
 
 // For emacs verilog-mode
 // Local Variables:
-// verilog-library-directories:("../serial_ck/" "../serial_tx/" "../serial_rx/")
+// verilog-library-directories:("../serial_ck/" "../serial_tx/" "../serial_rx/" "../iter_integer_linear_calc/")
 // End:
