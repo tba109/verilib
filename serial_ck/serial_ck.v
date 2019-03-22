@@ -3,7 +3,7 @@
 //
 // serial_ck.v
 //
-// Transmit a clock in 4 phases
+// Transmit a clock in 3 phases
 // S0: Hold y0 for n0 cycles
 // S1: Output msb of data after n1 cycles. 
 // S2: Hold for n2 cycles. If we've output ncyc, go back to S0. Otherwise, return to S1.
@@ -12,7 +12,6 @@ module serial_ck #(parameter P_Y_INIT=0)
   (
    input 	 clk, // clock
    input 	 rst, // active high resset
-   output 	 ack, // acknowledge
    input 	 y0, // idle output level 
    input [7:0] 	 ncyc, // number of data bits, minimum valid value is 1
    input [31:0]  n0, // number of cnt cycles in getting started, minimum valid value is 1
