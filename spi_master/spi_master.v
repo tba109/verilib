@@ -122,7 +122,7 @@ module spi_master
 			 .n0			(n0_sclk),
 			 .n1			(n1_sclk),
 			 .n2			(n2_sclk),
-			 .cnt			(cnt)); 
+			 .cnt			((is_wr || is_rd) ? cnt : 0)); 
    
    serial_rx SERIAL_RX_0(
 			 // Outputs
@@ -157,45 +157,34 @@ module spi_master
        begin
 	  cnt <= 0;
 	  ack <= 0;
+	  is_wr <= 0;
+	  is_rd <= 0; 
        end
      else
        begin
-	  ack <= 0; 
 	  if(cnt == 0 && (wr_req || rd_req) && valid_max_cnt)
-	    begin 
+	    begin
+	       ack <= 0; 
+	       if(wr_req) is_wr <= 1;
+	       if(rd_req) is_rd <= 1; 
 	       cnt <= cnt + 1;
 	    end
 	  else if(cnt == max_cnt)
 	    begin
 	       ack <= 1;
-	       cnt <= 0;
+	       if(wr_req == 0 && rd_req == 0)
+		 begin
+		    is_wr <= 0;
+		    is_rd <= 0;
+		    cnt <= 0;
+		    ack <= 0;
+		 end
+	       
 	    end
-	  else
-	  cnt <= cnt + 1;
+	  else if(wr_req || rd_req)
+	    cnt <= cnt + 1;
        end
-   
-   always @(posedge clk or posedge rst)
-     if(rst)
-       begin
-	  is_rd <= 0;
-	  is_wr <= 0;
-       end
-     else
-       begin
-	  if(ack)
-	    begin
-	       is_wr <= 0;
-	       is_rd <= 0;
-	    end
-	  else
-	    begin 
-	       if(wr_req)
-		 is_wr <= 1;
-	       if(rd_req)
-		 is_rd <= 1;
-	    end
-       end
-       
+          
 endmodule
 
 // For emacs verilog-mode

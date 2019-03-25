@@ -12,19 +12,12 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	tb
 
-} {} {}} /home/tyler/verilib/spi_master/spi_master.v {1 {vlog -work work -stats=none /home/tyler/verilib/spi_master/spi_master.v
+} {} {}} /home/tyler/verilib/serial_tx/serial_tx.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_tx/serial_tx.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module spi_master
+-- Compiling module serial_tx
 
 Top level modules:
-	spi_master
-
-} {} {}} /home/tyler/verilib/serial_ck/serial_ck.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_ck/serial_ck.v
-Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module serial_ck
-
-Top level modules:
-	serial_ck
+	serial_tx
 
 } {} {}} /home/tyler/verilib/serial_rx/serial_rx.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_rx/serial_rx.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
@@ -33,11 +26,11 @@ Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
 Top level modules:
 	serial_rx
 
-} {} {}} /home/tyler/verilib/serial_tx/serial_tx.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_tx/serial_tx.v
+} {} {}} /home/tyler/verilib/serial_ck/serial_ck.v {1 {vlog -work work -stats=none /home/tyler/verilib/serial_ck/serial_ck.v
 Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
--- Compiling module serial_tx
+-- Compiling module serial_ck
 
 Top level modules:
-	serial_tx
+	serial_ck
 
 } {} {}}
