@@ -1,1 +1,399 @@
 # Loading project tb
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
+# Compile of tb.v failed with 1 errors.
+# Compile of ft232r_hs.v failed with 1 errors.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v failed with 1 errors.
+# Compile of rs232_ser.v failed with 1 errors.
+# 5 compiles, 4 failed with 4 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ft232r_hs.v failed with 1 errors.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# 5 compiles, 2 failed with 2 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ft232r_hs.v failed with 1 errors.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# 6 compiles, 2 failed with 2 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ft232r_hs.v failed with 3 errors.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# 6 compiles, 2 failed with 4 errors.
+# Compile of tb.v failed with 1 errors.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# 6 compiles, 1 failed with 1 error.
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 16:05:06 on Mar 26,2019
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# ** Error: (vsim-3033) /home/tyler/verilib/rs232_des/rs232_des.v(47): Instantiation of 'sync' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/FT232_R_HS_0/RS232_DES_0 File: /home/tyler/verilib/rs232_des/rs232_des.v
+#         Searched libraries:
+#             /home/tyler/verilib/ft232r_hs/sim/modelsim_ase/work
+# Loading work.negedge_detector
+# Error loading design
+# End time: 16:05:06 on Mar 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 16:05:37 on Mar 26,2019
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/FT232_R_HS_0/*
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v failed with 1 errors.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 1 failed with 1 error.
+# Error opening /home/tyler/verilib/ft232r_hs/sim/modelsim_ase/(vlog-13069) /home/tyler/verilib/ft232r_hs/ft232r_hs.v
+# Path name '/home/tyler/verilib/ft232r_hs/sim/modelsim_ase/(vlog-13069) /home/tyler/verilib/ft232r_hs/ft232r_hs.v' doesn't exist.
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/FT232_R_HS_0/ser_en'. 
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+add wave -position insertpoint sim:/tb/FT232_R_HS_0/*
+run
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/tb/wr_req
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/tb/FT232_R_HS_0/wr_ack
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/tb/FT232_R_HS_0/rd_ack_ne
+# Compile of tb.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of sync.v was successful.
+# 7 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.posedge_detector
+# Loading work.rs232_des
+# Loading work.sync
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1, simple loopback
+run
+run
+run
+run
+run
+run
+# End time: 16:32:33 on Mar 26,2019, Elapsed time: 0:26:56
+# Errors: 2, Warnings: 1

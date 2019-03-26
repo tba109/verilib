@@ -23,8 +23,13 @@ module rs232_des
    input 	    rx_fifo_full          // acknowledgement of acceptance from downstream
    );
 
-`include "fncs.vh"
-   
+   // ceiling(log2()), used to figure out counter size.   
+   function integer clogb2;
+      input integer value;
+      for(clogb2=0;value>0;clogb2=clogb2+1)
+	value = value >> 1;
+   endfunction // for
+
    parameter P_CLK_FREQ_HZ = 100000000;
    parameter P_BAUD_RATE = 9600;
         

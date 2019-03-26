@@ -1,0 +1,50 @@
+/home/tyler/verilib/ft232r_hs/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/verilib/ft232r_hs/sim/tb.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} /home/tyler/verilib/negedge_detector/negedge_detector.v {1 {vlog -work work -stats=none /home/tyler/verilib/negedge_detector/negedge_detector.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module negedge_detector
+
+Top level modules:
+	negedge_detector
+
+} {} {}} /home/tyler/verilib/posedge_detector/posedge_detector.v {1 {vlog -work work -stats=none /home/tyler/verilib/posedge_detector/posedge_detector.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module posedge_detector
+
+Top level modules:
+	posedge_detector
+
+} {} {}} /home/tyler/verilib/ft232r_hs/ft232r_hs.v {1 {vlog -work work -stats=none /home/tyler/verilib/ft232r_hs/ft232r_hs.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module ft232r_hs
+
+Top level modules:
+	ft232r_hs
+
+} {} {}} /home/tyler/verilib/sync/sync.v {1 {vlog -work work -stats=none /home/tyler/verilib/sync/sync.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module sync
+
+Top level modules:
+	sync
+
+} {} {}} /home/tyler/verilib/rs232_ser/rs232_ser.v {1 {vlog -work work -stats=none /home/tyler/verilib/rs232_ser/rs232_ser.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module rs232_ser
+
+Top level modules:
+	rs232_ser
+
+} {} {}} /home/tyler/verilib/rs232_des/rs232_des.v {1 {vlog -work work -stats=none /home/tyler/verilib/rs232_des/rs232_des.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module rs232_des
+
+Top level modules:
+	rs232_des
+
+} {} {}}

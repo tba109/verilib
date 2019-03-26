@@ -1,0 +1,150 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tyler/verilib/spi_master/sim/modelsim_ase
+vft232r_hs
+Z0 !s110 1553632294
+!i10b 1
+!s100 F7Gd9VlgP[dQ4f]LMfI6Z1
+IRbaoAB:I:3ZbF8817J^953
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tyler/verilib/ft232r_hs/sim/modelsim_ase
+w1553632288
+8/home/tyler/verilib/ft232r_hs/ft232r_hs.v
+F/home/tyler/verilib/ft232r_hs/ft232r_hs.v
+L0 12
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1553632294.000000
+!s107 /home/tyler/verilib/ft232r_hs/ft232r_hs.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ft232r_hs/ft232r_hs.v|
+!i113 1
+Z5 o-work work
+vnegedge_detector
+R0
+!i10b 1
+!s100 TI9=1cSZf^z3AI6k<@AnF3
+IF0jEPl^ZTX3zI5VnDO^Qf3
+R1
+R2
+Z6 w1551113510
+8/home/tyler/verilib/negedge_detector/negedge_detector.v
+F/home/tyler/verilib/negedge_detector/negedge_detector.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/negedge_detector/negedge_detector.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/negedge_detector/negedge_detector.v|
+!i113 1
+R5
+vposedge_detector
+R0
+!i10b 1
+!s100 nDLWL=DMn<ndSEaWWb?@30
+IbTh1zPMgZz:Y2K=1Fj0?l2
+R1
+R2
+R6
+8/home/tyler/verilib/posedge_detector/posedge_detector.v
+F/home/tyler/verilib/posedge_detector/posedge_detector.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/posedge_detector/posedge_detector.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/posedge_detector/posedge_detector.v|
+!i113 1
+R5
+vrs232_des
+R0
+!i10b 1
+!s100 gGgBmAN@5GYBGa^lD_R4l1
+IMCBf3SS^Dz?YF@HzV5kd?1
+R1
+R2
+w1553630411
+8/home/tyler/verilib/rs232_des/rs232_des.v
+F/home/tyler/verilib/rs232_des/rs232_des.v
+L0 16
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/rs232_des/rs232_des.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/rs232_des/rs232_des.v|
+!i113 1
+R5
+vrs232_ser
+R0
+!i10b 1
+!s100 mH;GKE`NUd@^>n<3F2gFg3
+I[PbLCP=U3`LgzJhZD=S7=3
+R1
+R2
+w1553630432
+8/home/tyler/verilib/rs232_ser/rs232_ser.v
+F/home/tyler/verilib/rs232_ser/rs232_ser.v
+L0 17
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/rs232_ser/rs232_ser.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/rs232_ser/rs232_ser.v|
+!i113 1
+R5
+vsync
+R0
+!i10b 1
+!s100 8>ODV5YBDo`kGRGGK>0_Y3
+IjK>G1hVgO^[JfY9PzL2ch3
+R1
+R2
+R6
+8/home/tyler/verilib/sync/sync.v
+F/home/tyler/verilib/sync/sync.v
+L0 5
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/sync/sync.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/sync/sync.v|
+!i113 1
+R5
+vtb
+R0
+!i10b 1
+!s100 >ReC4B:2ITObTmcd<k?k11
+I`7[hBnIilEilI8S?70SQ;1
+R1
+R2
+w1553631832
+8/home/tyler/verilib/ft232r_hs/sim/tb.v
+F/home/tyler/verilib/ft232r_hs/sim/tb.v
+L0 15
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tyler/verilib/ft232r_hs/sim/tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tyler/verilib/ft232r_hs/sim/tb.v|
+!i113 1
+R5

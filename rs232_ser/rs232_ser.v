@@ -16,15 +16,21 @@
 
 module rs232_ser
   (
-   input       clk,                  // clock frequency
-   input       rst_n,                // active low reset
-   output reg  tx = 1'b1,            // serial RS-232 data
-   input [7:0] tx_fifo_data,         // serial tx data
+   input       clk, // clock frequency
+   input       rst_n, // active low reset
+   output reg  tx = 1'b1, // serial RS-232 data
+   input [7:0] tx_fifo_data, // serial tx data
    output reg  tx_fifo_rd_en = 1'b0, // transmission request from upstream
-   input       tx_fifo_empty         // acknowledge of acceptance to upstream
+   input       tx_fifo_empty, // acknowledge of acceptance to upstream
+   output      done
    );
 
-`include "fncs.vh"
+   // ceiling(log2()), used to figure out counter size.   
+   function integer clogb2;
+      input integer value;
+      for(clogb2=0;value>0;clogb2=clogb2+1)
+	value = value >> 1;
+   endfunction // for
    
    parameter P_CLK_FREQ_HZ = 100000000;
    parameter P_BAUD_RATE = 9600;
@@ -53,6 +59,10 @@ module rs232_ser
      if( !rst_n ) tx_fifo_rd_en <= 1'b0;
      else if( (fsm == S_IDLE) && !tx_fifo_empty) tx_fifo_rd_en <= 1'b1;
      else tx_fifo_rd_en <= 1'b0;
+
+   // Utility signal for done
+   assign done = (launch_cnt == LAUNCH_CNT_MAX) && (fsm == S_STOP); 
+
       
    // Finite State Machine
    always @(posedge clk or negedge rst_n)
