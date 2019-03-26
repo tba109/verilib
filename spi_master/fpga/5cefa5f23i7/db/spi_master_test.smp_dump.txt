@@ -1,0 +1,38 @@
+
+State Machine - |spi_master|fsm
+Name fsm.S_ACK fsm.S_COUNT fsm.S_VALID_MAX_CNT_CHECK fsm.00 
+fsm.00 0 0 0 0 
+fsm.S_VALID_MAX_CNT_CHECK 0 0 1 1 
+fsm.S_COUNT 0 1 0 1 
+fsm.S_ACK 1 0 0 1 
+
+State Machine - |spi_master|serial_tx:SERIAL_TX_0|fsm
+Name fsm.S1 
+fsm.S0 0 
+fsm.S1 1 
+
+State Machine - |spi_master|serial_rx:SERIAL_RX_0|fsm
+Name fsm.S1 
+fsm.S0 0 
+fsm.S1 1 
+
+State Machine - |spi_master|serial_ck:SERIAL_CK_0|fsm
+Name fsm.S0 fsm.S2 fsm.S1 
+fsm.S0 0 0 0 
+fsm.S1 1 0 1 
+fsm.S2 1 1 0 
+
+State Machine - |spi_master|iter_integer_linear_calc:IILC_SCLK_0|fsm
+Name fsm.S_CALC 
+fsm.S_IDLE 0 
+fsm.S_CALC 1 
+
+State Machine - |spi_master|iter_integer_linear_calc:IILC_MISO_0|fsm
+Name fsm.S_CALC 
+fsm.S_IDLE 0 
+fsm.S_CALC 1 
+
+State Machine - |spi_master|iter_integer_linear_calc:IILC_MOSI_0|fsm
+Name fsm.S_CALC 
+fsm.S_IDLE 0 
+fsm.S_CALC 1 

@@ -1,8 +1,1 @@
 # Loading project tb
-# Compile of tb.v was successful.
-# Compile of spi_master.v was successful.
-# Compile of serial_ck.v was successful.
-# Compile of serial_rx.v was successful.
-# Compile of serial_tx.v was successful.
-# Compile of iter_integer_linear_calc.v was successful.
-# 6 compiles, 0 failed with no errors.

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Tue Mar 26 11:09:03 2019
+Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+Revision Name : spi_master_test
+Top-level Entity Name : spi_master
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 969
+Total pins : 0
+Total virtual pins : 346
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0
