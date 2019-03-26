@@ -134,9 +134,20 @@ module tb;
 	$display("Test Case: TEST_CASE_1");
 
 
-	@(posedge clk) begin wr_req = 1; rd_req = 1; end
+	@(posedge clk) begin wr_req=1; rd_req=1; end
+	wait(ack) @(posedge clk) begin wr_req=0; rd_req=0; end
+	
+	@(posedge clk) 
+	  begin 
+	     wr_req=1; 
+	     rd_req=1; 
+	     nb_miso=17; 
+	     nb_sclk=17; 
+	     nb_mosi=17; 
+	     wr_data = 17'h15aaa; 
+	  end
+	wait(ack) @(posedge clk) begin wr_req=0; rd_req=0; end
 
-	wait(ack) @(posedge clk) begin wr_req = 0; rd_req = 0; end
 	
 	// Stimulate UUT
      end

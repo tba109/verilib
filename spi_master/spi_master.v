@@ -82,6 +82,7 @@ module spi_master
      (
       .clk(clk),
       .rst(rst),
+      .wr(wr_req || rd_req),
       .m(n1_mosi),
       .x({24'b0,nb_mosi}),
       .b(n0_mosi),
@@ -92,6 +93,7 @@ module spi_master
      (
       .clk(clk),
       .rst(rst),
+      .wr(wr_req || rd_req),
       .m(n1_miso),
       .x({24'b0,nb_miso}),
       .b(n0_miso),
@@ -102,6 +104,7 @@ module spi_master
      (
       .clk(clk),
       .rst(rst),
+      .wr(wr_req || rd_req),
       .m(n1_sclk + n2_sclk),
       .x({24'b0,nb_sclk}),
       .b(n0_sclk),
@@ -150,6 +153,30 @@ module spi_master
 			 .cnt			(is_wr ? cnt : 0));
       
    ///////////////////////////////////////////////////////////////////////////////////////////////
+   // FSM definitions
+   reg [1:0] fsm=0;
+   localparam
+     S_IDLE = 0,
+     S_VALID_MAX_CNT_CHECK = 1, 
+     S_COUNT = 2, 
+     S_ACK = 3;
+   
+
+`ifdef MODEL_TECH // This works well for modelsim
+   reg [127:0] state_str;
+   always @(*)
+     case(fsm)
+       S_IDLE:                state_str <= "S_IDLE";
+       S_VALID_MAX_CNT_CHECK: state_str <= "S_VALID_MAX_CNT_CHECK";
+       S_COUNT:               state_str <= "S_COUNT";
+       S_ACK:                 state_str <= "S_ACK";
+       default:               state_str <= "*** UNKNOWN ***"; 
+     endcase // case (fsm)
+`endif
+
+   
+
+   ///////////////////////////////////////////////////////////////////////////////////////////////
    // FSM Flow
    // Main counter
    always @(posedge clk or posedge rst)
@@ -158,31 +185,54 @@ module spi_master
 	  cnt <= 0;
 	  ack <= 0;
 	  is_wr <= 0;
-	  is_rd <= 0; 
+	  is_rd <= 0;
+	  fsm <= 0; 
        end
      else
        begin
-	  if(cnt == 0 && (wr_req || rd_req) && valid_max_cnt)
-	    begin
-	       ack <= 0; 
-	       if(wr_req) is_wr <= 1;
-	       if(rd_req) is_rd <= 1; 
-	       cnt <= cnt + 1;
-	    end
-	  else if(cnt == max_cnt)
-	    begin
-	       ack <= 1;
-	       if(wr_req == 0 && rd_req == 0)
-		 begin
-		    is_wr <= 0;
-		    is_rd <= 0;
-		    cnt <= 0;
-		    ack <= 0;
-		 end
-	       
-	    end
-	  else if(wr_req || rd_req)
-	    cnt <= cnt + 1;
+	  case(fsm)
+	    S_IDLE:
+	      begin
+		 is_wr <= 0;
+		 is_rd <= 0;
+		 cnt <= 0;
+		 ack <= 0;
+		 if(wr_req || rd_req)
+		   begin
+		      if(wr_req) is_wr <= 1;
+		      if(rd_req) is_rd <= 1;
+		      fsm <= S_VALID_MAX_CNT_CHECK; 
+		   end
+	      end
+
+	    S_VALID_MAX_CNT_CHECK:
+	      begin
+		 if(valid_max_cnt)
+		   fsm <= S_COUNT; 
+	      end
+
+	    S_COUNT:
+	      begin
+		 cnt <= cnt + 1;
+		 if(cnt == max_cnt)
+		   fsm <= S_ACK; 
+	      end
+
+	    S_ACK:
+	      begin
+		 ack <= 1;
+		 if(wr_req == 0 && rd_req == 0)
+		   begin
+		      is_wr <= 0;
+		      is_rd <= 0;
+		      cnt <= 0;
+		      ack <= 0;
+		      fsm <= S_IDLE;
+		   end
+	      end
+
+	    default: fsm <= S_IDLE;
+	  endcase // case (fsm)
        end
           
 endmodule

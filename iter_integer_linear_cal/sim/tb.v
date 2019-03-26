@@ -32,6 +32,7 @@ module tb;
    reg [31:0]		b;			// To IILC_0 of iter_integer_linear_calc.v
    reg [31:0]		m;			// To IILC_0 of iter_integer_linear_calc.v
    reg [31:0]		x;			// To IILC_0 of iter_integer_linear_calc.v
+   reg 			wr; 
    // End of automatics
    
    //////////////////////////////////////////////////////////////////////
@@ -54,6 +55,7 @@ module tb;
 				   // Inputs
 				   .clk			(clk),
 				   .rst			(rst),
+				   .wr                  (wr),
 				   .m			(m[31:0]),
 				   .x			(x[31:0]),
 				   .b			(b[31:0])); 
@@ -76,7 +78,8 @@ module tb;
      begin
 	b = 0;
 	m = 0;
-	x = 0; 
+	x = 0;
+	wr = 0; 
 	// Reset	
 	#(10 * CLK_PERIOD);
 	rst = 1'b0;
@@ -88,14 +91,12 @@ module tb;
 	$display("Test Case: TEST_CASE_1");
 
 	// Stimulate UUT
-	b = 10;
+	b = 10; 
 	#(10*CLK_PERIOD);
-	x = 16;
-	m = 11;
+	x = 16; m = 11; wr = 1; @(posedge clk) wr = 0;  
 
 	#(100*CLK_PERIOD);
-	x = 12;
-	m = 7;
+	x = 12; m = 7; wr = 1; @(posedge clk) wr = 0; 
 	
      end
    `endif

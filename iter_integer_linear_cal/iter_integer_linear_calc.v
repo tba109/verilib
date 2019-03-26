@@ -16,13 +16,14 @@
 
 module iter_integer_linear_calc
   (
-   input clk, // line values
-   input rst, // reset, active high
-   input [31:0] m, // slope 
-   input [31:0] x, // abscissa
-   input [31:0] b, // intercept
+   input 	 clk, // line values
+   input 	 rst, // reset, active high
+   input 	 wr, // calculate a new value
+   input [31:0]  m, // slope 
+   input [31:0]  x, // abscissa
+   input [31:0]  b, // intercept
    output [31:0] y, // ordinate
-   output valid
+   output 	 valid
    );
 
    ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -68,10 +69,10 @@ module iter_integer_linear_calc
 	 S_IDLE:
 	   begin
 	      cnt <= 0;
-	      i_m_0 <= m;
-	      i_x_0 <= x;
-	      if(i_m_0 != m || i_x_0 != x)
+	      if(wr && (i_m_0 != m || i_x_0 != x))
 		begin
+		   i_m_0 <= m;
+		   i_x_0 <= x;
 		   i_dy <= 0; 
 		   fsm <= S_CALC;
 		end

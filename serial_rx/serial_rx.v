@@ -63,7 +63,10 @@ module serial_rx #(parameter P_Y_INIT=0)
 	      i_cnt_0 <= n0;
 	      i_cnt_1 <= n0+n1;
 	      if(cnt == i_cnt_0)
-		fsm <= S1;
+		begin
+		   fsm <= S1;
+		   data <= 0;
+		end
 	   end
 	 
 	 S1:
