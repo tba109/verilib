@@ -65,9 +65,9 @@ module ft232r_hs
       .rx_fifo_full		(1'b0)
       ); 
    // This requires slightly more translation:
-   // 1.) cts_n idles low, rts_n asserts and go to S1. Otherwise, jump directly to S2 (no handshaking). 
-   // 2.) data is received. cts_n is transitioned high by i_des_done. 
-   // 3.) rd_req asserts. when rd_ack, return to S0. 
+   // S0: cts_n idles low, rts_n asserts and go to S1. Otherwise, jump directly to S2 (no handshaking). 
+   // S1: data is received. cts_n is transitioned high by i_des_done. 
+   // S2: rd_req asserts. when rd_ack, return to S0. 
    localparam
      S0=0,
      S1=1,
