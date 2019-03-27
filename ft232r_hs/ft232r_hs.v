@@ -7,6 +7,8 @@
 // 
 // This module allows hardware handshaking on incoming transmission from the FT232. 
 // There is no provision for handshaking outgoing data (to the FT232). 
+// On the logic side of the interface, cmd means incoming data from the FT232R, rsp means outgoing data
+// to the FT232R. 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 module ft232r_hs
@@ -19,12 +21,12 @@ module ft232r_hs
    input 	rts_n, // request to send (active low) FPGA to FT232R
    output reg 	cts_n=1, // clear to send (active low) FT232R to FPGA 
    // Internal interface (FPGA logic) 
-   input 	wr_req, // logic asserts to requests to write data to FT232R
-   output 	wr_ack, // logic is signaled with acknowledge of write request to FT232R
-   input [7:0] 	wr_data, // data to be written to FT232R
-   output reg 	rd_req=0, // request logic read new data from FT232R
-   input 	rd_ack, // logic acknowledges reading of data from FT232R
-   output [7:0] rd_data // data read from FT232
+   input 	rsp_req, // logic asserts to requests to write data to FT232R
+   output 	rsp_ack, // logic is signaled with acknowledge of write request to FT232R
+   input [7:0] 	rsp_data, // data to be written to FT232R
+   output reg 	cmd_req=0, // request logic read new data from FT232R
+   input 	cmd_ack, // logic acknowledges reading of data from FT232R
+   output [7:0] cmd_data // data read from FT232
    );
 
    /////////////////////////////////////////////////////////////////////////////////////////////////
@@ -42,21 +44,21 @@ module ft232r_hs
       // Outputs
       .tx			(rxd),
       .tx_fifo_rd_en		(),
-      .done                     (wr_ack),
+      .done                     (rsp_ack),
       // Inputs
       .clk			(clk),
       .rst_n			(!rst),
-      .tx_fifo_data		(wr_data),
+      .tx_fifo_data		(rsp_data),
       .tx_fifo_empty		(!i_ser_en)
       );
-   posedge_detector PEDGE_0(.clk(clk),.rst_n(!rst),.a(wr_req),.y(i_ser_en));
+   posedge_detector PEDGE_0(.clk(clk),.rst_n(!rst),.a(rsp_req),.y(i_ser_en));
 
    /////////////////////////////////////////////////////////////////////////////////////////////////
    // Deserializer
    rs232_des #(.P_CLK_FREQ_HZ(P_CLK_FREQ_HZ),.P_BAUD_RATE(P_BAUD_RATE)) RS232_DES_0
      (
       // Outputs
-      .rx_fifo_data		(rd_data),
+      .rx_fifo_data		(cmd_data),
       .rx_fifo_wr_en		(i_des_done),
       // Inputs
       .clk			(clk),
@@ -67,26 +69,26 @@ module ft232r_hs
    // This requires slightly more translation:
    // S0: cts_n idles low, rts_n asserts and go to S1. Otherwise, jump directly to S2 (no handshaking). 
    // S1: data is received. cts_n is transitioned high by i_des_done. 
-   // S2: rd_req asserts. when rd_ack, return to S0. 
+   // S2: cmd_req asserts. when cmd_ack, return to S0. 
    localparam
      S0=0,
      S1=1,
      S2=2;
    reg [1:0] 	fsm=S0;
-   wire 	rd_ack_ne; 
-   negedge_detector NEDGE_0(.clk(clk),.rst_n(!rst),.a(rd_ack),.y(rd_ack_ne)); 
+   wire 	cmd_ack_ne; 
+   negedge_detector NEDGE_0(.clk(clk),.rst_n(!rst),.a(cmd_ack),.y(cmd_ack_ne)); 
    always @(posedge clk or posedge rst)
      if(rst)
        begin
 	  fsm <= 0;
-	  rd_req <= 0;
+	  cmd_req <= 0;
 	  cts_n <= 0; 
        end
      else
        case(fsm)
 	 S0:
 	   begin
-	      rd_req <= 0; 
+	      cmd_req <= 0; 
 	      cts_n <= 0;
 	      if(!rts_n) // rs232 flow control is being used
 		fsm <= S1; // rs232 flow control is bypassed
@@ -105,12 +107,12 @@ module ft232r_hs
 	 
 	 S2:
 	   begin
-	      rd_req <= 1;
-	      if(rd_ack)
-		rd_req <= 0;
-	      if(rd_ack_ne)
+	      cmd_req <= 1;
+	      if(cmd_ack)
+		cmd_req <= 0;
+	      if(cmd_ack_ne)
 		begin
-		   rd_req <= 0;
+		   cmd_req <= 0;
 		   fsm <= S0;
 		end
 	   end

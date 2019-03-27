@@ -25,18 +25,18 @@ module tb;
    /*AUTOWIRE*/
    // Beginning of automatic wires (for undeclared instantiated-module outputs)
    wire			cts_n;			// From FT232_R_HS_0 of ft232r_hs.v
-   wire [7:0]		rd_data;		// From FT232_R_HS_0 of ft232r_hs.v
-   wire			rd_req;			// From FT232_R_HS_0 of ft232r_hs.v
+   wire [7:0]		cmd_data;		// From FT232_R_HS_0 of ft232r_hs.v
+   wire			cmd_req;			// From FT232_R_HS_0 of ft232r_hs.v
    wire			rxd;			// From FT232_R_HS_0 of ft232r_hs.v
    wire			txd;			
-   wire			wr_ack;			
+   wire			rsp_ack;			
    // End of automatics
    /*AUTOREGINPUT*/
    // Beginning of automatic reg inputs (for undeclared instantiated-module inputs)
-   reg			wr_req;			
-   reg			rd_ack;			// To FT232_R_HS_0 of ft232r_hs.v
+   reg			rsp_req;			
+   reg			cmd_ack;			// To FT232_R_HS_0 of ft232r_hs.v
    reg			rts_n;			// To FT232_R_HS_0 of ft232r_hs.v   
-   reg [7:0]		wr_data;		// To FT232_R_HS_0 of ft232r_hs.v
+   reg [7:0]		rsp_data;		// To FT232_R_HS_0 of ft232r_hs.v
    // End of automatics
    
    //////////////////////////////////////////////////////////////////////
@@ -56,17 +56,17 @@ module tb;
 			  // Outputs
 			  .rxd			(rxd),
 			  .cts_n		(cts_n),
-			  .wr_req		(wr_req),
-			  .rd_req		(rd_req),
-			  .rd_data		(rd_data[7:0]),
+			  .rsp_req		(rsp_req),
+			  .cmd_req		(cmd_req),
+			  .cmd_data		(cmd_data[7:0]),
 			  // Inputs
 			  .clk			(clk),
 			  .rst			(rst),
 			  .txd			(txd),
 			  .rts_n		(rts_n),
-			  .wr_ack		(wr_ack),
-			  .wr_data		(wr_data[7:0]),
-			  .rd_ack		(rd_ack)); 
+			  .rsp_ack		(rsp_ack),
+			  .rsp_data		(rsp_data[7:0]),
+			  .cmd_ack		(cmd_ack)); 
    
    //////////////////////////////////////////////////////////////////////
    // Testbench
@@ -85,10 +85,10 @@ module tb;
    assign txd = rxd; // simple loopback
    initial
      begin
-	rd_ack = 0;
+	cmd_ack = 0;
 	rts_n = 1;
-	wr_req = 0;
-	wr_data = 0; 
+	rsp_req = 0;
+	rsp_data = 0; 
 	
 	// Reset	
 	#(10 * CLK_PERIOD);
@@ -101,22 +101,22 @@ module tb;
 	$display("Test Case: TEST_CASE_1, simple loopback");
 
 	#(10*CLK_PERIOD);
-	@(posedge clk) begin wr_data = 8'hae; wr_req = 1; end
-	wait(wr_ack) @(posedge clk) wr_req = 0;
-	wait(rd_req) @(posedge clk) rd_ack = 1; @(posedge clk) rd_ack = 0;  
+	@(posedge clk) begin rsp_data = 8'hae; rsp_req = 1; end
+	wait(rsp_ack) @(posedge clk) rsp_req = 0;
+	wait(cmd_req) @(posedge clk) cmd_ack = 1; @(posedge clk) cmd_ack = 0;  
 
 	#(10*CLK_PERIOD);
-	@(posedge clk) begin wr_data = 8'hb1; wr_req = 1; end
-	wait(wr_ack) @(posedge clk) wr_req = 0;
-	wait(rd_req) @(posedge clk) rd_ack = 1; @(posedge clk) rd_ack = 0;  
+	@(posedge clk) begin rsp_data = 8'hb1; rsp_req = 1; end
+	wait(rsp_ack) @(posedge clk) rsp_req = 0;
+	wait(cmd_req) @(posedge clk) cmd_ack = 1; @(posedge clk) cmd_ack = 0;  
 
 	// Now try with flow control
 	#(10*CLK_PERIOD);
 	@(posedge clk) begin rts_n = 0; end
 	#(10*CLK_PERIOD); 
-	@(posedge clk) begin wr_data = 8'h5c; wr_req = 1; rts_n = 1; end
-	wait(wr_ack) @(posedge clk) wr_req = 0;
-	wait(rd_req) @(posedge clk) rd_ack = 1; @(posedge clk) rd_ack = 0;  
+	@(posedge clk) begin rsp_data = 8'h5c; rsp_req = 1; rts_n = 1; end
+	wait(rsp_ack) @(posedge clk) rsp_req = 0;
+	wait(cmd_req) @(posedge clk) cmd_ack = 1; @(posedge clk) cmd_ack = 0;  
 
 	
      end
