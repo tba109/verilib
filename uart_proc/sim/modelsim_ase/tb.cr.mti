@@ -1,0 +1,36 @@
+/home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v {1 {vlog -work work -stats=none /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module tb
+
+Top level modules:
+	tb
+
+} {} {}} /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v {1 {vlog -work work -stats=none /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module uart_proc
+
+Top level modules:
+	uart_proc
+
+} {} {}} /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/err_mngr/err_mngr.v {1 {vlog -work work -stats=none /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/err_mngr/err_mngr.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module err_mngr
+
+Top level modules:
+	err_mngr
+
+} {} {}} /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/crc16_8b_parallel/crc16_8b_parallel.v {1 {vlog -work work -stats=none /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/crc16_8b_parallel/crc16_8b_parallel.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module crc
+
+Top level modules:
+	crc
+
+} {} {}} /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/negedge_detector/negedge_detector.v {1 {vlog -work work -stats=none /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/negedge_detector/negedge_detector.v
+Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+-- Compiling module negedge_detector
+
+Top level modules:
+	negedge_detector
+
+} {} {}}

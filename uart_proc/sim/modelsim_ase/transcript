@@ -1,0 +1,345 @@
+# Loading project tb
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 08:56:42 on Mar 29,2019
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/UART_PROC_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+add wave -position insertpoint sim:/tb/UART_PROC_0/*
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_ack'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+add wave -position insertpoint  \
+sim:/tb/UART_PROC_0/err_out \
+sim:/tb/UART_PROC_0/err_req \
+sim:/tb/UART_PROC_0/err_ack
+add wave -position insertpoint  \
+sim:/tb/UART_PROC_0/err_wr \
+sim:/tb/UART_PROC_0/err_in
+add wave -position insertpoint  \
+sim:/tb/UART_PROC_0/crc_out \
+sim:/tb/UART_PROC_0/crc_in \
+sim:/tb/UART_PROC_0/crc_data \
+sim:/tb/UART_PROC_0/crc_en
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v failed with 1 errors.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_ack'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of err_mngr.v was successful.
+# 5 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# Loading work.err_mngr
+# ** Warning: (vsim-3017) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Too few port connections. Expected 15, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_out'.
+# ** Warning: (vsim-3722) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/tb.v(55): [TFMPC] - Missing connection for port 'err_req'.
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+# End time: 16:31:49 on Mar 29,2019, Elapsed time: 7:35:07
+# Errors: 0, Warnings: 30

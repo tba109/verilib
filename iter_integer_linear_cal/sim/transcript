@@ -1,0 +1,47 @@
+# Loading project tb
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
+# Compile of uart_proc.v failed with 5 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of uart_proc.v failed with 2 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of uart_proc.v failed with 2 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of uart_proc.v failed with 2 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of uart_proc.v failed with 1 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v failed with 1 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v failed with 1 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v failed with 1 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_proc.v failed with 2 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
