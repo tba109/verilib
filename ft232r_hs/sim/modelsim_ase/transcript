@@ -1,0 +1,457 @@
+# Loading project tb
+# reading /home/tyler/altera/16.0/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project tb
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:09:20 on Mar 28,2019
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/UART_PROC_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+add wave -position insertpoint sim:/tb/UART_PROC_0/*
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v failed with 14 errors.
+# 3 compiles, 1 failed with 14 errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v failed with 4 errors.
+# 3 compiles, 1 failed with 4 errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v failed with 2 errors.
+# 3 compiles, 1 failed with 2 errors.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful with warnings.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v failed with 1 errors.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 1 failed with 1 error.
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# ** Error: (vsim-3033) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v(94): Instantiation of 'crc16_parallel' failed. The design unit was not found.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+#         Searched libraries:
+#             /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/modelsim_ase/work
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 12:09:20 on Mar 28,2019
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# ** Error: (vsim-3033) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v(94): Instantiation of 'crc16_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+#         Searched libraries:
+#             /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/modelsim_ase/work
+# Error loading design
+# End time: 15:57:13 on Mar 28,2019, Elapsed time: 3:47:53
+# Errors: 2, Warnings: 1
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.tb
+# vsim work.tb 
+# Start time: 15:57:44 on Mar 28,2019
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# ** Error: (vsim-3033) /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v(94): Instantiation of 'crc16_8b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UART_PROC_0 File: /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/uart_proc.v
+#         Searched libraries:
+#             /home/tyler/gen2dom-fw/pdommb_rev1_fw_psu/hdl/uart_proc/sim/modelsim_ase/work
+# Error loading design
+# End time: 15:57:45 on Mar 28,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+# Load canceled
+# Compile of uart_proc.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of tb.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim work.crc16_8b_parallel
+# vsim work.crc16_8b_parallel 
+# Start time: 15:58:48 on Mar 28,2019
+# Loading work.crc16_8b_parallel
+vsim work.tb
+# End time: 15:59:07 on Mar 28,2019, Elapsed time: 0:00:19
+# Errors: 0, Warnings: 0
+# vsim work.tb 
+# Start time: 15:59:07 on Mar 28,2019
+# Loading work.tb
+# Loading work.uart_proc
+# Loading work.negedge_detector
+# Loading work.crc
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/UART_PROC_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# End time: 16:05:27 on Mar 28,2019, Elapsed time: 0:06:20
+# Errors: 0, Warnings: 1
