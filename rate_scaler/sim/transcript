@@ -1,0 +1,1847 @@
+# Loading project tb
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project tb
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v failed with 1 errors.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v failed with 5 errors.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v failed with 1 errors.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# 82 compiles, 3 failed with 7 errors.
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v failed with 1 errors.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v failed with 5 errors.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v failed with 1 errors.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v failed with 1 errors.
+# 84 compiles, 4 failed with 8 errors.
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v failed with 8 errors.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v failed with 5 errors.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v failed with 1 errors.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v failed with 1 errors.
+# 84 compiles, 4 failed with 15 errors.
+# Compile of xdom.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v failed with 1 errors.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v failed with 2 errors.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# 84 compiles, 2 failed with 3 errors.
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# 84 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 20:50:32 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/sim/work
+# Loading work.simple_DDR3
+# Error loading design
+# End time: 20:50:33 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 20:52:41 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.simple_DDR3
+# ** Error (suppressible): (vsim-3584) C:/gen2dom-fw/deggmb_rev2_fw_psu/quartus_project/deggmb_fw_top.v(419): Module parameter 'P_RATE_SCALER_CTRL_BUNDLE' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/quartus_project/deggmb_fw_top.v
+# ** Error (suppressible): (vsim-3584) C:/gen2dom-fw/deggmb_rev2_fw_psu/quartus_project/deggmb_fw_top.v(419): Module parameter 'P_RATE_SCALER_STS_BUNDLE' not found for override.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/quartus_project/deggmb_fw_top.v
+# Error loading design
+# End time: 20:52:42 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 20:54:33 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.simple_DDR3
+# Loading work.altsyncram_body
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.dcfifo_async
+# Loading work.dcfifo_fefifo
+# Loading work.wvb_rd_ctrl_fmt_0
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (4) does not match connection size (32) for port 'n0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (4) does not match connection size (32) for port 'n1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'a0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'a1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (4) does not match connection size (32) for port 'n0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (4) does not match connection size (32) for port 'n1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(8).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'a0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(26): [PCDPC] - Port size (1) does not match connection size (32) for port 'a1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# Error loading design
+# End time: 20:54:34 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 14
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 21:05:57 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.simple_DDR3
+# Loading work.altsyncram_body
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.dcfifo_async
+# Loading work.dcfifo_fefifo
+# Loading work.wvb_rd_ctrl_fmt_0
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'a0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'a1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'a0'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/word_sync/word_sync.v(18): [PCDPC] - Port size (1) does not match connection size (32) for port 'a1'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/SYNC_WORD_0/ONE_SHOT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# Error loading design
+# End time: 21:05:58 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 10
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 21:15:43 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.simple_DDR3
+# Loading work.altsyncram_body
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.dcfifo_async
+# Loading work.dcfifo_fefifo
+# Loading work.wvb_rd_ctrl_fmt_0
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(256): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG0_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'period'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# ** Error (suppressible): (vsim-3053) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/xdom/xdom.v(265): Illegal output or inout port connection for port 'deadtime'.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/XDOM_0/DIG1_RATE_SCALER_CTRL_BUNDLE_FAN_OUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bundles/rate_scaler_ctrl_bundle/rate_scaler_ctrl_bundle_fan_out.v
+# Error loading design
+# End time: 21:15:44 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 6
+# Compile of tb.v was successful.
+# Compile of ADC_PLL.v was successful.
+# Compile of RCLK_PLL.v was successful.
+# Compile of simple_DDR3.v was successful.
+# Compile of checker.v was successful.
+# Compile of cmp.v was successful.
+# Compile of config_ind.v was successful.
+# Compile of crc16_8b_parallel.v was successful.
+# Compile of crs_master.v was successful.
+# Compile of ft232r_hs.v was successful.
+# Compile of ft232r_proc_buffered.v was successful.
+# Compile of hs_adapter_run.v was successful.
+# Compile of iter_integer_linear_calc.v was successful.
+# Compile of multivib.v was successful.
+# Compile of negedge_detector.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of pretrigger_buffer.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of rs232_des.v was successful.
+# Compile of rs232_ser.v was successful.
+# Compile of serial_ck.v was successful.
+# Compile of serial_rx.v was successful.
+# Compile of serial_tx.v was successful.
+# Compile of spi_master.v was successful.
+# Compile of sync.v was successful.
+# Compile of task_reg.v was successful.
+# Compile of uart_proc.v was successful.
+# Compile of uart_proc_hs.v was successful.
+# Compile of waveform_buffer.v was successful.
+# Compile of waveform_buffer_storage.v was successful.
+# Compile of waveform_trigger.v was successful.
+# Compile of wvb_rd_ctrl_fmt_0.v was successful.
+# Compile of wvb_reader.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of xdom.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of PTB.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of FIFO_512_160.v was successful.
+# Compile of WVB_RAM_16384_16.v was successful.
+# Compile of deggmb_fw_top.v was successful.
+# Compile of build_number.v was successful.
+# Compile of err_mngr.v was successful.
+# Compile of FIFO_2048_32.v was successful.
+# Compile of local_time_counter.v was successful.
+# Compile of sim_ADS4149_spi.v was successful.
+# Compile of sim_LTC2600.v was successful.
+# Compile of sim_ADS8332.v was successful.
+# Compile of sim_ADC_LVDS.v was successful.
+# Compile of clip.v was successful.
+# Compile of pulse_ram.v was successful.
+# Compile of noise_ram_0.v was successful.
+# Compile of noise_ram_1.v was successful.
+# Compile of noise_ram_2.v was successful.
+# Compile of noise_ram_3.v was successful.
+# Compile of sign_ext.v was successful.
+# Compile of clip_signed.v was successful.
+# Compile of FIFO_4_2_SA.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of wvf_trig_bundle_fan_out.v was successful.
+# Compile of wvf_trig_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_in.v was successful.
+# Compile of wvb_config_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_out.v was successful.
+# Compile of sim_adc_lvds_bundle_fan_in.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# Compile of waveform_acquisition.v was successful.
+# Compile of wvb_rd_addr_ctrl.v was successful.
+# Compile of pulse_gen.v was successful.
+# Compile of wvb_overflow_ctrl.v was successful.
+# Compile of mem_pg_transfer.v was successful.
+# Compile of FIFO_1024_160.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of bitstream_counter_simple.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_in.v was successful.
+# Compile of rate_scaler_sts_bundle_fan_out.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_in.v was successful.
+# Compile of rate_scaler_ctrl_bundle_fan_out.v was successful.
+# Compile of rate_scaler_four_lane.v was successful.
+# Compile of hstm.v was successful.
+# Compile of word_sync.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 85 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 21:18:03 on Dec 11,2019
+# Loading work.tb
+# Loading work.deggmb_fw_top
+# Loading work.sim_adc_lvds_bundle_fan_in
+# Loading work.build_number
+# Loading work.RCLK_PLL
+# Loading work.config_ind
+# Loading work.sync
+# Loading work.posedge_detector
+# Loading work.local_time_counter
+# Loading work.ADC_PLL
+# Loading work.waveform_acquisition
+# Loading work.sim_adc_lvds_bundle_fan_out
+# Loading work.wvf_trig_bundle_fan_out
+# Loading work.wvb_config_bundle_fan_out
+# Loading work.sim_ADC_LVDS
+# Loading work.noise_ram_0
+# Loading work.noise_ram_1
+# Loading work.noise_ram_2
+# Loading work.noise_ram_3
+# Loading work.pulse_ram
+# Loading work.sign_ext
+# Loading work.clip_signed
+# Loading work.waveform_trigger
+# Loading work.cmp
+# Loading work.rate_scaler_sts_bundle_fan_in
+# Loading work.rate_scaler_ctrl_bundle_fan_out
+# Loading work.rate_scaler_four_lane
+# Loading work.bitstream_counter_simple
+# Loading work.word_sync
+# Loading work.one_shot
+# Loading work.hstm
+# Loading work.waveform_buffer
+# Loading work.pretrigger_buffer
+# Loading work.PTB
+# Loading work.altsyncram
+# Loading work.waveform_buffer_storage
+# Loading work.WVB_RAM_16384_16
+# Loading work.FIFO_1024_160
+# Loading work.dcfifo
+# Loading work.dcfifo_mixed_widths
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.dcfifo_low_latency
+# Loading work.ALTERA_MF_HINT_EVALUATION
+# Loading work.dcfifo_dffpipe
+# Loading work.wvb_wr_ctrl
+# Loading work.wvb_hdr_bundle_fan_in
+# Loading work.wvb_rd_addr_ctrl
+# Loading work.wvb_hdr_bundle_fan_out
+# Loading work.wvb_overflow_ctrl
+# Loading work.negedge_detector
+# Loading work.wvb_reader
+# Loading work.spi_master
+# Loading work.iter_integer_linear_calc
+# Loading work.serial_ck
+# Loading work.serial_rx
+# Loading work.serial_tx
+# Loading work.xdom
+# Loading work.wvf_trig_bundle_fan_in
+# Loading work.wvb_config_bundle_fan_in
+# Loading work.rate_scaler_sts_bundle_fan_out
+# Loading work.rate_scaler_ctrl_bundle_fan_in
+# Loading work.ft232r_proc_buffered
+# Loading work.ft232r_hs
+# Loading work.rs232_ser
+# Loading work.rs232_des
+# Loading work.uart_proc_hs
+# Loading work.crc
+# Loading work.err_mngr
+# Loading work.FIFO_2048_32
+# Loading work.scfifo
+# Loading work.crs_master
+# Loading work.multivib
+# Loading work.pulse_gen
+# Loading work.task_reg
+# Loading work.DPRAM_2048_16
+# Loading work.dpram_ping_pong
+# Loading work.rbd_task_ctrl
+# Loading work.mem_pg_transfer
+# Loading work.hit_buffer_controller
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.simple_DDR3
+# Loading work.altsyncram_body
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.dcfifo_async
+# Loading work.dcfifo_fefifo
+# Loading work.wvb_rd_ctrl_fmt_0
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG0_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: (vsim-3015) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/waveform_buffer_storage/waveform_buffer_storage.v(113): [PCDPC] - Port size (10) does not match connection size (9) for port 'rdusedw'. The port definition is at: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/FIFO_1024_160/FIFO_1024_160.v
+# ** Warning: (vsim-3017) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Too few port connections. Expected 14, found 13.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0/DIG1_WAVEFORM_ACQUISITION/DIG_WVB/WBS_0/WVB_HEADER_0/dcfifo_component/DCFIFO_MW File: C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v
+# ** Warning: (vsim-3722) C:/intelFPGA_lite/18.1/quartus/eda/sim_lib/altera_mf.v(31791): [TFMPC] - Missing connection for port 'eccstatus'.
+# ** Warning: Design size of 19946 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# Expect performance to be adversely affected.
+# WARNING: No extended dataflow license exists
+# End time: 21:56:16 on Dec 11,2019, Elapsed time: 0:38:13
+# Errors: 0, Warnings: 8
+# Closing project C:/gen2dom-fw/deggmb_rev2_fw_psu/sim/tb.mpf
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project tb
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 21:58:38 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v(40): Instantiation of 'DPRAM_2048_16' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v(56): Instantiation of 'rbd_task_ctrl' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Error loading design
+# End time: 21:58:38 on Dec 11,2019, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 22:01:09 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0/DPRAM_2048_16_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/DPRAM_2048_16/DPRAM_2048_16.v
+# Loading work.altsyncram
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v(56): Instantiation of 'rbd_task_ctrl' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Error loading design
+# End time: 22:01:09 on Dec 11,2019, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 22:01:56 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# ** Error (suppressible): (vsim-3009) [TSCALE] - Module 'tb' does not have a timeunit/timeprecision specification in effect, but other modules do.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0/DPRAM_2048_16_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/ipcores/DPRAM_2048_16/DPRAM_2048_16.v
+# Loading work.altsyncram
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v(56): Instantiation of 'rbd_task_ctrl' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Error loading design
+# End time: 22:01:57 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 3, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 22:04:06 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v(56): Instantiation of 'rbd_task_ctrl' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/DPRAM_PING_PONG_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/dpram_ping_pong/dpram_ping_pong.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Error loading design
+# End time: 22:04:06 on Dec 11,2019, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# 7 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 22:04:42 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v(112): Instantiation of 'crc16_16b_parallel' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hbuf_ctrl/hbuf_ctrl_fmt_0.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/hit_buffer_controller/sim/work
+# Error loading design
+# End time: 22:04:43 on Dec 11,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 22:05:12 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.altsyncram_body
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+vsim tb
+# End time: 22:06:17 on Dec 11,2019, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 1
+# vsim tb 
+# Start time: 22:06:17 on Dec 11,2019
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.altsyncram_body
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+# WARNING: No extended dataflow license exists
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.altsyncram_body
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+add wave -position insertpoint sim:/tb/HIT_BUFFER_CONTROLLER_0/*
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+add wave -position insertpoint sim:/tb/HIT_BUFFER_CONTROLLER_0/HBUF_CTRL_FMT_0_0/*
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.altsyncram_body
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of tb.v was successful.
+# Compile of hit_buffer_controller.v was successful.
+# Compile of hbuf_ctrl_fmt_0.v was successful.
+# Compile of dpram_ping_pong.v was successful.
+# Compile of DPRAM_2048_16.v was successful.
+# Compile of altera_mf.v was successful.
+# Compile of rbd_task_ctrl.v was successful.
+# Compile of crc16_16b_parallel.v was successful.
+# 8 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.hit_buffer_controller
+# Loading work.dpram_ping_pong
+# Loading work.DPRAM_2048_16
+# Loading work.altsyncram
+# Loading work.rbd_task_ctrl
+# Loading work.hbuf_ctrl_fmt_0
+# Loading work.crc16_16b_parallel
+# Loading work.altsyncram_body
+# Loading work.ALTERA_DEVICE_FAMILIES
+# Loading work.ALTERA_MF_MEMORY_INITIALIZATION
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1

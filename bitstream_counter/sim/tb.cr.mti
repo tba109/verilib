@@ -1,0 +1,29 @@
+C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bitstream_counter/bitstream_counter.v {1 {vlog -work work -stats=none C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/bitstream_counter/bitstream_counter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module bitstream_counter
+
+Top level modules:
+	bitstream_counter
+
+} {} {}} C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/negedge_detector/negedge_detector.v {1 {vlog -work work -stats=none C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/negedge_detector/negedge_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module negedge_detector
+
+Top level modules:
+	negedge_detector
+
+} {} {}} C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/posedge_detector/posedge_detector.v {1 {vlog -work work -stats=none C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/posedge_detector/posedge_detector.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module posedge_detector
+
+Top level modules:
+	posedge_detector
+
+} {} {}} C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v {1 {vlog -work work -stats=none C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/one_shot/one_shot.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module one_shot
+
+Top level modules:
+	one_shot
+
+} {} {}}

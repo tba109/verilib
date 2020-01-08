@@ -1,4 +1,4 @@
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////// 
 // Tyler Anderson Tue Mar 26 12:05:56 EDT 2019
 //
 // ft232r_hs.v
@@ -9,7 +9,7 @@
 // There is no provision for handshaking outgoing data (to the FT232). 
 // On the logic side of the interface, cmd means incoming data from the FT232R, rsp means outgoing data
 // to the FT232R. 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////
 
 module ft232r_hs
   (
@@ -29,17 +29,20 @@ module ft232r_hs
    output [7:0] cmd_data // data read from FT232
    );
 
-   /////////////////////////////////////////////////////////////////////////////////////////////////
+   //////////////////////////////////////////////////////////////////////////
    // Internals
    wire 	i_ser_en; 
    wire 	i_des_done; 
-   parameter P_CLK_FREQ_HZ = 100000000;
-   parameter P_BAUD_RATE = 3000000;
-
-   /////////////////////////////////////////////////////////////////////////////////////////////////
+   parameter P_DES_START_LATCH_CNT_MAX = 7;
+   parameter P_DES_SHIFT_LATCH_CNT_MAX = 20;
+   parameter P_DES_STOP_LATCH_CNT_MAX = 20; 
+   parameter P_SER_LAUNCH_CNT_MAX = 20; 
+   
+   /////////////////////////////////////////////////////////////////////////
    // Serializer. tx was written in the port names from an FPGA centric view (i.e.,
    // transmitting from the FPGA to the outside world). 
-   rs232_ser #(.P_CLK_FREQ_HZ(P_CLK_FREQ_HZ),.P_BAUD_RATE(P_BAUD_RATE)) RS232_SER_0
+   rs232_ser #(.P_LAUNCH_CNT_MAX(P_SER_LAUNCH_CNT_MAX)) 
+   RS232_SER_0
      (
       // Outputs
       .tx			(rxd),
@@ -53,9 +56,13 @@ module ft232r_hs
       );
    posedge_detector PEDGE_0(.clk(clk),.rst_n(!rst),.a(rsp_req),.y(i_ser_en));
 
-   /////////////////////////////////////////////////////////////////////////////////////////////////
+   /////////////////////////////////////////////////////////////////////////
    // Deserializer
-   rs232_des #(.P_CLK_FREQ_HZ(P_CLK_FREQ_HZ),.P_BAUD_RATE(P_BAUD_RATE)) RS232_DES_0
+   rs232_des #(
+	       .P_START_LATCH_CNT_MAX(P_DES_START_LATCH_CNT_MAX),
+	       .P_SHIFT_LATCH_CNT_MAX(P_DES_SHIFT_LATCH_CNT_MAX),
+	       .P_STOP_LATCH_CNT_MAX(P_DES_STOP_LATCH_CNT_MAX)
+	       ) RS232_DES_0
      (
       // Outputs
       .rx_fifo_data		(cmd_data),

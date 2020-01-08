@@ -10,6 +10,12 @@
 //   No parity
 //   1 stop bit
 //
+// Tue 07/30/2019_16:11:48.24
+// Had to shorten STOP_LATCH_CNT for a 3Mbaud with 60MHz clock
+// Had to shorten START_LATCH_CNT for a 3Mbaud with 60MHz clock
+//
+// Mon 08/05/2019_22:37:30.40
+// Change from paramaterization in terms of clock rate and baud rate to  
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -29,9 +35,6 @@ module rs232_des
       for(clogb2=0;value>0;clogb2=clogb2+1)
 	value = value >> 1;
    endfunction // for
-
-   parameter P_CLK_FREQ_HZ = 100000000;
-   parameter P_BAUD_RATE = 9600;
         
    // Finite state machine
    reg [1:0] 	    fsm=2'd0;
@@ -48,10 +51,10 @@ module rs232_des
    negedge_detector NEDGE0(.clk(clk), .rst_n(rst_n), .a(rx_s), .y(rx_s_nedge));
    
    // Count to the center of each bit and latch on it
-   localparam START_LATCH_CNT_MAX = P_CLK_FREQ_HZ/P_BAUD_RATE/2;
-   localparam SHIFT_LATCH_CNT_MAX = P_CLK_FREQ_HZ/P_BAUD_RATE;
-   localparam STOP_LATCH_CNT_MAX = P_CLK_FREQ_HZ/P_BAUD_RATE;
-   localparam NBITS_LATCH_CNT = clogb2(SHIFT_LATCH_CNT_MAX);
+   parameter P_START_LATCH_CNT_MAX = 7;
+   parameter P_SHIFT_LATCH_CNT_MAX = 20;
+   parameter P_STOP_LATCH_CNT_MAX = 20;
+   localparam NBITS_LATCH_CNT = clogb2(P_SHIFT_LATCH_CNT_MAX-1);
    reg [NBITS_LATCH_CNT-1:0]  latch_cnt={NBITS_LATCH_CNT{1'b0}};
 
    // Count the 8 bits to be shifted in
@@ -60,7 +63,7 @@ module rs232_des
    // FIFO write signal (watch out for break condition)
    always @(posedge clk or negedge rst_n )
      if( !rst_n ) rx_fifo_wr_en <= 1'b0;
-     else if( (fsm == S_STOP) && (latch_cnt == STOP_LATCH_CNT_MAX) && (rx_s == 1'b1) && !rx_fifo_full ) rx_fifo_wr_en <= 1'b1;
+     else if( (fsm == S_STOP) && (latch_cnt == P_STOP_LATCH_CNT_MAX-1) && (rx_s == 1'b1) && !rx_fifo_full ) rx_fifo_wr_en <= 1'b1;
      else rx_fifo_wr_en <= 1'b0;
      
    // Finite State Machine
@@ -86,7 +89,7 @@ module rs232_des
 	      end
 		 
 	    S_START: 
-	      if( latch_cnt == START_LATCH_CNT_MAX )
+	      if( latch_cnt == P_START_LATCH_CNT_MAX-1 )
 		begin
 		   latch_cnt <= {NBITS_LATCH_CNT-1{1'b0}}; 
 	           fsm <= S_SHIFT; 
@@ -97,14 +100,14 @@ module rs232_des
 		end
 	    
 	    S_SHIFT: 
-	      if( (shift_cnt == 3'd7) && (latch_cnt == SHIFT_LATCH_CNT_MAX) )   
+	      if( (shift_cnt == 3'd7) && (latch_cnt == P_SHIFT_LATCH_CNT_MAX-1) )   
 		begin
 		   rx_fifo_data <= {rx_s,rx_fifo_data[7:1]}; // RS-232 is little endian
 		   shift_cnt <= 3'b0;
 		   latch_cnt <= {NBITS_LATCH_CNT-1{1'b0}}; 
 		   fsm <= S_STOP;  
 		end
-	      else if( latch_cnt == SHIFT_LATCH_CNT_MAX )
+	      else if( latch_cnt == P_SHIFT_LATCH_CNT_MAX-1 )
 		begin
 		   rx_fifo_data <= {rx_s,rx_fifo_data[7:1]}; // RS-232 is little endian
 		   shift_cnt <= shift_cnt + 1'b1;
@@ -116,7 +119,7 @@ module rs232_des
 		end
 	 
 	    S_STOP:  
-	      if( latch_cnt == STOP_LATCH_CNT_MAX  )   
+	      if( latch_cnt == P_STOP_LATCH_CNT_MAX-1 )   
 		begin 
 		   latch_cnt <= {NBITS_LATCH_CNT-1{1'b0}}; 
 	           fsm <= S_IDLE;

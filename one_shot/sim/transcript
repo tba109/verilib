@@ -1,0 +1,120 @@
+# Loading project tb
+# Compile of one_shot.v was successful.
+# Compile of tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project tb
+# Compile of pulse_gen.v failed with 4 errors.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 6 errors.
+# 3 compiles, 2 failed with 10 errors.
+# Compile of pulse_gen.v failed with 3 errors.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 6 errors.
+# 3 compiles, 2 failed with 9 errors.
+# Compile of pulse_gen.v failed with 1 errors.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 6 errors.
+# 3 compiles, 2 failed with 7 errors.
+# Compile of pulse_gen.v failed with 2 errors.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 6 errors.
+# 3 compiles, 2 failed with 8 errors.
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 6 errors.
+# 3 compiles, 1 failed with 6 errors.
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 5 errors.
+# 3 compiles, 1 failed with 5 errors.
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v failed with 1 errors.
+# 3 compiles, 1 failed with 1 error.
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 15:21:28 on Nov 11,2019
+# Loading work.tb
+# Loading work.pulse_gen
+# Loading work.one_shot
+add wave -position insertpoint sim:/tb/UUT_0/*
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.pulse_gen
+# Loading work.one_shot
+run
+run -continue
+run -continue
+run -continue
+run -continue
+run -continue
+run -continue
+run -continue
+run
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.pulse_gen
+# Loading work.one_shot
+# Warning in wave window restart: (vish-4014) No objects found matching '/tb/UUT_0/afe0_pulse_trig'. 
+run
+run
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+add wave -position insertpoint  \
+sim:/tb/UUT_0/trig_os
+# Compile of pulse_gen.v was successful.
+# Compile of one_shot.v was successful.
+# Compile of tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.pulse_gen
+# Loading work.one_shot
+run
+run
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 15:26:48 on Nov 11,2019, Elapsed time: 0:05:20
+# Errors: 1, Warnings: 0

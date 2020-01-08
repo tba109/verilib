@@ -92,24 +92,24 @@ module uart_proc
    reg [127:0] state_str;
    always @(*)
      case(fsm)
-       S_HDR1:     state_str <= "S_HDR1";
-       S_HDR0:     state_str <= "S_HDR0";
-       S_PID1:     state_str <= "S_PID1";
-       S_PID0:     state_str <= "S_PID0";
-       S_LEN1:     state_str <= "S_LEN1";
-       S_LEN0:     state_str <= "S_LEN0"; 
-       S_ADR1:     state_str <= "S_ADR1";
-       S_ADR0:     state_str <= "S_ADR0";
-       S_WR_DATA1: state_str <= "S_WR_DATA1";
-       S_WR_DATA0: state_str <= "S_WR_DATA0";
-       S_WR_WAIT:  state_str <= "S_WR_WAIT"; 
-       S_WR_CRC1:  state_str <= "S_WR_CRC1";
-       S_WR_CRC0:  state_str <= "S_WR_CRC0"; 
-       S_RD_DATA1: state_str <= "S_RD_DATA1";
-       S_RD_DATA0: state_str <= "S_RD_DATA0";
-       S_RD_WAIT:  state_str <= "S_RD_WAIT"; 
-       S_RD_CRC1:  state_str <= "S_RD_CRC1";
-       S_RD_CRC0:  state_str <= "S_RD_CRC0"; 
+       S_HDR1:     state_str = "S_HDR1";
+       S_HDR0:     state_str = "S_HDR0";
+       S_PID1:     state_str = "S_PID1";
+       S_PID0:     state_str = "S_PID0";
+       S_LEN1:     state_str = "S_LEN1";
+       S_LEN0:     state_str = "S_LEN0"; 
+       S_ADR1:     state_str = "S_ADR1";
+       S_ADR0:     state_str = "S_ADR0";
+       S_WR_DATA1: state_str = "S_WR_DATA1";
+       S_WR_DATA0: state_str = "S_WR_DATA0";
+       S_WR_WAIT:  state_str = "S_WR_WAIT"; 
+       S_WR_CRC1:  state_str = "S_WR_CRC1";
+       S_WR_CRC0:  state_str = "S_WR_CRC0"; 
+       S_RD_DATA1: state_str = "S_RD_DATA1";
+       S_RD_DATA0: state_str = "S_RD_DATA0";
+       S_RD_WAIT:  state_str = "S_RD_WAIT"; 
+       S_RD_CRC1:  state_str = "S_RD_CRC1";
+       S_RD_CRC0:  state_str = "S_RD_CRC0"; 
      endcase // case (fsm)
 `endif
    

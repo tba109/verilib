@@ -12,6 +12,8 @@
 //
 // Clock rate needs to be >=2x baud rate for this to really work
 // 
+// Tue 08/06/2019_ 9:00:37.99
+// Change to a parametered number of cycles. This is my new approach to most things. 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
 module rs232_ser
@@ -32,9 +34,6 @@ module rs232_ser
 	value = value >> 1;
    endfunction // for
    
-   parameter P_CLK_FREQ_HZ = 100000000;
-   parameter P_BAUD_RATE = 9600;
-
    // Finite state machine
    reg [1:0]     fsm=2'd0;
    localparam
@@ -44,8 +43,8 @@ module rs232_ser
      S_STOP  = 2'd3; // transmit the stop bit
 
    // Launch counter tells you where bit edges should be
-   localparam LAUNCH_CNT_MAX = P_CLK_FREQ_HZ/P_BAUD_RATE;
-   localparam NBITS_LAUNCH_CNT = clogb2(LAUNCH_CNT_MAX);
+   parameter P_LAUNCH_CNT_MAX = 20;
+   localparam NBITS_LAUNCH_CNT = clogb2(P_LAUNCH_CNT_MAX-1);
    reg [NBITS_LAUNCH_CNT-1:0] launch_cnt = {NBITS_LAUNCH_CNT{1'b0}};
 
    // Count the 8 bits to be shifted out
@@ -61,7 +60,7 @@ module rs232_ser
      else tx_fifo_rd_en <= 1'b0;
 
    // Utility signal for done
-   assign done = (launch_cnt == LAUNCH_CNT_MAX) && (fsm == S_STOP); 
+   assign done = (launch_cnt == P_LAUNCH_CNT_MAX-1) && (fsm == S_STOP); 
 
       
    // Finite State Machine
@@ -88,7 +87,7 @@ module rs232_ser
 	    S_START:
 	      begin
 		 tx <= 1'b0; // assert the start bit
-		 if( launch_cnt == LAUNCH_CNT_MAX )
+		 if( launch_cnt == P_LAUNCH_CNT_MAX-1 )
 		   begin
 		      shift_reg <= tx_fifo_data;
 		      launch_cnt <= {NBITS_LAUNCH_CNT-1{1'b0}};
@@ -103,14 +102,14 @@ module rs232_ser
 	    S_SHIFT:
 	      begin
 		 tx <= shift_reg[0];
-		 if( (shift_cnt == 3'd7) && (launch_cnt == LAUNCH_CNT_MAX) )
+		 if( (shift_cnt == 3'd7) && (launch_cnt == P_LAUNCH_CNT_MAX-1) )
 		   begin
 		      shift_reg <= {1'b0,shift_reg[7:1]};
 		      shift_cnt <= 3'd0;
 		      launch_cnt <= {NBITS_LAUNCH_CNT-1{1'b0}};
 		      fsm <= S_STOP;
 		   end
-		 else if( launch_cnt == LAUNCH_CNT_MAX )
+		 else if( launch_cnt == P_LAUNCH_CNT_MAX-1 )
 		   begin
 		      shift_reg <= {1'b0,shift_reg[7:1]};
 		      shift_cnt <= shift_cnt + 1'b1;
@@ -125,7 +124,7 @@ module rs232_ser
 	    S_STOP:
 	      begin
 		 tx <= 1'b1; // assert the stop bit (active low)
-		 if( launch_cnt == LAUNCH_CNT_MAX )
+		 if( launch_cnt == P_LAUNCH_CNT_MAX-1 )
 		   begin
 		      launch_cnt <= {NBITS_LAUNCH_CNT-1{1'b0}};
 		      fsm <= S_IDLE;

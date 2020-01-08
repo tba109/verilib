@@ -1,0 +1,373 @@
+# Loading project tb
+# reading C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini
+# Loading project tb
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 19:12:07 on Nov 12,2019
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/wvb_wr_ctrl.v(289): Instantiation of 'wvb_hdr_bundle_fan_in' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/wvb_wr_ctrl.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/sim/work
+# Error loading design
+# End time: 19:12:08 on Nov 12,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_out.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 19:14:37 on Nov 12,2019
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# ** Error: (vsim-3033) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/wvb_wr_ctrl.v(289): Instantiation of 'wvb_hdr_bundle_fan_in' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /tb/UUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/wvb_wr_ctrl.v
+#         Searched libraries:
+#             C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/sim/work
+# Error loading design
+# End time: 19:14:37 on Nov 12,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# vsim tb 
+# Start time: 19:15:22 on Nov 12,2019
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+# ** Warning: (vsim-3017) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/sim/tb.v(84): [TFMPC] - Too few port connections. Expected 25, found 24.
+#    Time: 0 ns  Iteration: 0  Instance: /tb/UUT_0 File: C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/wvb_wr_ctrl.v
+# ** Warning: (vsim-3722) C:/gen2dom-fw/deggmb_rev2_fw_psu/hdl/wvb_wr_ctrl/sim/tb.v(84): [TFMPC] - Missing connection for port 'overflow'.
+# WARNING: No extended dataflow license exists
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim tb
+# End time: 19:16:29 on Nov 12,2019, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 3
+# vsim tb 
+# Start time: 19:16:29 on Nov 12,2019
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+# WARNING: No extended dataflow license exists
+add wave -position insertpoint sim:/tb/UUT_0/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: psu-phys-astro-fw  Hostname: PSU-PHYS-ASTRO-  ProcessID: 11124
+#           Attempting to use alternate WLF file "./wlftyktf28".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftyktf28
+restart
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_1
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_2
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_3
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_3
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_2
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_4
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_5
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_4
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_2
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_6
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_7
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_8
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_9
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_9
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_10
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_11
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_12
+# Compile of altera_mf.v was successful.
+# Compile of 220model.v was successful.
+# Compile of tb.v was successful.
+# Compile of wvb_wr_ctrl.v was successful.
+# Compile of posedge_detector.v was successful.
+# Compile of wvb_hdr_bundle_fan_in.v was successful.
+# 6 compiles, 0 failed with no errors.
+restart
+# Loading work.tb
+# Loading work.wvb_wr_ctrl
+# Loading work.posedge_detector
+# Loading work.wvb_hdr_bundle_fan_in
+run
+# 
+# ------------------------------------------------------
+# Test Case: TEST_CASE_13

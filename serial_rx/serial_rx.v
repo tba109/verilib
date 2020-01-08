@@ -1,4 +1,4 @@
-////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 // Tyler Anderson Thu Mar 21 13:16:33 EDT 2019
 //
 // serial_tx.v
@@ -7,9 +7,9 @@
 // Transmission happens in 3 phases:
 // S0: Hold y0 for n0 cycles
 // S1: Output msb of data for n1 cycles
-///////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////
 
-module serial_rx #(parameter P_Y_INIT=0) 
+module serial_rx #(parameter P_Y_INIT=0, parameter P_DATA_WIDTH=256) 
   (
    input 	clk, // clock
    input 	rst, // active high resset
@@ -18,10 +18,10 @@ module serial_rx #(parameter P_Y_INIT=0)
    input [31:0] n0, // number of cnt cycles in getting started, minimum valid value is 1
    input [31:0] n1, // number of cnt cycles in the first half cycle, minimum valid value is 1
    input [31:0] cnt, // everything marches to this
-   output reg [255:0] data=0 // data output
+   output reg [P_DATA_WIDTH-1:0] data=0 // data output
    );
 
-   ////////////////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////
    // Internals
    wire [31:0] 	 i_n0 = n0==0 ? 1 : n0; 
    wire [31:0] 	 i_n1 = n1==0 ? 1 : n1; 
@@ -29,7 +29,7 @@ module serial_rx #(parameter P_Y_INIT=0)
    reg [31:0] 	 i_cnt_1 = 1; // cnt value for transition S1 to S2
    reg [31:0] 	 sr_cnt = 0; 
    
-   ///////////////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////
    // FSM definitions
    reg [0:0] fsm;
    localparam
@@ -40,12 +40,12 @@ module serial_rx #(parameter P_Y_INIT=0)
    reg [127:0] state_str;
    always @(*)
      case(fsm)
-       S0: state_str <= "S0";
-       S1: state_str <= "S1";
+       S0: state_str = "S0";
+       S1: state_str = "S1";
      endcase // case (fsm)
 `endif
    
-   ////////////////////////////////////////////////////////////////////////////////////////////////
+   ///////////////////////////////////////////////////////////////////////////////
    // FSM Flow
    always @(posedge clk or posedge rst)
      if(rst)
@@ -75,7 +75,7 @@ module serial_rx #(parameter P_Y_INIT=0)
 		begin
 		   i_cnt_1 <= cnt + i_n1;
 		   sr_cnt <= sr_cnt + 1; 
-		   data <= {data[254:0],a}; 
+		   data <= {data[P_DATA_WIDTH-2:0],a}; 
 		   if(sr_cnt == nbits-1)
 		     fsm <= S0;
 		end
