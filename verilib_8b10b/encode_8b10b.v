@@ -234,7 +234,7 @@ module encode_8b10b
 		    if(n_ones_k_p1==4 || n_ones_k_p1==5)
 		      begin
 			 valid <= 1'b1;
-			 rd <= n_ones_k_p1==4;
+			 rd <= !(n_ones_k_p1==4);
 		      end
 		    else
 		      begin
