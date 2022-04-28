@@ -1,0 +1,7 @@
+TEST_CASE_2: generate the full table for the encoder. 
+table_8b10b.txt is a redirect of the output of gen_table_8b10b.py to this file.
+
+sim_8b10b_tb_out.txt is the output of TEST_CASE_2. If you re-run the testbench with TEST_CASE_2, and then diff the new
+version of this file against table_8b10b.txt, you should see that these are identical. That means that the table is
+working correctly.
+
